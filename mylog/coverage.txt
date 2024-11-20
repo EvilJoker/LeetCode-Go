@@ -1,0 +1,7 @@
+
+mode: atomic
+github.com/halfrost/LeetCode-Go/leetcode/0001.Two-Sum/1. Two Sum.go:3.43,5.25 2 5
+github.com/halfrost/LeetCode-Go/leetcode/0001.Two-Sum/1. Two Sum.go:5.25,6.33 1 13
+github.com/halfrost/LeetCode-Go/leetcode/0001.Two-Sum/1. Two Sum.go:6.33,8.4 1 4
+github.com/halfrost/LeetCode-Go/leetcode/0001.Two-Sum/1. Two Sum.go:9.3,9.11 1 9
+github.com/halfrost/LeetCode-Go/leetcode/0001.Two-Sum/1. Two Sum.go:11.2,11.12 1 1
