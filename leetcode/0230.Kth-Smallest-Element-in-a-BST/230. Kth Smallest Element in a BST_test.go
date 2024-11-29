@@ -48,7 +48,7 @@ func Test_Problem230(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 230------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans230, q.para230
+		ans, p := q.ans230, q.para230
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", kthSmallest(root, p.k))

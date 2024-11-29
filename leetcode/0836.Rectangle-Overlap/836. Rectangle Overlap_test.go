@@ -41,8 +41,8 @@ func Test_Problem836(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 836------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans836, q.para836
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isRectangleOverlap(p.rec1, p.rec2))
+		ans, p := q.ans836, q.para836
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isRectangleOverlap(p.rec1, p.rec2))
 	}
 	fmt.Printf("\n\n\n")
 }

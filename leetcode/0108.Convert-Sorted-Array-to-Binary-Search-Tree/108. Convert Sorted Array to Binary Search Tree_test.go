@@ -37,10 +37,10 @@ func Test_Problem108(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 108------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans108, q.para108
+		ans, p := q.ans108, q.para108
 		arr := []int{}
 		structures.T2s(sortedArrayToBST(p.one), &arr)
-		fmt.Printf("【input】:%v       【output】:%v\n", p, arr)
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, arr)
 	}
 	fmt.Printf("\n\n\n")
 }

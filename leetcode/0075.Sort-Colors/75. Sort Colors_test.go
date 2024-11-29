@@ -50,7 +50,7 @@ func Test_Problem75(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 75------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans75, q.para75
+		ans, p := q.ans75, q.para75
 		fmt.Printf("【input】:%v      ", p)
 		sortColors(p.one)
 		fmt.Printf("【output】:%v      \n", p)

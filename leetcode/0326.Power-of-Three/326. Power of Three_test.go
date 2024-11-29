@@ -50,8 +50,8 @@ func Test_Problem326(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 326------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans326, q.para326
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isPowerOfThree(p.one))
+		ans, p := q.ans326, q.para326
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isPowerOfThree(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

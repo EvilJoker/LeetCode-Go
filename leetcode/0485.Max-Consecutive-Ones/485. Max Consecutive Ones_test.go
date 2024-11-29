@@ -41,8 +41,8 @@ func Test_Problem485(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 485------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans485, q.para485
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findMaxConsecutiveOnes(p.one))
+		ans, p := q.ans485, q.para485
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findMaxConsecutiveOnes(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

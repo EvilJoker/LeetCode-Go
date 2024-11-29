@@ -60,8 +60,8 @@ func Test_Problem498(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 498------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans498, q.para498
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findDiagonalOrder(p.one))
+		ans, p := q.ans498, q.para498
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findDiagonalOrder(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

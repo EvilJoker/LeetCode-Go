@@ -56,7 +56,7 @@ func Test_Problem1455(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1455------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1455, q.para1455
+		ans, p := q.ans1455, q.para1455
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", isPrefixOfWord(p.sentence, p.searchWord))
 	}

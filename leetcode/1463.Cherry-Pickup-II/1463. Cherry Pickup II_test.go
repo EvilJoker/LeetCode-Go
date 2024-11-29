@@ -63,7 +63,7 @@ func Test_Problem1463(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1463------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1463, q.para1463
+		ans, p := q.ans1463, q.para1463
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", cherryPickup(p.grid))
 	}

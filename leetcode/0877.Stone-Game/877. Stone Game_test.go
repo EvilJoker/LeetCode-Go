@@ -35,8 +35,8 @@ func Test_Problem877(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 877------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans877, q.para877
-		fmt.Printf("【input】:%v       【output】:%v\n", p, stoneGame(p.piles))
+		ans, p := q.ans877, q.para877
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, stoneGame(p.piles))
 	}
 	fmt.Printf("\n\n\n")
 }

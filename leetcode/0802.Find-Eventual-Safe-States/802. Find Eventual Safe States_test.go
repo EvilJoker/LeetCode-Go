@@ -35,8 +35,8 @@ func Test_Problem802(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 802------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans802, q.para802
-		fmt.Printf("【input】:%v       【output】:%v\n", p, eventualSafeNodes(p.graph))
+		ans, p := q.ans802, q.para802
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, eventualSafeNodes(p.graph))
 	}
 	fmt.Printf("\n\n\n")
 }

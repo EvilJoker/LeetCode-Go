@@ -41,8 +41,8 @@ func Test_Problem1074(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1074------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1074, q.para1074
-		fmt.Printf("【input】:%v       【output】:%v\n", p, numSubmatrixSumTarget1(p.one, p.t))
+		ans, p := q.ans1074, q.para1074
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numSubmatrixSumTarget1(p.one, p.t))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -35,7 +35,7 @@ func Test_Problem384(t *testing.T) {
 
 	for _, q := range qs {
 		sol := Constructor(nil)
-		_, p := q.ans384, q.para384
+		ans, p := q.ans384, q.para384
 		for _, op := range p.ops {
 			if op == "Solution" {
 				sol = Constructor(q.value[0])

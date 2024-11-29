@@ -41,8 +41,8 @@ func Test_Problem60(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 60------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans60, q.para60
-		fmt.Printf("【input】:%v       【output】:%v\n", p, getPermutation(p.n, p.k))
+		ans, p := q.ans60, q.para60
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, getPermutation(p.n, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

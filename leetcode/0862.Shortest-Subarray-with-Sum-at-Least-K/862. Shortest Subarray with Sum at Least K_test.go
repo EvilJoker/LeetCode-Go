@@ -45,8 +45,8 @@ func Test_Problem862(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 862------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans862, q.para862
-		fmt.Printf("【input】:%v       【output】:%v\n", p, shortestSubarray(p.A, p.K))
+		ans, p := q.ans862, q.para862
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, shortestSubarray(p.A, p.K))
 	}
 	fmt.Printf("\n\n\n")
 }

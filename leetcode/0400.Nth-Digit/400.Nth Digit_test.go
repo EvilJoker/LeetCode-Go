@@ -38,7 +38,7 @@ func Test_Problem400(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 400------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans400, q.para400
+		ans, p := q.ans400, q.para400
 		fmt.Printf("【input】:%v    【output】:%v\n", p.n, findNthDigit(p.n))
 	}
 	fmt.Printf("\n\n\n")

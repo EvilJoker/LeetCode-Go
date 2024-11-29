@@ -35,8 +35,8 @@ func Test_Problem409(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 409------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans409, q.para409
-		fmt.Printf("【input】:%v       【output】:%v\n", p, longestPalindrome(p.one))
+		ans, p := q.ans409, q.para409
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestPalindrome(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

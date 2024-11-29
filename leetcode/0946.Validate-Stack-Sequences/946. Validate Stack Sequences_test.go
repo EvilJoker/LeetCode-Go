@@ -45,8 +45,8 @@ func Test_Problem946(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 946------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans946, q.para946
-		fmt.Printf("【input】:%v       【output】:%v\n", p, validateStackSequences(p.one, p.two))
+		ans, p := q.ans946, q.para946
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, validateStackSequences(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

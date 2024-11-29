@@ -36,8 +36,8 @@ func Test_Problem819(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 819------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans819, q.para819
-		fmt.Printf("【input】:%v       【output】:%v\n", p, mostCommonWord(p.one, p.b))
+		ans, p := q.ans819, q.para819
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, mostCommonWord(p.one, p.b))
 	}
 	fmt.Printf("\n\n\n")
 }

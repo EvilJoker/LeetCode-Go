@@ -47,7 +47,7 @@ func Test_Problem1385(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1385------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1385, q.para1385
+		ans, p := q.ans1385, q.para1385
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", findTheDistanceValue(p.arr1, p.arr2, p.d))
 	}

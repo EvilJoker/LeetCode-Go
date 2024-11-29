@@ -65,8 +65,8 @@ func Test_Problem1680(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1680------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1680, q.para1680
-		fmt.Printf("【input】:%v       【output】:%v\n", p, concatenatedBinary(p.n))
+		ans, p := q.ans1680, q.para1680
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, concatenatedBinary(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

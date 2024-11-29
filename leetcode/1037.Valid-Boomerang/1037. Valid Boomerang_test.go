@@ -39,8 +39,8 @@ func Test_Problem1037(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1037------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1037, q.para1037
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isBoomerang(p.one))
+		ans, p := q.ans1037, q.para1037
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isBoomerang(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

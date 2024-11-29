@@ -48,7 +48,7 @@ func Test_Problem2021(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 2021------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans2021, q.para2021
+		ans, p := q.ans2021, q.para2021
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", brightestPosition(p.lights))
 	}

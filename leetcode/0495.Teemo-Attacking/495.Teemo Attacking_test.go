@@ -39,8 +39,8 @@ func Test_Problem495(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 495------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans495, q.para495
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findPoisonedDuration(p.timeSeries, p.duration))
+		ans, p := q.ans495, q.para495
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findPoisonedDuration(p.timeSeries, p.duration))
 	}
 	fmt.Printf("\n\n\n")
 }

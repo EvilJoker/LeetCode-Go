@@ -44,7 +44,7 @@ func Test_Problem1089(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1089------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1089, q.para1089
+		ans, p := q.ans1089, q.para1089
 		fmt.Printf("【input】:%v      ", p)
 		duplicateZeros(p.arr)
 		fmt.Printf("【output】:%v      \n", p.arr)

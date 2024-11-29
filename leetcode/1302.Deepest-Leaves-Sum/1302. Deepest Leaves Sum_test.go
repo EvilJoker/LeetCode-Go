@@ -42,8 +42,8 @@ func Test_Problem1302(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1302------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1302, q.para1302
-		fmt.Printf("【input】:%v       【output】:%v\n", p, deepestLeavesSum(structures.Ints2TreeNode(p.one)))
+		ans, p := q.ans1302, q.para1302
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, deepestLeavesSum(structures.Ints2TreeNode(p.one)))
 	}
 	fmt.Printf("\n\n\n")
 }

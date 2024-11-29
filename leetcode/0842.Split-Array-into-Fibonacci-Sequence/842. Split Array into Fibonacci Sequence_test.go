@@ -65,8 +65,8 @@ func Test_Problem842(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 842------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans842, q.para842
-		fmt.Printf("【input】:%v       【output】:%v\n", p, splitIntoFibonacci(p.one))
+		ans, p := q.ans842, q.para842
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, splitIntoFibonacci(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

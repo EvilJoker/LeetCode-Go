@@ -53,7 +53,7 @@ func Test_Problem37(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 37------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans37, q.para37
+		ans, p := q.ans37, q.para37
 		fmt.Printf("【input】:%v \n\n", p)
 		solveSudoku(p.s)
 		fmt.Printf("【output】:%v \n\n", p)

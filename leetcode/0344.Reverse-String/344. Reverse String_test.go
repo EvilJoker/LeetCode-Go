@@ -40,7 +40,7 @@ func Test_Problem344(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 344------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans344, q.para344
+		ans, p := q.ans344, q.para344
 		fmt.Printf("【input】:%v      ", p.one)
 		reverseString(p.one)
 		fmt.Printf("【output】:%v\n", p.one)

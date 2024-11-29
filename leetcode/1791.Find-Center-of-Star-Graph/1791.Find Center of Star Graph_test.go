@@ -38,7 +38,7 @@ func Test_Problem1791(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1791------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1791, q.para1791
+		ans, p := q.ans1791, q.para1791
 		fmt.Printf("【input】:%v      ", p.edges)
 		fmt.Printf("【output】:%v      \n", findCenter(p.edges))
 	}

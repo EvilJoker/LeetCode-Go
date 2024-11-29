@@ -46,8 +46,8 @@ func Test_Problem1818(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1818------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1818, q.para1818
-		fmt.Printf("【input】:%v       【output】:%v\n", p, minAbsoluteSumDiff(p.nums1, p.nums2))
+		ans, p := q.ans1818, q.para1818
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minAbsoluteSumDiff(p.nums1, p.nums2))
 	}
 	fmt.Printf("\n\n\n")
 }

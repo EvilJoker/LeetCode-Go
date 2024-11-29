@@ -35,8 +35,8 @@ func Test_Problem187(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 187------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans187, q.para187
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findRepeatedDnaSequences(p.one))
+		ans, p := q.ans187, q.para187
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findRepeatedDnaSequences(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

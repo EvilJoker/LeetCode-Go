@@ -36,7 +36,7 @@ func Test_Problem985(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 985------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans985, q.para985
+		ans, p := q.ans985, q.para985
 		fmt.Printf("【input】:%v       【output】:%v\n\n\n", p, sumEvenAfterQueries(p.A, p.queries))
 	}
 	fmt.Printf("\n\n\n")

@@ -39,8 +39,8 @@ func Test_Problem1044(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1044------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1044, q.para1044
-		fmt.Printf("【input】:%v       【output】:%v\n", p, longestDupSubstring(p.one))
+		ans, p := q.ans1044, q.para1044
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestDupSubstring(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

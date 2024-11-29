@@ -65,8 +65,8 @@ func Test_Problem242(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 242------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans242, q.para242
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isAnagram(p.one, p.two))
+		ans, p := q.ans242, q.para242
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isAnagram(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

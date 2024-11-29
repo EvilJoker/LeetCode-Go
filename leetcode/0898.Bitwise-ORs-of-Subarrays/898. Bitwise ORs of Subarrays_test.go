@@ -45,8 +45,8 @@ func Test_Problem898(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 898------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans898, q.para898
-		fmt.Printf("【input】:%v       【output】:%v\n", p, subarrayBitwiseORs(p.one))
+		ans, p := q.ans898, q.para898
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, subarrayBitwiseORs(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

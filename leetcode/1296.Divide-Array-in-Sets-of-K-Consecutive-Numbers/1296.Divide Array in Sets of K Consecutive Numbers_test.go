@@ -44,7 +44,7 @@ func Test_Problem1296(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1296------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1296, q.para1296
+		ans, p := q.ans1296, q.para1296
 		fmt.Printf("【input】:%v    【output】:%v\n", p, isPossibleDivide(p.nums, p.k))
 	}
 	fmt.Printf("\n\n\n")

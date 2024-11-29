@@ -36,8 +36,8 @@ func Test_Problem643(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 643------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans643, q.para643
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findMaxAverage(p.nums, p.k))
+		ans, p := q.ans643, q.para643
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findMaxAverage(p.nums, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

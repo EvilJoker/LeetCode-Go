@@ -41,8 +41,8 @@ func Test_Problem756(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 756------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans756, q.para756
-		fmt.Printf("【input】:%v       【output】:%v\n", p, pyramidTransition(p.b, p.a))
+		ans, p := q.ans756, q.para756
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, pyramidTransition(p.b, p.a))
 	}
 	fmt.Printf("\n\n\n")
 }

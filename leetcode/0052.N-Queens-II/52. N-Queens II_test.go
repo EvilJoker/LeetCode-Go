@@ -78,8 +78,8 @@ func Test_Problem52(t *testing.T) {
 
 	fmt.Printf("------------------------Leetcode Problem 52------------------------\n")
 	for _, q := range qs {
-		_, p := q.ans52, q.para52
-		fmt.Printf("【input】:%v       【output】:%v\n", p, totalNQueens(p.one))
+		ans, p := q.ans52, q.para52
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, totalNQueens(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

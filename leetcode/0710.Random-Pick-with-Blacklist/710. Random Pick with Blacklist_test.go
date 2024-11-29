@@ -57,7 +57,7 @@ func Test_Problem710(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 710------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans710, q.para710
+		ans, p := q.ans710, q.para710
 		fmt.Printf("【input】: n = %v blacklist = %v pick times = %v  ", p.n, p.blackList, p.times)
 		obj := Constructor710(p.n, p.blackList)
 		fmt.Printf("【output】:")

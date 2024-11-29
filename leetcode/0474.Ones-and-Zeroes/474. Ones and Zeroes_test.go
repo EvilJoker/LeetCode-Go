@@ -47,8 +47,8 @@ func Test_Problem474(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 474------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans474, q.para474
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findMaxForm(p.strs, p.m, p.n))
+		ans, p := q.ans474, q.para474
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findMaxForm(p.strs, p.m, p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

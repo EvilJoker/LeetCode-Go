@@ -56,8 +56,8 @@ func Test_Problem16(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 16------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans16, q.para16
-		fmt.Printf("【input】:%v       【output】:%v\n", p, threeSumClosest(p.a, p.target))
+		ans, p := q.ans16, q.para16
+		fmt.Printf("【input】:%v   【expect】: %v    【output】:%v\n", p, ans, threeSumClosest(p.a, p.target))
 	}
 	fmt.Printf("\n\n\n")
 }

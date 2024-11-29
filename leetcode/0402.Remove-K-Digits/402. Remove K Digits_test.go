@@ -70,8 +70,8 @@ func Test_Problem402(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 402------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans402, q.para402
-		fmt.Printf("【input】:%v       【output】:%v\n", p, removeKdigits(p.num, p.k))
+		ans, p := q.ans402, q.para402
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, removeKdigits(p.num, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -35,8 +35,8 @@ func Test_Problem421(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 421------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans421, q.para421
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findMaximumXOR(p.one))
+		ans, p := q.ans421, q.para421
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findMaximumXOR(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

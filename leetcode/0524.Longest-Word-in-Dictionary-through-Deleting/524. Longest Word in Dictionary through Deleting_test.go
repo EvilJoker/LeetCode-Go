@@ -56,8 +56,8 @@ func Test_Problem524(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 524------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans524, q.para524
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findLongestWord(p.s, p.one))
+		ans, p := q.ans524, q.para524
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findLongestWord(p.s, p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

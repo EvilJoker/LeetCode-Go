@@ -70,7 +70,7 @@ func Test_Problem153(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 153------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans153, q.para153
+		ans, p := q.ans153, q.para153
 		fmt.Printf("【input】:%v    【output】:%v\n", p, findMin(p.nums))
 	}
 	fmt.Printf("\n\n\n")

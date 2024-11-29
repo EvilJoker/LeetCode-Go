@@ -82,8 +82,8 @@ func Test_Problem234(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 234------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans234, q.para234
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isPalindrome(structures.Ints2List(p.one)))
+		ans, p := q.ans234, q.para234
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isPalindrome(structures.Ints2List(p.one)))
 	}
 	fmt.Printf("\n\n\n")
 }

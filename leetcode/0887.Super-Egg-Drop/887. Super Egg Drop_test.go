@@ -46,8 +46,8 @@ func Test_Problem887(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 887------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans887, q.para887
-		fmt.Printf("【input】:%v       【output】:%v\n", p, superEggDrop(p.k, p.n))
+		ans, p := q.ans887, q.para887
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, superEggDrop(p.k, p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

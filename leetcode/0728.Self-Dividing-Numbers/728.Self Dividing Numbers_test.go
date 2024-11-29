@@ -39,7 +39,7 @@ func Test_Problem728(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 728------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans728, q.para728
+		ans, p := q.ans728, q.para728
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", selfDividingNumbers(p.left, p.right))
 	}

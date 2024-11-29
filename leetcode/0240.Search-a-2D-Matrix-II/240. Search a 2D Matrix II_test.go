@@ -41,8 +41,8 @@ func Test_Problem240(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 240------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans240, q.para240
-		fmt.Printf("【input】:%v       【output】:%v\n", p, searchMatrix240(p.matrix, p.target))
+		ans, p := q.ans240, q.para240
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, searchMatrix240(p.matrix, p.target))
 	}
 	fmt.Printf("\n\n\n")
 }

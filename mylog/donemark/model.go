@@ -7,6 +7,7 @@ import (
 
 type Problem struct {
 	name       string
+	alias      string
 	catagory   string
 	status     string
 	recommend  string // 1~3
@@ -33,6 +34,8 @@ func newProblem(name string, desc string) *Problem {
 		value := strings.TrimSpace(kv[1])
 
 		switch key {
+		case "alias":
+			result.alias = value
 		case "status":
 			result.status = value
 		case "catagory":

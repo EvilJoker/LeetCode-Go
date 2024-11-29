@@ -42,7 +42,7 @@ func Test_Problem589(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 589------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans589, q.para589
+		ans, p := q.ans589, q.para589
 		fmt.Printf("【input】:%v      ", p)
 		rootOne := int2NaryNode(p.one)
 		fmt.Printf("【output】:%v      \n", preorder(rootOne))

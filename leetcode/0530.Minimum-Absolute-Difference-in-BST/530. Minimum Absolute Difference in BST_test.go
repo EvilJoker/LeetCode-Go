@@ -47,7 +47,7 @@ func Test_Problem530(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 530------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans530, q.para530
+		ans, p := q.ans530, q.para530
 		fmt.Printf("【input】:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", getMinimumDifference(rootOne))

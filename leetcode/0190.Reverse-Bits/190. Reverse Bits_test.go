@@ -40,7 +40,7 @@ func Test_Problem190(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 190------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans190, q.para190
+		ans, p := q.ans190, q.para190
 		input := strconv.FormatUint(uint64(p.one), 2) // 32位无符号整数转换为二进制字符串
 		input = fmt.Sprintf("%0*v", 32, input)        // 格式化输出32位,保留前置0
 		output := reverseBits(p.one)

@@ -63,8 +63,8 @@ func Test_Problem92(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 92------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans92, q.para92
-		fmt.Printf("【input】:%v       【output】:%v\n", p, structures.List2Ints(reverseBetween(structures.Ints2List(p.one), p.m, p.n)))
+		ans, p := q.ans92, q.para92
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, structures.List2Ints(reverseBetween(structures.Ints2List(p.one), p.m, p.n)))
 	}
 	fmt.Printf("\n\n\n")
 }

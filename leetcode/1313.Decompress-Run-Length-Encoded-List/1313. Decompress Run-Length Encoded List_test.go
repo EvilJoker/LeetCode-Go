@@ -45,7 +45,7 @@ func Test_Problem1313(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1313------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1313, q.para1313
+		ans, p := q.ans1313, q.para1313
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", decompressRLElist(p.nums))
 	}

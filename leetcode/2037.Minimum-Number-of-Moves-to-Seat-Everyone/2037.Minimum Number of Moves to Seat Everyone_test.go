@@ -44,7 +44,7 @@ func Test_Problem2037(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 2037------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans2037, q.para2037
+		ans, p := q.ans2037, q.para2037
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", minMovesToSeat(p.seats, p.students))
 	}

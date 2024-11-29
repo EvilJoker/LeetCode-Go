@@ -34,7 +34,7 @@ func Test_Problem519(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 519------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans519, q.para519
+		ans, p := q.ans519, q.para519
 		sol := Constructor(0, 0)
 		for _, v := range p.para {
 			if v == "Solution" {

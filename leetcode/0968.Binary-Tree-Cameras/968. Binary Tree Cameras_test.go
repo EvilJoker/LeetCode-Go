@@ -42,7 +42,7 @@ func Test_Problem968(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 968------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans968, q.para968
+		ans, p := q.ans968, q.para968
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", minCameraCover(root))

@@ -45,8 +45,8 @@ func Test_Problem785(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 785------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans785, q.para785
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isBipartite(p.graph))
+		ans, p := q.ans785, q.para785
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isBipartite(p.graph))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -46,7 +46,7 @@ func Test_Problem1389(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1389------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1389, q.para1389
+		ans, p := q.ans1389, q.para1389
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", createTargetArray(p.nums, p.index))
 	}

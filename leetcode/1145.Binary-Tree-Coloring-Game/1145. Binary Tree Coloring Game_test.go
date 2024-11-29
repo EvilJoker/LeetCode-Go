@@ -39,9 +39,9 @@ func Test_Problem1145(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1145------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1145, q.para1145
+		ans, p := q.ans1145, q.para1145
 		tree := structures.Ints2TreeNode(p.root)
-		fmt.Printf("【input】:%v       【output】:%v\n", p, btreeGameWinningMove(tree, p.n, p.x))
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, btreeGameWinningMove(tree, p.n, p.x))
 	}
 	fmt.Printf("\n\n\n")
 }

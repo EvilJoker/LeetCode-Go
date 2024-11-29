@@ -45,8 +45,8 @@ func Test_Problem1009(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1009------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1009, q.para1009
-		fmt.Printf("【input】:%v       【output】:%v\n", p, bitwiseComplement(p.n))
+		ans, p := q.ans1009, q.para1009
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, bitwiseComplement(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

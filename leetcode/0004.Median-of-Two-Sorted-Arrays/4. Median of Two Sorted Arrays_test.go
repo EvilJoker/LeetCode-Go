@@ -41,8 +41,8 @@ func Test_Problem4(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 4------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans4, q.para4
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findMedianSortedArrays(p.nums1, p.nums2))
+		ans, p := q.ans4, q.para4
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findMedianSortedArrays(p.nums1, p.nums2))
 	}
 	fmt.Printf("\n\n\n")
 }

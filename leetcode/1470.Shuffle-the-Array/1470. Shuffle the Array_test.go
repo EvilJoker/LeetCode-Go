@@ -46,7 +46,7 @@ func Test_Problem1470(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1470------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1470, q.para1470
+		ans, p := q.ans1470, q.para1470
 		fmt.Printf("【input】:%v      【output】:%v      \n", p, shuffle(p.nums, p.n))
 	}
 	fmt.Printf("\n\n\n")

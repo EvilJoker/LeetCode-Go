@@ -41,8 +41,8 @@ func Test_Problem347(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 347------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans347, q.para347
-		fmt.Printf("【input】:%v       【output】:%v\n", p, topKFrequent(p.one, p.two))
+		ans, p := q.ans347, q.para347
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, topKFrequent(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

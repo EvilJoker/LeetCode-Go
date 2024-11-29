@@ -73,7 +73,7 @@ func Test_Problem725(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 725------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans725, q.para725
+		ans, p := q.ans725, q.para725
 		res := splitListToParts(structures.Ints2List(p.one), p.n)
 		for _, value := range res {
 			fmt.Printf("【input】:%v    length:%v   【output】:%v\n", p, len(res), structures.List2Ints(value))

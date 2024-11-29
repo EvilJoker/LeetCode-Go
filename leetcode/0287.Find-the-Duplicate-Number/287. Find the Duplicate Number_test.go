@@ -45,8 +45,8 @@ func Test_Problem287(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 287------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans287, q.para287
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findDuplicate(p.one))
+		ans, p := q.ans287, q.para287
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findDuplicate(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

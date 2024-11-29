@@ -46,8 +46,8 @@ func Test_Problem1143(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1143------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1143, q.para1143
-		fmt.Printf("【input】:%v       【output】:%v\n", p, longestCommonSubsequence(p.text1, p.text2))
+		ans, p := q.ans1143, q.para1143
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestCommonSubsequence(p.text1, p.text2))
 	}
 	fmt.Printf("\n\n\n")
 }

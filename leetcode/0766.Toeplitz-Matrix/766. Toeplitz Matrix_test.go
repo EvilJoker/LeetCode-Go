@@ -40,8 +40,8 @@ func Test_Problem766(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 766------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans766, q.para766
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isToeplitzMatrix(p.A))
+		ans, p := q.ans766, q.para766
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isToeplitzMatrix(p.A))
 	}
 	fmt.Printf("\n\n\n")
 }

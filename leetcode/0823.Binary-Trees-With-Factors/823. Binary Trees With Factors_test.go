@@ -40,8 +40,8 @@ func Test_Problem823(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 823------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans823, q.para823
-		fmt.Printf("【input】:%v       【output】:%v\n", p, numFactoredBinaryTrees(p.arr))
+		ans, p := q.ans823, q.para823
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numFactoredBinaryTrees(p.arr))
 	}
 	fmt.Printf("\n\n\n")
 }

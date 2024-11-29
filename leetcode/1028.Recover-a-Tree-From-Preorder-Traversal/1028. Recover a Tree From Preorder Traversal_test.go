@@ -46,8 +46,8 @@ func Test_Problem1028(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1028------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1028, q.para1028
-		fmt.Printf("【input】:%v       【output】:%v\n", p, structures.Tree2ints(recoverFromPreorder(p.one)))
+		ans, p := q.ans1028, q.para1028
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, structures.Tree2ints(recoverFromPreorder(p.one)))
 	}
 	fmt.Printf("\n\n\n")
 }

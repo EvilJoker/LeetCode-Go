@@ -51,8 +51,8 @@ func Test_Problem205(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 205------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans205, q.para205
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isIsomorphic(p.one, p.two))
+		ans, p := q.ans205, q.para205
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isIsomorphic(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

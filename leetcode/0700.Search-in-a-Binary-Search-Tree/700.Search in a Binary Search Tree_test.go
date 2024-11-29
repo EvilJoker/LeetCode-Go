@@ -44,7 +44,7 @@ func Test_Problem700(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 700------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans700, q.para700
+		ans, p := q.ans700, q.para700
 		fmt.Printf("【input】:%v    【output】:%v\n", p, searchBST(p.root, p.val))
 	}
 	fmt.Printf("\n\n\n")

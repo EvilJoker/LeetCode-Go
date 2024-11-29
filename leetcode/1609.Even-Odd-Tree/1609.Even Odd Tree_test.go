@@ -66,7 +66,7 @@ func Test_Problem1609(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1609------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1609, q.para1609
+		ans, p := q.ans1609, q.para1609
 		fmt.Printf("【input】:%v    【output】:%v\n", p.root, isEvenOddTree(p.root))
 	}
 	fmt.Printf("\n\n\n")

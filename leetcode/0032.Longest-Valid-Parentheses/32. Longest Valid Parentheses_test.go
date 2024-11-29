@@ -54,7 +54,7 @@ func Test_Problem32(t *testing.T) {
 
 	fmt.Printf("------------------------Leetcode Problem 32------------------------\n")
 	for _, q := range qs {
-		_, p := q.ans32, q.para32
+		ans, p := q.ans32, q.para32
 		fmt.Printf("【input】:%v    【output】:%v\n", p, longestValidParentheses(p.s))
 	}
 	fmt.Printf("\n\n\n")

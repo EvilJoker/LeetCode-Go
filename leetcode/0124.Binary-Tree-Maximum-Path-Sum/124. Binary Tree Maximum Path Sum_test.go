@@ -52,7 +52,7 @@ func Test_Problem124(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 124------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans124, q.para124
+		ans, p := q.ans124, q.para124
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", maxPathSum(root))

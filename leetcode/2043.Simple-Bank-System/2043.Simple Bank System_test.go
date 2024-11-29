@@ -38,7 +38,7 @@ func Test_Problem2043(t *testing.T) {
 	for _, q := range qs {
 		var b Bank
 		var res []bool
-		_, p := q.ans2043, q.para2043
+		ans, p := q.ans2043, q.para2043
 		for i, op := range p.ops {
 			if op == "Bank" {
 				b = Constructor(q.para[i])

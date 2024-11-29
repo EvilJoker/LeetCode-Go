@@ -52,7 +52,7 @@ func Test_Problem98(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 98------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans98, q.para98
+		ans, p := q.ans98, q.para98
 		fmt.Printf("【input】:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", isValidBST(rootOne))

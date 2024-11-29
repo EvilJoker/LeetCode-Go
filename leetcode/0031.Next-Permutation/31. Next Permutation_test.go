@@ -49,7 +49,7 @@ func Test_Problem31(t *testing.T) {
 
 	fmt.Printf("------------------------Leetcode Problem 31------------------------\n")
 	for _, q := range qs {
-		_, p := q.ans31, q.para31
+		ans, p := q.ans31, q.para31
 		fmt.Printf("【input】:%v       ", p)
 		nextPermutation(p.nums)
 		fmt.Printf("【output】:%v\n", p.nums)

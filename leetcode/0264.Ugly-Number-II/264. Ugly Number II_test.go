@@ -55,8 +55,8 @@ func Test_Problem264(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 264------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans264, q.para264
-		fmt.Printf("【input】:%v       【output】:%v\n", p, nthUglyNumber(p.one))
+		ans, p := q.ans264, q.para264
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, nthUglyNumber(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

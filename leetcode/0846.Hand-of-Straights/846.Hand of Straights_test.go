@@ -39,7 +39,7 @@ func Test_Problem846(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 846------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans846, q.para846
+		ans, p := q.ans846, q.para846
 		fmt.Printf("【input】:%v    【output】:%v\n", p, isNStraightHand(p.hand, p.groupSize))
 	}
 	fmt.Printf("\n\n\n")

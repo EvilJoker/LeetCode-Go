@@ -57,7 +57,7 @@ func Test_Problem662(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 662------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans662, q.para662
+		ans, p := q.ans662, q.para662
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", widthOfBinaryTree(root))

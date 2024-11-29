@@ -40,8 +40,8 @@ func Test_Problem684(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 684------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans684, q.para684
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findRedundantConnection(p.one))
+		ans, p := q.ans684, q.para684
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findRedundantConnection(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

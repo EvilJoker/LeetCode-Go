@@ -70,8 +70,8 @@ func Test_Problem864(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 864------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans864, q.para864
-		fmt.Printf("【input】:%v       【output】:%v\n", p, shortestPathAllKeys(p.one))
+		ans, p := q.ans864, q.para864
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, shortestPathAllKeys(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

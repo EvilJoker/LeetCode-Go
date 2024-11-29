@@ -48,7 +48,7 @@ func Test_Problem794(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 794------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans794, q.para794
+		ans, p := q.ans794, q.para794
 		fmt.Printf("【input】:%v    【output】:%v\n", p.board, validTicTacToe(p.board))
 	}
 	fmt.Printf("\n\n\n")

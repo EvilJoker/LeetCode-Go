@@ -62,8 +62,8 @@ func Test_Problem220(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 220------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans220, q.para220
-		fmt.Printf("【input】:%v       【output】:%v\n", p, containsNearbyAlmostDuplicate(p.one, p.k, p.t))
+		ans, p := q.ans220, q.para220
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, containsNearbyAlmostDuplicate(p.one, p.k, p.t))
 	}
 	fmt.Printf("\n\n\n")
 }

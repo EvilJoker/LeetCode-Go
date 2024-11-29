@@ -39,7 +39,7 @@ func Test_Problem1984(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1984------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1984, q.para1984
+		ans, p := q.ans1984, q.para1984
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", minimumDifference(p.nums, p.k))
 	}

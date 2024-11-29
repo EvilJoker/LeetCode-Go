@@ -47,7 +47,7 @@ func Test_Problem94(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 94------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans94, q.para94
+		ans, p := q.ans94, q.para94
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", inorderTraversal(root))

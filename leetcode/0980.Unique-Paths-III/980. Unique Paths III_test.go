@@ -56,7 +56,7 @@ func Test_Problem980(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 980------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans980, q.para980
+		ans, p := q.ans980, q.para980
 		fmt.Printf("【input】:%v       【output】:%v\n\n\n", p, uniquePathsIII(p.grid))
 	}
 	fmt.Printf("\n\n\n")

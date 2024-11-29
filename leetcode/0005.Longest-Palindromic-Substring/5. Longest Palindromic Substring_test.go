@@ -60,8 +60,8 @@ func Test_Problem5(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 5------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans5, q.para5
-		fmt.Printf("【input】:%v       【output】:%v\n", p, longestPalindrome(p.s))
+		ans, p := q.ans5, q.para5
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestPalindrome(p.s))
 	}
 	fmt.Printf("\n\n\n")
 }

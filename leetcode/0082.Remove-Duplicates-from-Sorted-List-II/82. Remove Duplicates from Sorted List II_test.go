@@ -77,8 +77,8 @@ func Test_Problem82(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 82------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans82, q.para82
-		fmt.Printf("【input】:%v       【output】:%v\n", p, structures.List2Ints(deleteDuplicates1(structures.Ints2List(p.one))))
+		ans, p := q.ans82, q.para82
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, structures.List2Ints(deleteDuplicates1(structures.Ints2List(p.one))))
 	}
 	fmt.Printf("\n\n\n")
 }

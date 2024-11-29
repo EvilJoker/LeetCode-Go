@@ -51,8 +51,8 @@ func Test_Problem786(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 786------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans786, q.para786
-		fmt.Printf("【input】:%v       【output】:%v\n", p, kthSmallestPrimeFraction(p.A, p.K))
+		ans, p := q.ans786, q.para786
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, kthSmallestPrimeFraction(p.A, p.K))
 	}
 	fmt.Printf("\n\n\n")
 }

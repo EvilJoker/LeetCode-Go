@@ -50,7 +50,7 @@ func Test_Problem1464(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1464------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1464, q.para1464
+		ans, p := q.ans1464, q.para1464
 		fmt.Printf("【input】:%v      ", p)
 		fmt.Printf("【output】:%v      \n", maxProduct(p.nums))
 	}

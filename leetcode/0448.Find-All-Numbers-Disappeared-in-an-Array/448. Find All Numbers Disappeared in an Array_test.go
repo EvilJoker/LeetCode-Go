@@ -41,8 +41,8 @@ func Test_Problem448(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 448------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans448, q.para448
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findDisappearedNumbers(p.one))
+		ans, p := q.ans448, q.para448
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findDisappearedNumbers(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

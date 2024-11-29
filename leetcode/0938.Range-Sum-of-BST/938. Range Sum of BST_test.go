@@ -44,7 +44,7 @@ func Test_Problem938(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 938------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans938, q.para938
+		ans, p := q.ans938, q.para938
 		fmt.Printf("【input】:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", rangeSumBST(rootOne, p.low, p.high))

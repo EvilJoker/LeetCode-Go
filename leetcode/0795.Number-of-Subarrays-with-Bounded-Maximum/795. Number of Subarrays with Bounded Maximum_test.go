@@ -37,8 +37,8 @@ func Test_Problem795(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 795------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans795, q.para795
-		fmt.Printf("【input】:%v       【output】:%v\n", p, numSubarrayBoundedMax(p.nums, p.left, p.right))
+		ans, p := q.ans795, q.para795
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numSubarrayBoundedMax(p.nums, p.left, p.right))
 	}
 	fmt.Printf("\n\n\n")
 }

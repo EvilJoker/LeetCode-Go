@@ -51,8 +51,8 @@ func Test_Problem392(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 392------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans392, q.para392
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isSubsequence(p.one, p.two))
+		ans, p := q.ans392, q.para392
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isSubsequence(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

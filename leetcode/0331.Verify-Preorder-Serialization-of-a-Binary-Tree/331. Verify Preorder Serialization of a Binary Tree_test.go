@@ -45,8 +45,8 @@ func Test_Problem331(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 331------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans331, q.para331
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isValidSerialization(p.one))
+		ans, p := q.ans331, q.para331
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isValidSerialization(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

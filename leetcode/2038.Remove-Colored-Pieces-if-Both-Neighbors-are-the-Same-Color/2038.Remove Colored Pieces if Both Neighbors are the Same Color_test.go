@@ -43,7 +43,7 @@ func Test_Problem2038(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 2038------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans2038, q.para2038
+		ans, p := q.ans2038, q.para2038
 		fmt.Printf("【input】:%v      ", p.colors)
 		fmt.Printf("【output】:%v      \n", winnerOfGame(p.colors))
 	}

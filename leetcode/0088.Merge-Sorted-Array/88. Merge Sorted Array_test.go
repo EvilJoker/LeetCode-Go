@@ -41,7 +41,7 @@ func Test_Problem88(t *testing.T) {
 	}
 	fmt.Printf("------------------------Leetcode Problem 88------------------------\n")
 	for _, q := range qs {
-		_, p := q.ans88, q.para88
+		ans, p := q.ans88, q.para88
 		fmt.Printf("【intput】:%v,%v,%v,%v       ", p.one, p.m, p.two, p.n)
 		merge(p.one, p.m, p.two, p.n)
 		fmt.Printf("【output】:%v\n", p)

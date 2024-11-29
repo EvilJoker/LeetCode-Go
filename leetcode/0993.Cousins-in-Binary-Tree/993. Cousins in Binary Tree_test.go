@@ -49,7 +49,7 @@ func Test_Problem993(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 993------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans993, q.para993
+		ans, p := q.ans993, q.para993
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", isCousins(root, p.x, p.y))

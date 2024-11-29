@@ -59,7 +59,7 @@ func Test_Problem236(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 236------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans236, q.para236
+		ans, p := q.ans236, q.para236
 		fmt.Printf("【input】:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
 		rootTwo := structures.Ints2TreeNode(p.two)

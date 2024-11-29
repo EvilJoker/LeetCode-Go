@@ -48,7 +48,7 @@ func Test_Problem971(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 971------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans971, q.para971
+		ans, p := q.ans971, q.para971
 		fmt.Printf("【input】:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", flipMatchVoyage(rootOne, p.voyage))

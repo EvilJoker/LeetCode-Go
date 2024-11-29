@@ -35,7 +35,7 @@ func Test_Problem966(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 966------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans966, q.para966
+		ans, p := q.ans966, q.para966
 		fmt.Printf("【input】:%v       【output】:%#v\n", p, spellchecker(p.wordlist, p.queries))
 	}
 	fmt.Printf("\n\n\n")

@@ -47,7 +47,7 @@ func Test_Problem95(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 95------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans95, q.para95
+		ans, p := q.ans95, q.para95
 		fmt.Printf("【input】:%v  \n", p)
 		trees := generateTrees(p.one)
 		for _, t := range trees {

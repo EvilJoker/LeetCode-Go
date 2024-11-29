@@ -38,10 +38,10 @@ func Test_Problem872(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 872------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans872, q.para872
+		ans, p := q.ans872, q.para872
 		tree1 := structures.Ints2TreeNode(p.one)
 		tree2 := structures.Ints2TreeNode(p.two)
-		fmt.Printf("【input】:%v       【output】:%v\n", p, leafSimilar(tree1, tree2))
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, leafSimilar(tree1, tree2))
 	}
 	fmt.Printf("\n\n\n")
 }

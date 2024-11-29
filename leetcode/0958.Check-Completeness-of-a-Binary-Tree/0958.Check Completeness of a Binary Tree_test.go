@@ -42,7 +42,7 @@ func Test_Problem958(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 958------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans958, q.para958
+		ans, p := q.ans958, q.para958
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", isCompleteTree(root))

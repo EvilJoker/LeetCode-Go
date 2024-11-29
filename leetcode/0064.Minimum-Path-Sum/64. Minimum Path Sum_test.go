@@ -39,8 +39,8 @@ func Test_Problem64(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 64------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans64, q.para64
-		fmt.Printf("【input】:%v       【output】:%v\n", p, minPathSum(p.og))
+		ans, p := q.ans64, q.para64
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minPathSum(p.og))
 	}
 	fmt.Printf("\n\n\n")
 }

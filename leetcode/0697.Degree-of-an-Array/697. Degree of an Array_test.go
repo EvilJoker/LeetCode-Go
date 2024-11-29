@@ -55,8 +55,8 @@ func Test_Problem697(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 697------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans697, q.para697
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findShortestSubArray(p.one))
+		ans, p := q.ans697, q.para697
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findShortestSubArray(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

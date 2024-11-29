@@ -38,7 +38,7 @@ func Test_Problem1104(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1104------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1104, q.para1104
+		ans, p := q.ans1104, q.para1104
 		fmt.Printf("【input】:%v      【output】:%v      \n", p, pathInZigZagTree(p.label))
 	}
 	fmt.Printf("\n\n\n")

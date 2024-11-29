@@ -45,8 +45,8 @@ func Test_Problem885(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 885------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans885, q.para885
-		fmt.Printf("【input】:%v       【output】:%v\n", p, spiralMatrixIII(p.R, p.C, p.r0, p.c0))
+		ans, p := q.ans885, q.para885
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, spiralMatrixIII(p.R, p.C, p.r0, p.c0))
 	}
 	fmt.Printf("\n\n\n")
 }

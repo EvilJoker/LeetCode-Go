@@ -72,8 +72,8 @@ func Test_Problem36(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 36------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans36, q.para36
-		fmt.Printf("【input】:%v       【output】:%v\n", p, isValidSudoku1(p.s))
+		ans, p := q.ans36, q.para36
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isValidSudoku1(p.s))
 	}
 	fmt.Printf("\n\n\n")
 }

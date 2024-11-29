@@ -46,7 +46,7 @@ func Test_Problem1579(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1579------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1579, q.para1579
+		ans, p := q.ans1579, q.para1579
 		fmt.Printf("【input】:%v      【output】:%v      \n", p, maxNumEdgesToRemove(p.n, p.edges))
 	}
 	fmt.Printf("\n\n\n")

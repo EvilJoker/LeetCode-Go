@@ -47,7 +47,7 @@ func Test_Problem257(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 257------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans257, q.para257
+		ans, p := q.ans257, q.para257
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", binaryTreePaths(root))

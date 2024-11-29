@@ -62,7 +62,7 @@ func Test_Problem1123(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1123------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1123, q.para1123
+		ans, p := q.ans1123, q.para1123
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", structures.Tree2ints(lcaDeepestLeaves(root)))

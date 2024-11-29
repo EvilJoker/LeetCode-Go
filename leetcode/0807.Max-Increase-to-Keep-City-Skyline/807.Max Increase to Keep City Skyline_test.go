@@ -38,7 +38,7 @@ func Test_Problem807(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 807------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans807, q.para807
+		ans, p := q.ans807, q.para807
 		fmt.Printf("【input】:%v    【output】:%v\n", p.grid, maxIncreaseKeepingSkyline(p.grid))
 	}
 	fmt.Printf("\n\n\n")

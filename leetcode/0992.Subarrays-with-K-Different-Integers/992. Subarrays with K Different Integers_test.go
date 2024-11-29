@@ -66,8 +66,8 @@ func Test_Problem992(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 992------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans992, q.para992
-		fmt.Printf("【input】:%v       【output】:%v\n", p, subarraysWithKDistinct(p.one, p.k))
+		ans, p := q.ans992, q.para992
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, subarraysWithKDistinct(p.one, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

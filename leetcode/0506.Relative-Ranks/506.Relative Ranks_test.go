@@ -38,7 +38,7 @@ func Test_Problem506(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 506------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans506, q.para506
+		ans, p := q.ans506, q.para506
 		fmt.Printf("【input】:%v    【output】:%v\n", p.score, findRelativeRanks(p.score))
 	}
 	fmt.Printf("\n\n\n")

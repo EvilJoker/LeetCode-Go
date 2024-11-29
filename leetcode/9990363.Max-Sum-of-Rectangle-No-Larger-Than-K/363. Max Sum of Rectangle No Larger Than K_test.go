@@ -51,8 +51,8 @@ func Test_Problem363(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 363------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans363, q.para363
-		fmt.Printf("【input】:%v       【output】:%v\n", p, maxSumSubmatrix(p.one, p.k))
+		ans, p := q.ans363, q.para363
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, maxSumSubmatrix(p.one, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

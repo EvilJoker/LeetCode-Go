@@ -1,1 +1,1 @@
-catagory=array;status=doing;recommend=basic;difficulty=easy;lastupdate=2024-11-20;
+catagory=array;status=done;recommend=basic;difficulty=easy;lastupdate=2024-11-27;alias=两数之和;

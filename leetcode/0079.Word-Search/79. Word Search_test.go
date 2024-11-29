@@ -98,7 +98,7 @@ func Test_Problem79(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 79------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans79, q.para79
+		ans, p := q.ans79, q.para79
 		fmt.Printf("【input】:%v       【output】:%v\n\n\n", p, exist(p.b, p.word))
 	}
 	fmt.Printf("\n\n\n")

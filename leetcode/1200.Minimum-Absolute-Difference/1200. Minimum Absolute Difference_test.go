@@ -45,8 +45,8 @@ func Test_Problem1200(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1200------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1200, q.para1200
-		fmt.Printf("【input】:%v       【output】:%v\n", p, minimumAbsDifference(p.arr))
+		ans, p := q.ans1200, q.para1200
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minimumAbsDifference(p.arr))
 	}
 	fmt.Printf("\n\n\n")
 }

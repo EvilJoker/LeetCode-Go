@@ -65,8 +65,8 @@ func Test_Problem1005(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1005------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1005, q.para1005
-		fmt.Printf("【input】:%v       【output】:%v\n", p, largestSumAfterKNegations(p.one, p.two))
+		ans, p := q.ans1005, q.para1005
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, largestSumAfterKNegations(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

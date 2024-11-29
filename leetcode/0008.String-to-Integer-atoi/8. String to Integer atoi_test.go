@@ -55,7 +55,7 @@ func Test_Problem8(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 8------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans8, q.para8
+		ans, p := q.ans8, q.para8
 		fmt.Printf("【input】:%v    【output】:%v\n", p.one, myAtoi(p.one))
 	}
 	fmt.Printf("\n\n\n")

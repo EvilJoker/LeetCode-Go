@@ -47,7 +47,7 @@ func Test_Problem226(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 226------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans226, q.para226
+		ans, p := q.ans226, q.para226
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", structures.Tree2ints(invertTree(root)))

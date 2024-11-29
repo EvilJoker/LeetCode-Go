@@ -39,8 +39,8 @@ func Test_Problem778(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 778------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans778, q.para778
-		fmt.Printf("【input】:%v       【output】:%v\n", p, swimInWater(p.grid))
+		ans, p := q.ans778, q.para778
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, swimInWater(p.grid))
 	}
 	fmt.Printf("\n\n\n")
 }

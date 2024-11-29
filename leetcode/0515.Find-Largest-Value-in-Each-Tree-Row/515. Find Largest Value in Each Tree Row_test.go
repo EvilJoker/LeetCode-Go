@@ -52,7 +52,7 @@ func Test_Problem515(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 515------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans515, q.para515
+		ans, p := q.ans515, q.para515
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", largestValues(root))

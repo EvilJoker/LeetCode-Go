@@ -42,8 +42,8 @@ func Test_Problem658(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 658------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans658, q.para658
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findClosestElements(p.arr, p.k, p.x))
+		ans, p := q.ans658, q.para658
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findClosestElements(p.arr, p.k, p.x))
 	}
 	fmt.Printf("\n\n\n")
 }

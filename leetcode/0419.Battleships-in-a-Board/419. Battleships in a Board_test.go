@@ -41,7 +41,7 @@ func Test_Problem419(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 419------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans419, q.para419
+		ans, p := q.ans419, q.para419
 		fmt.Printf("【input】:%v       【output】:%v\n", bytesArrayToStringArray(p.one), countBattleships(p.one))
 	}
 	fmt.Printf("\n\n\n")

@@ -38,7 +38,7 @@ func Test_Problem73(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 73------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans73, q.para73
+		ans, p := q.ans73, q.para73
 		fmt.Printf("【input】:%v       ", p)
 		setZeroes(p.matrix)
 		fmt.Printf("【output】:%v\n", p)

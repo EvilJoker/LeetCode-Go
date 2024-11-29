@@ -39,9 +39,9 @@ func Test_Problem863(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 863------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans863, q.para863
+		ans, p := q.ans863, q.para863
 		tree, target := structures.Ints2TreeNode(p.root), structures.Ints2TreeNode(p.target)
-		fmt.Printf("【input】:%v       【output】:%v\n", p, distanceK(tree, target, p.K))
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, distanceK(tree, target, p.K))
 	}
 	fmt.Printf("\n\n\n")
 }

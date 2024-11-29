@@ -41,7 +41,7 @@ func Test_Problem1539(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1539------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1539, q.para1539
+		ans, p := q.ans1539, q.para1539
 		fmt.Printf("【input】:%v      【output】:%v      \n", p, findKthPositive(p.arr, p.k))
 	}
 	fmt.Printf("\n\n\n")

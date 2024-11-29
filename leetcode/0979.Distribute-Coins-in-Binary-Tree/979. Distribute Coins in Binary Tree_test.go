@@ -57,7 +57,7 @@ func Test_Problem979(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 979------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans979, q.para979
+		ans, p := q.ans979, q.para979
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", distributeCoins(root))

@@ -47,7 +47,7 @@ func Test_Problem783(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 783------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans783, q.para783
+		ans, p := q.ans783, q.para783
 		fmt.Printf("【input】:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", minDiffInBST(rootOne))

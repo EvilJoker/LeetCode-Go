@@ -57,7 +57,7 @@ func Test_Problem508(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 508------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans508, q.para508
+		ans, p := q.ans508, q.para508
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", findFrequentTreeSum(root))

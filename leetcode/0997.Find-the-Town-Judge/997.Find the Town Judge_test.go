@@ -44,7 +44,7 @@ func Test_Problem997(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 997------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans997, q.para997
+		ans, p := q.ans997, q.para997
 		fmt.Printf("【input】:%v    【output】:%v\n", p, findJudge(p.n, p.trust))
 	}
 	fmt.Printf("\n\n\n")

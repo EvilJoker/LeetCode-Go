@@ -8,12 +8,14 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/mattn/go-runewidth"
 )
 
 var config = make(map[string]interface{})
 var problems []Problem
 
-const TABLE_WITH = 20
+const TABLE_WITH = 15
 
 func parseConfig() error {
 	file, err := os.Open("config.json")
@@ -78,11 +80,11 @@ func generateMd() error {
 	}
 
 	// 表格标题和数据
-	fmt_str := fmt.Sprintf("|%%-%ds|%%-%ds|%%-%ds|%%-%ds|%%-%ds|%%-%ds|", TABLE_WITH, TABLE_WITH, TABLE_WITH, TABLE_WITH, TABLE_WITH, TABLE_WITH)
+	fmt_str := fmt.Sprintf("|%%-%ds|%%-%ds|%%-%ds|%%-%ds|%%-%ds|%%s|%%-%ds|", TABLE_WITH, TABLE_WITH, TABLE_WITH, TABLE_WITH, TABLE_WITH*2, TABLE_WITH)
 
-	header := fmt.Sprintf(fmt_str, "catagory", "status", "recommend", "difficulty", "name", "lastupdate")
+	header := fmt.Sprintf(fmt_str, "catagory", "status", "recommend", "difficulty", "name", padRight("alias", TABLE_WITH*2), "lastupdate")
 	tmp := strings.Repeat("-", TABLE_WITH)
-	separator := fmt.Sprintf("|%s|%s|%s|%s|%s|%s|", tmp, tmp, tmp, tmp, tmp, tmp)
+	separator := fmt.Sprintf("|%s|%s|%s|%s|%s|%s|%s|", tmp, tmp, tmp, tmp, tmp+tmp, tmp+tmp, tmp)
 
 	// 写入表格头部
 	_, err = writer.WriteString(header + "\n")
@@ -100,7 +102,11 @@ func generateMd() error {
 
 	// 写入表格数据
 	for _, problem := range problems {
-		_, err = fmt.Fprintf(writer, fmt_str+"\n", problem.catagory, problem.status, problem.recommend, problem.difficulty, problem.name, problem.lastupdate)
+		// fmt.Println(problem)
+		// fmt.Println(fmt_str)
+		line := fmt.Sprintf(fmt_str, problem.catagory, problem.status, problem.recommend, problem.difficulty, problem.name, padRight(problem.alias, TABLE_WITH*2), problem.lastupdate)
+		fmt.Println(line)
+		_, err = fmt.Fprintln(writer, line)
 		if err != nil {
 			log.Println("Error writing to file:", err)
 			return err
@@ -111,6 +117,17 @@ func generateMd() error {
 
 	return nil
 
+}
+
+func padRight(s string, width int) string {
+	realWidth := runewidth.StringWidth(s)
+	if realWidth < width {
+		a := s + fmt.Sprintf("%*s", width-realWidth, "")
+		// fmt.Println("--" + a + "--")
+		return a
+	}
+	// fmt.Println("--" + s + "--")
+	return s
 }
 
 func main() {

@@ -45,8 +45,8 @@ func Test_Problem674(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 674------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans674, q.para674
-		fmt.Printf("【input】:%v       【output】:%v\n", p, findLengthOfLCIS(p.nums))
+		ans, p := q.ans674, q.para674
+		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findLengthOfLCIS(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

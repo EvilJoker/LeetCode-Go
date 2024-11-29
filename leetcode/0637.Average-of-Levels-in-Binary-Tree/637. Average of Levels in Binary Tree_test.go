@@ -47,7 +47,7 @@ func Test_Problem637(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 637------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans637, q.para637
+		ans, p := q.ans637, q.para637
 		fmt.Printf("【input】:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 		fmt.Printf("【output】:%v      \n", averageOfLevels(root))

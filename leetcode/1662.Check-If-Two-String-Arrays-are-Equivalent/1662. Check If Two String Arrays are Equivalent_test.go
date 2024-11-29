@@ -46,7 +46,7 @@ func Test_Problem1662(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 1662------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1662, q.para1662
+		ans, p := q.ans1662, q.para1662
 		fmt.Printf("【input】:%v      【output】:%v      \n", p, arrayStringsAreEqual(p.word1, p.word2))
 	}
 	fmt.Printf("\n\n\n")

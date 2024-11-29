@@ -43,7 +43,7 @@ func Test_Problem14(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 14------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans14, q.para14
+		ans, p := q.ans14, q.para14
 		fmt.Printf("【input】:%v    【output】:%v\n", p.strs, longestCommonPrefix(p.strs))
 	}
 	fmt.Printf("\n\n\n")

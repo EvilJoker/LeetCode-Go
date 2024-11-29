@@ -38,7 +38,7 @@ func Test_Problem504(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 504------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans504, q.para504
+		ans, p := q.ans504, q.para504
 		fmt.Printf("【input】:%v      ", p.num)
 		fmt.Printf("【output】:%v      \n", convertToBase7(p.num))
 	}
