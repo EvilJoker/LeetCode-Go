@@ -7,15 +7,13 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 
 	"github.com/mattn/go-runewidth"
 )
 
 var config = make(map[string]interface{})
-var problems []Problem
-
-const TABLE_WITH = 15
 
 func parseConfig() error {
 	file, err := os.Open("config.json")
@@ -34,34 +32,35 @@ func parseConfig() error {
 	return nil
 }
 
-func getProblemsWithLabel() error {
-	dirPath := config["leetcode_dir"].(string)
+func getProblemsWithLabel(dirPath string) ([]Problem, error) {
 
+	var problems []Problem
 	entries, err := os.ReadDir(dirPath)
 	if err != nil {
 		log.Println("Error reading directory:", dirPath, err)
-		return err
+		return nil, err
 	}
 
 	for _, entry := range entries {
 		fullPath := filepath.Join(dirPath, entry.Name())
+		// fmt.Println(fullPath)
 		if entry.IsDir() {
 			labelPath := filepath.Join(fullPath, "label.txt")
 			if data, err := os.ReadFile(labelPath); err != nil {
 				// 忽略没有 label.txt 的目录
 				continue
 			} else {
-				problems = append(problems, *newProblem(entry.Name(), string(data)))
+				problems = append(problems, *newProblem(entry.Name(), fullPath, string(data)))
 			}
 
 		}
 	}
-
-	return nil
+	sortProblem(problems)
+	return problems, nil
 
 }
+func generateMd(problemsMap map[string]([]Problem)) error {
 
-func generateMd() error {
 	outputPath := filepath.Join(config["output_dir"].(string), config["output_file"].(string))
 	file, err := os.Create(outputPath)
 	if err != nil {
@@ -72,62 +71,58 @@ func generateMd() error {
 
 	writer := bufio.NewWriter(file)
 	defer writer.Flush()
-
-	_, err = writer.WriteString("# 进展\n\n")
-	if err != nil {
-		log.Println("Error writing to file:", err)
-		return err
+	// 保证顺序
+	keys := make([]string, 0, len(problemsMap))
+	for k := range problemsMap {
+		keys = append(keys, k)
 	}
+	sort.Strings(keys)
 
-	// 表格标题和数据
-	fmt_str := fmt.Sprintf("|%%-%ds|%%-%ds|%%-%ds|%%-%ds|%%-%ds|%%s|%%-%ds|", TABLE_WITH, TABLE_WITH, TABLE_WITH, TABLE_WITH, TABLE_WITH*2, TABLE_WITH)
+	for _, key := range keys {
+		problems := problemsMap[key]
 
-	header := fmt.Sprintf(fmt_str, "catagory", "status", "recommend", "difficulty", "name", padRight("alias", TABLE_WITH*2), "lastupdate")
-	tmp := strings.Repeat("-", TABLE_WITH)
-	separator := fmt.Sprintf("|%s|%s|%s|%s|%s|%s|%s|", tmp, tmp, tmp, tmp, tmp+tmp, tmp+tmp, tmp)
+		fmt.Fprintf(writer, "# "+key+"\n\n")
 
-	// 写入表格头部
-	_, err = writer.WriteString(header + "\n")
-	if err != nil {
-		log.Println("Error writing to file:", err)
-		return err
-	}
+		header := []string{"catagory", "status", "recommend", "difficulty", "name", "alias", "lastupdate"}
 
-	// 写入表格分隔符
-	_, err = writer.WriteString(separator + "\n")
-	if err != nil {
-		log.Println("Error writing to file:", err)
-		return err
-	}
+		// 定义每列宽度
+		columnWidths := []int{12, 10, 12, 12, 30, 30, 15}
 
-	// 写入表格数据
-	for _, problem := range problems {
-		// fmt.Println(problem)
-		// fmt.Println(fmt_str)
-		line := fmt.Sprintf(fmt_str, problem.catagory, problem.status, problem.recommend, problem.difficulty, problem.name, padRight(problem.alias, TABLE_WITH*2), problem.lastupdate)
-		fmt.Println(line)
-		_, err = fmt.Fprintln(writer, line)
-		if err != nil {
-			log.Println("Error writing to file:", err)
-			return err
+		// 打印表头
+		for i, col := range header {
+			fmt.Fprint(writer, "| "+padRight(col, columnWidths[i]))
+		}
+		fmt.Fprintln(writer, "|")
+
+		// 打印分隔符
+		for _, width := range columnWidths {
+			fmt.Fprint(writer, "| "+strings.Repeat("-", width))
+		}
+		fmt.Fprintln(writer, "|")
+
+		// 打印数据
+		for _, row := range problems {
+
+			line_show := fmt.Sprintf("|%s|%s|%s|%s|%s|%s|%s|", padRight(row.catagory, columnWidths[0]), padRight(row.status, columnWidths[1]), padRight(row.recommend, columnWidths[2]), padRight(row.difficulty, columnWidths[3]),
+				padRight(row.name, columnWidths[4]), padRight(row.alias, columnWidths[5]), padRight(row.lastupdate, columnWidths[6]))
+			fmt.Println(line_show)
+			md_address := "[" + row.name + "](" + row.path + ")"
+			line_md := fmt.Sprintf("|%s|%s|%s|%s|%s|%s|%s|", padRight(row.catagory, columnWidths[0]), padRight(row.status, columnWidths[1]), padRight(row.recommend, columnWidths[2]), padRight(row.difficulty, columnWidths[3]),
+				md_address, padRight(row.alias, columnWidths[5]), padRight(row.lastupdate, columnWidths[6]))
+			fmt.Fprintln(writer, line_md)
 		}
 	}
-
-	log.Printf("Markdown file %s generated successfully!\n", outputPath)
-
 	return nil
-
 }
 
-func padRight(s string, width int) string {
-	realWidth := runewidth.StringWidth(s)
-	if realWidth < width {
-		a := s + fmt.Sprintf("%*s", width-realWidth, "")
-		// fmt.Println("--" + a + "--")
-		return a
+// 根据指定宽度填充空格，左对齐
+func padRight(input string, totalWidth int) string {
+	currentWidth := runewidth.StringWidth(input)
+	// fmt.Println(currentWidth)
+	if currentWidth >= totalWidth {
+		return input
 	}
-	// fmt.Println("--" + s + "--")
-	return s
+	return input + strings.Repeat(" ", totalWidth-currentWidth)
 }
 
 func main() {
@@ -138,14 +133,21 @@ func main() {
 		panic("Error parsing config")
 	}
 
-	err = getProblemsWithLabel()
+	structProblems, err := getProblemsWithLabel("../../datastruct")
+	if err != nil {
+		panic("Error finding code dir")
+	}
+	algoProblems, err := getProblemsWithLabel("../../algorithm")
+	if err != nil {
+		panic("Error finding code dir")
+	}
+	codeProblems, err := getProblemsWithLabel("../../leetcode")
 	if err != nil {
 		panic("Error finding code dir")
 	}
 
-	sortProblem(problems)
-
-	fmt.Println(problems)
-
-	generateMd()
+	generateMd(map[string]([]Problem){
+		"数据结构": structProblems,
+		"算法":   algoProblems,
+		"题目":   codeProblems})
 }

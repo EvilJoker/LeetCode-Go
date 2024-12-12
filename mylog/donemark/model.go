@@ -13,10 +13,15 @@ type Problem struct {
 	recommend  string // 1~3
 	difficulty string
 	lastupdate string //2024-11-20
+	path       string
 }
 
-func newProblem(name string, desc string) *Problem {
-	result := Problem{name: name}
+func newProblem(name string, path string, desc string) *Problem {
+
+	if len(name) > 30 {
+		name = name[:30]
+	}
+	result := Problem{name: name, path: path}
 
 	if desc == "" {
 		return &result
@@ -53,10 +58,43 @@ func newProblem(name string, desc string) *Problem {
 }
 func sortProblem(problems []Problem) {
 	pCmp := func(a, b Problem) int {
+
+		if a.catagory != b.catagory {
+			return strings.Compare(a.catagory, b.catagory)
+		}
+
+		if a.status != b.status {
+			return strings.Compare(a.status, b.status)
+		}
+
+		if a.recommend != b.recommend {
+			return strings.Compare(a.recommend, b.recommend)
+		}
+
+		if a.difficulty != b.difficulty {
+			return strings.Compare(a.difficulty, b.difficulty)
+		}
+
+		return strings.Compare(a.name, b.name)
+	}
+
+	slices.SortFunc(problems, pCmp)
+
+}
+
+func oldsortProblem(problems []Problem) {
+	pCmp := func(a, b Problem) int {
 		c1 := NewCatagory(a.catagory)
 		c2 := NewCatagory(b.catagory)
+
 		if c1 != c2 {
-			return int(c1 - c2)
+
+			if c1 == CATAGORY_UNKONWN || c2 == CATAGORY_UNKONWN {
+				// 按照名称排序，需要手动维护，比如 1.sort 2.tree 3.list
+				return strings.Compare(a.catagory, b.catagory)
+			} else {
+				return int(c1 - c2)
+			}
 		}
 
 		s1 := NewStatus(a.status)

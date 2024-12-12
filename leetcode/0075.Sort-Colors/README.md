@@ -8,6 +8,11 @@ Here, we will use the integers 0, 1, and 2 to represent the color red, white, an
 
 Note: You are not suppose to use the library's sort function for this problem.
 
+给定一个包含 n 个红色、白色或蓝色对象的数组，将它们就地排序，以便相同颜色的对象相邻，颜色顺序为红色、白色和蓝色。
+
+在这里，我们将使用整数 0、1 和 2 分别表示红色、白色和蓝色。
+
+注意：您不应该使用库的排序函数来解决此问题。
 Example 1:  
 
 ```

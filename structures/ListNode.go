@@ -62,21 +62,24 @@ func (l *ListNode) GetNodeWith(val int) *ListNode {
 
 // Ints2ListWithCycle returns a list whose tail point to pos-indexed node
 // head's index is 0
-// if pos = -1, no cycle
+// if pos = -1, no cycle // 构造有环的 列表，pos 是环的尾巴
 func Ints2ListWithCycle(nums []int, pos int) *ListNode {
 	head := Ints2List(nums)
 	if pos == -1 {
 		return head
 	}
+	// 得到环的交点
 	c := head
 	for pos > 0 {
 		c = c.Next
 		pos--
 	}
+	// 找到单链表的尾巴节点
 	tail := c
 	for tail.Next != nil {
 		tail = tail.Next
 	}
+	// 尾巴节点指向头结点得到环
 	tail.Next = c
 	return head
 }
