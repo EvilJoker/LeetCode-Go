@@ -1,1 +1,1 @@
-catagory=01单链表;status=01plan;recommend=basic;difficulty=easy;lastupdate=2024-11-29;alias=链表的概念;
+catagory=02哈希;status=01done;recommend=01basic;difficulty=01easy;lastupdate=2024-11-29;alias=none;

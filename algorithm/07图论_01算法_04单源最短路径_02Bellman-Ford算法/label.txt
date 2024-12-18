@@ -1,1 +1,0 @@
-catagory=07图论;status=01plan;recommend=basic;difficulty=easy;lastupdate=2024-11-29;alias=冒泡排序(左右交换);

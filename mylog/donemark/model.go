@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"slices"
+	"strconv"
 	"strings"
 )
 
@@ -18,8 +20,8 @@ type Problem struct {
 
 func newProblem(name string, path string, desc string) *Problem {
 
-	if len(name) > 30 {
-		name = name[:30]
+	if len(name) > 50 {
+		name = name[:50]
 	}
 	result := Problem{name: name, path: path}
 
@@ -82,167 +84,46 @@ func sortProblem(problems []Problem) {
 
 }
 
-func oldsortProblem(problems []Problem) {
-	pCmp := func(a, b Problem) int {
-		c1 := NewCatagory(a.catagory)
-		c2 := NewCatagory(b.catagory)
+func (p *Problem) ColorRender() {
+	// 标记  status
+	if strings.HasPrefix(p.status, "01") {
+		p.recommend = colorRender(p.recommend)
+		p.difficulty = colorRender(p.difficulty)
+	}
+	p.status = colorRender(p.status)
 
-		if c1 != c2 {
-
-			if c1 == CATAGORY_UNKONWN || c2 == CATAGORY_UNKONWN {
-				// 按照名称排序，需要手动维护，比如 1.sort 2.tree 3.list
-				return strings.Compare(a.catagory, b.catagory)
-			} else {
-				return int(c1 - c2)
-			}
+	if len(p.catagory) > 1 {
+		num, ok := strconv.Atoi(p.catagory[:2])
+		if ok != nil {
+			return
 		}
-
-		s1 := NewStatus(a.status)
-		s2 := NewStatus(b.status)
-
-		if s1 != s2 {
-			return int(s1 - s2)
+		if num%2 == 0 {
+			p.catagory = fmt.Sprintf("<span style=\"color:#FEFFA7;\">%s</span>", p.catagory)
+		} else {
+			p.catagory = fmt.Sprintf("<span style=\"color:#D4F6FF;\">%s</span>", p.catagory)
 		}
-
-		r1 := NewRecommend(a.recommend)
-		r2 := NewRecommend(b.recommend)
-		if r1 != r2 {
-			return int(r1 - r2)
-		}
-
-		d1 := NewDifficulty(a.difficulty)
-		d2 := NewDifficulty(b.difficulty)
-
-		if d1 != d2 {
-			return int(d1 - d2)
-		}
-
-		return strings.Compare(a.name, b.name)
 
 	}
 
-	slices.SortFunc(problems, pCmp)
-
 }
 
-// 定义状态枚举
-type Status int
+func colorRender(input string) string {
+	switch {
+	case strings.HasPrefix(input, "01"):
 
-const (
-	STATUS_PLAN Status = iota
-	STATUS_DOING
-	STATUS_DONE
-	STATUS_UNKONWN
-)
+		input = fmt.Sprintf("<span style=\"color:#00FF9C;\">%s</span>", input)
+	case strings.HasPrefix(input, "02"):
 
-var statusMap = map[Status]string{
-	STATUS_PLAN:    "plan",
-	STATUS_DOING:   "doing",
-	STATUS_DONE:    "done",
-	STATUS_UNKONWN: "unknown",
-}
+		input = fmt.Sprintf("<span style=\"color:#FEEE91;\">%s</span>", input)
+	case strings.HasPrefix(input, "03"):
 
-func (s Status) String() string {
-	return statusMap[s]
-}
+		input = fmt.Sprintf("<span style=\"color:#FF9D3D;\">%s</span>", input)
+	case strings.HasPrefix(input, "04"):
 
-func NewStatus(s string) Status {
-	for k, v := range statusMap {
-		if v == s {
-			return k
-		}
+		input = fmt.Sprintf("<span style=\"color:#FF7D29;\">%s</span>", input)
+	case strings.HasPrefix(input, "05"):
+
+		input = fmt.Sprintf("<span style=\"color:#FA4032;\">%s</span>", input)
 	}
-	return STATUS_UNKONWN
-}
-
-// 定义 catagory 枚举
-type Catagory int
-
-const (
-	CATAGORY_ARRAY Catagory = iota
-	CATAGORY_STRING
-	CATAGORY_TREE
-	CATAGORY_UNKONWN
-)
-
-var catagoryMap = map[Catagory]string{
-	CATAGORY_ARRAY:   "array",
-	CATAGORY_STRING:  "string",
-	CATAGORY_TREE:    "tree",
-	CATAGORY_UNKONWN: "unkonwn",
-}
-
-func (c Catagory) String() string {
-	return catagoryMap[c]
-}
-
-func NewCatagory(s string) Catagory {
-	for k, v := range catagoryMap {
-		if v == s {
-			return k
-		}
-	}
-	return CATAGORY_UNKONWN
-}
-
-// 定义 difficulty 枚举
-type Difficulty int
-
-const (
-	DIFFICULTY_EASY Difficulty = iota
-	DIFFICULTY_MID
-	DIFFICULTY_HARD
-	DIFFICULTY_UNKONWN
-)
-
-var difficultyMap = map[Difficulty]string{
-	DIFFICULTY_EASY:    "easy",
-	DIFFICULTY_MID:     "mid",
-	DIFFICULTY_HARD:    "hard",
-	DIFFICULTY_UNKONWN: "unkonwn",
-}
-
-func (d Difficulty) String() string {
-	return difficultyMap[d]
-}
-
-func NewDifficulty(s string) Difficulty {
-	for k, v := range difficultyMap {
-		if v == s {
-			return k
-		}
-	}
-	return DIFFICULTY_UNKONWN
-}
-
-// 定义 Recommend  掌握程度
-type Recommend int
-
-const (
-	RECOMMEND_BASIC     Recommend = iota // 基础内容，简单必要
-	RECOMMEND_NEED                       // 必要但是全面，
-	RECOMMEND_SKILL                      // 需要熟练掌握
-	RECOMMEND_CHALLENGE                  // 挑战
-	RECOMMEND_UNKONWN
-)
-
-var recommendMap = map[Recommend]string{
-	RECOMMEND_BASIC:     "basic",
-	RECOMMEND_NEED:      "need",
-	RECOMMEND_SKILL:     "skill",
-	RECOMMEND_CHALLENGE: "challenge",
-	RECOMMEND_UNKONWN:   "unkonwn",
-}
-
-func (r Recommend) String() string {
-	return recommendMap[r]
-}
-
-func NewRecommend(s string) Recommend {
-	for k, v := range recommendMap {
-		if v == s {
-			return k
-		}
-	}
-	return RECOMMEND_UNKONWN
+	return input
 }

@@ -1,1 +1,0 @@
-catagory=02 list;status=01plan;recommend=basic;difficulty=easy;lastupdate=2024-11-29;alias=快慢指针(链表是否有环,给出起点)

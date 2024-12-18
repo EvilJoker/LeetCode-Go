@@ -1,23 +1,44 @@
 # 定义
 
-链表是一种线性数据结构，由一系列节点（Node）按顺序连接而成，每个节点包含两部分：
+哈希表: 是一种通过散列函数将数据的键映射到数组下标来实现快速数据查找的数据结构。
 
-数据域（Data）：存储节点的数据。
-指针域（Pointer/Next）：存储指向下一个节点的引用（地址）。
-链表的节点通过指针连接，形成一种动态的数据结构，便于插入和删除操作。
+散列函数: 是将键映射为固定范围整数（数组索引）的函数，用于高效定位存储位置。
 
-## 分类
-
-1. 单链表
-
-2. 双向链表
-
-3. 循环链表
+## 示例
 
 ```golang
-// 定义单链表节点结构
-type ListNode struct {
-    Value int        // 数据域
-    Next  *ListNode  // 指针域
+package main
+
+import (
+    "fmt"
+    "hash/fnv"
+)
+
+// 定义一个简单的哈希函数
+func hash(key string, size int) int {
+    h := fnv.New32a()
+    h.Write([]byte(key))
+    return int(h.Sum32()) % size
+}
+
+func main() {
+    // 哈希表大小
+    size := 10
+
+    // 示例键值
+    keys := []string{"apple", "banana", "cherry"}
+
+    // 打印每个键的哈希值
+    for _, key := range keys {
+        index := hash(key, size)
+        fmt.Printf("Key: %s, Hash Index: %d\n", key, index)
+    }
 }
 ```
+
+## 特点
+
++ 快速查找: 时间复杂度接近 O(1)，适合快速检索。
++ 散列函数设计影响性能: 需均匀分布避免冲突。
++ 冲突处理: 常见方法包括链地址法和开放地址法。
++ 哈希表扩容: 当负载因子过高时，需要动态扩容以维持性能。

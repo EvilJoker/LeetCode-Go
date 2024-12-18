@@ -1,0 +1,1 @@
+catagory=02递归分治;status=01done;recommend=04challenge;difficulty=03hard;lastupdate=2024-12-17;alias=数学公式多项式,高级;

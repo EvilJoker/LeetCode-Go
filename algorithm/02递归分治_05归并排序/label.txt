@@ -1,0 +1,1 @@
+catagory=02递归分治;status=01done;recommend=01basic;difficulty=01easy;lastupdate=2024-12-17;alias=重复：01排序_06归并排序;

@@ -1,23 +1,53 @@
-# 定义
+# 双向链表
 
-链表是一种线性数据结构，由一系列节点（Node）按顺序连接而成，每个节点包含两部分：
+定义: 每个节点包含数据域、指向前一个节点的指针（prev）、指向下一个节点的指针（next）。
 
-数据域（Data）：存储节点的数据。
-指针域（Pointer/Next）：存储指向下一个节点的引用（地址）。
-链表的节点通过指针连接，形成一种动态的数据结构，便于插入和删除操作。
+## 结构
 
-## 分类
+```go
 
-1. 单链表
+package main
 
-2. 双向链表
+import "fmt"
 
-3. 循环链表
+// 定义单链表节点
+package main
 
-```golang
-// 定义单链表节点结构
-type ListNode struct {
-    Value int        // 数据域
-    Next  *ListNode  // 指针域
+import "fmt"
+
+// 定义双向链表节点
+type DNode struct {
+    value int
+    prev  *DNode
+    next  *DNode
 }
+
+// 打印双向链表
+func printDList(head *DNode) {
+    for head != nil {
+        fmt.Printf("%d <-> ", head.value)
+        head = head.next
+    }
+    fmt.Println("nil")
+}
+
+func main() {
+    // 创建双向链表 1 <-> 2 <-> 3
+    node1 := &DNode{value: 1}
+    node2 := &DNode{value: 2}
+    node3 := &DNode{value: 3}
+
+    node1.next = node2
+    node2.prev = node1
+    node2.next = node3
+    node3.prev = node2
+
+    printDList(node1)
+}
+
 ```
+
+特点:
+可以在双向（前后）两种方向遍历链表，灵活性更强。
+插入和删除节点更高效，因为可以直接访问前驱节点（无需从头遍历找到）。
+每个节点需要额外的 prev 指针，占用更多空间。

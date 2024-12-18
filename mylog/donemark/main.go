@@ -86,7 +86,7 @@ func generateMd(problemsMap map[string]([]Problem)) error {
 		header := []string{"catagory", "status", "recommend", "difficulty", "name", "alias", "lastupdate"}
 
 		// 定义每列宽度
-		columnWidths := []int{12, 10, 12, 12, 30, 30, 15}
+		columnWidths := []int{12, 10, 12, 12, 50, 30, 15}
 
 		// 打印表头
 		for i, col := range header {
@@ -102,6 +102,8 @@ func generateMd(problemsMap map[string]([]Problem)) error {
 
 		// 打印数据
 		for _, row := range problems {
+
+			row.ColorRender()
 
 			line_show := fmt.Sprintf("|%s|%s|%s|%s|%s|%s|%s|", padRight(row.catagory, columnWidths[0]), padRight(row.status, columnWidths[1]), padRight(row.recommend, columnWidths[2]), padRight(row.difficulty, columnWidths[3]),
 				padRight(row.name, columnWidths[4]), padRight(row.alias, columnWidths[5]), padRight(row.lastupdate, columnWidths[6]))
@@ -141,13 +143,18 @@ func main() {
 	if err != nil {
 		panic("Error finding code dir")
 	}
+	specProblems, err := getProblemsWithLabel("../../spical")
+	if err != nil {
+		panic("Error finding code dir")
+	}
 	codeProblems, err := getProblemsWithLabel("../../leetcode")
 	if err != nil {
 		panic("Error finding code dir")
 	}
 
 	generateMd(map[string]([]Problem){
-		"数据结构": structProblems,
-		"算法":   algoProblems,
-		"题目":   codeProblems})
+		"01数据结构": structProblems,
+		"02算法":   algoProblems,
+		"03专题":   specProblems,
+		"04题目":   codeProblems})
 }

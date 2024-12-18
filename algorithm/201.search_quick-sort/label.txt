@@ -1,1 +1,0 @@
-catagory=01 sort;status=01plan;recommend=basic;difficulty=easy;lastupdate=2024-11-29;alias=快排(分治法，分割大小数组);

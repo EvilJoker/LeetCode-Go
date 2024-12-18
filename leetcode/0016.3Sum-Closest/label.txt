@@ -1,1 +1,1 @@
-catagory=array;status=01plan;recommend=skill;difficulty=mid;lastupdate=2024-11-28;alias=三数之和最接近目标;
+catagory=array;status=03plan;recommend=skill;difficulty=mid;lastupdate=2024-11-28;alias=三数之和最接近目标;

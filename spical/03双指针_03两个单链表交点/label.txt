@@ -1,0 +1,1 @@
+catagory=03双指针;status=01done;recommend=01basic;difficulty=01easy;lastupdate=2024-11-29;alias=快慢指针(两个链表的交点)

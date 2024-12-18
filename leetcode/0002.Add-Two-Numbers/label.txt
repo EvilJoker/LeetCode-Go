@@ -1,1 +1,1 @@
-catagory=02list;status=01plan;recommend=need;difficulty=easy;lastupdate=2024-11-28;alias=逆序链表相加;
+catagory=02list;status=03plan;recommend=need;difficulty=01easy;lastupdate=2024-11-28;alias=逆序链表相加;

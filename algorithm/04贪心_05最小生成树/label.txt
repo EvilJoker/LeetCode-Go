@@ -1,1 +1,1 @@
-catagory=04贪心;status=01plan;recommend=basic;difficulty=easy;lastupdate=2024-11-29;alias=冒泡排序(左右交换);
+catagory=04贪心;status=03plan;recommend=09basic;difficulty=01easy;lastupdate=2024-11-29;alias=冒泡排序(左右交换);
