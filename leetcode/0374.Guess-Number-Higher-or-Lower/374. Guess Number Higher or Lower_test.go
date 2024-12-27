@@ -52,7 +52,8 @@ func Test_Problem374(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans374, q.para374
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, guessNumber(p.n))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", guessNumber(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

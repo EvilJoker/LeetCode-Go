@@ -52,8 +52,8 @@ func Test_Problem1437(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1437, q.para1437
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", kLengthApart(p.nums, p.k))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", kLengthApart(p.nums, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

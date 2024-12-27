@@ -42,7 +42,8 @@ func Test_Problem762(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans762, q.para762
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, countPrimeSetBits(p.l, p.r))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", countPrimeSetBits(p.l, p.r))
 	}
 	fmt.Printf("\n\n\n")
 }

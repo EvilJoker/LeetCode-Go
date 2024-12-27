@@ -46,7 +46,8 @@ func Test_Problem674(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans674, q.para674
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findLengthOfLCIS(p.nums))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findLengthOfLCIS(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

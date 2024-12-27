@@ -49,18 +49,18 @@ func Constructor(capacity int) LRUCache {
 
 ```go
 type Element struct {
-	// Next and previous pointers in the doubly-linked list of elements.
-	// To simplify the implementation, internally a list l is implemented
-	// as a ring, such that &l.root is both the next element of the last
-	// list element (l.Back()) and the previous element of the first list
-	// element (l.Front()).
-	next, prev *Element
+    // Next and previous pointers in the doubly-linked list of elements.
+    // To simplify the implementation, internally a list l is implemented
+    // as a ring, such that &l.root is both the next element of the last
+    // list element (l.Back()) and the previous element of the first list
+    // element (l.Front()).
+    next, prev *Element
 
-	// The list to which this element belongs.
-	list *List
+    // The list to which this element belongs.
+    list *List
 
-	// The value stored with this element.
-	Value interface{}
+    // The value stored with this element.
+    Value interface{}
 }
 ```
 
@@ -72,11 +72,11 @@ LRUCache 的 Get 操作很简单，在 map 中直接读取双向链表的结点�
 
 ```go 
 func (c *LRUCache) Get(key int) int {
-	if el, ok := c.Keys[key]; ok {
-		c.List.MoveToFront(el)
-		return el.Value.(pair).V
-	}
-	return -1
+    if el, ok := c.Keys[key]; ok {
+        c.List.MoveToFront(el)
+        return el.Value.(pair).V
+    }
+    return -1
 }
 ```
 
@@ -84,18 +84,18 @@ LRUCache 的 Put 操作也不难。先查询 map 中是否存在 key，如果存
 
 ```go
 func (c *LRUCache) Put(key int, value int) {
-	if el, ok := c.Keys[key]; ok {
-		el.Value = pair{K: key, V: value}
-		c.List.MoveToFront(el)
-	} else {
-		el := c.List.PushFront(pair{K: key, V: value})
-		c.Keys[key] = el
-	}
-	if c.List.Len() > c.Cap {
-		el := c.List.Back()
-		c.List.Remove(el)
-		delete(c.Keys, el.Value.(pair).K)
-	}
+    if el, ok := c.Keys[key]; ok {
+        el.Value = pair{K: key, V: value}
+        c.List.MoveToFront(el)
+    } else {
+        el := c.List.PushFront(pair{K: key, V: value})
+        c.Keys[key] = el
+    }
+    if c.List.Len() > c.Cap {
+        el := c.List.Back()
+        c.List.Remove(el)
+        delete(c.Keys, el.Value.(pair).K)
+    }
 }
 
 ```
@@ -116,76 +116,76 @@ func (c *LRUCache) Put(key int, value int) {
 ```go
 
 type LRUCache struct {
-	head, tail *Node
-	keys       map[int]*Node
-	capacity   int
+    head, tail *Node
+    keys       map[int]*Node
+    capacity   int
 }
 
 type Node struct {
-	key, val   int
-	prev, next *Node
+    key, val   int
+    prev, next *Node
 }
 
 func ConstructorLRU(capacity int) LRUCache {
-	return LRUCache{keys: make(map[int]*Node), capacity: capacity}
+    return LRUCache{keys: make(map[int]*Node), capacity: capacity}
 }
 
 func (this *LRUCache) Get(key int) int {
-	if node, ok := this.keys[key]; ok {
-		this.Remove(node)
-		this.Add(node)
-		return node.val
-	}
-	return -1
+    if node, ok := this.keys[key]; ok {
+        this.Remove(node)
+        this.Add(node)
+        return node.val
+    }
+    return -1
 }
 
 func (this *LRUCache) Put(key int, value int) {
-	if node, ok := this.keys[key]; ok {
-		node.val = value
-		this.Remove(node)
-		this.Add(node)
-		return
-	} else {
-		node = &Node{key: key, val: value}
-		this.keys[key] = node
-		this.Add(node)
-	}
-	if len(this.keys) > this.capacity {
-		delete(this.keys, this.tail.key)
-		this.Remove(this.tail)
-	}
+    if node, ok := this.keys[key]; ok {
+        node.val = value
+        this.Remove(node)
+        this.Add(node)
+        return
+    } else {
+        node = &Node{key: key, val: value}
+        this.keys[key] = node
+        this.Add(node)
+    }
+    if len(this.keys) > this.capacity {
+        delete(this.keys, this.tail.key)
+        this.Remove(this.tail)
+    }
 }
 
 func (this *LRUCache) Add(node *Node) {
-	node.prev = nil
-	node.next = this.head
-	if this.head != nil {
-		this.head.prev = node
-	}
-	this.head = node
-	if this.tail == nil {
-		this.tail = node
-		this.tail.next = nil
-	}
+    node.prev = nil
+    node.next = this.head
+    if this.head != nil {
+        this.head.prev = node
+    }
+    this.head = node
+    if this.tail == nil {
+        this.tail = node
+        this.tail.next = nil
+    }
 }
 
 func (this *LRUCache) Remove(node *Node) {
-	if node == this.head {
-		this.head = node.next
-		if node.next != nil {
-			node.next.prev = nil
-		}
-		node.next = nil
-		return
-	}
-	if node == this.tail {
-		this.tail = node.prev
-		node.prev.next = nil
-		node.prev = nil
-		return
-	}
-	node.prev.next = node.next
-	node.next.prev = node.prev
+    if node == this.head {
+        this.head = node.next
+        if node.next != nil {
+            node.next.prev = nil
+        }
+        node.next = nil
+        return
+    }
+    if node == this.tail {
+        this.tail = node.prev
+        node.prev.next = nil
+        node.prev = nil
+        return
+    }
+    node.prev.next = node.next
+    node.next.prev = node.prev
 }
 
 ```
@@ -201,73 +201,73 @@ func (this *LRUCache) Remove(node *Node) {
 
 ```go
 type LRUCache struct {
-	head, tail *Node
-	Keys       map[int]*Node
-	Cap        int
+    head, tail *Node
+    Keys       map[int]*Node
+    Cap        int
 }
 
 type Node struct {
-	Key, Val   int
-	Prev, Next *Node
+    Key, Val   int
+    Prev, Next *Node
 }
 
 func Constructor(capacity int) LRUCache {
-	return LRUCache{Keys: make(map[int]*Node), Cap: capacity}
+    return LRUCache{Keys: make(map[int]*Node), Cap: capacity}
 }
 
 func (this *LRUCache) Get(key int) int {
-	if node, ok := this.Keys[key]; ok {
-		this.Remove(node)
-		this.Add(node)
-		return node.Val
-	}
-	return -1
+    if node, ok := this.Keys[key]; ok {
+        this.Remove(node)
+        this.Add(node)
+        return node.Val
+    }
+    return -1
 }
 
 func (this *LRUCache) Put(key int, value int) {
-	if node, ok := this.Keys[key]; ok {
-		node.Val = value
-		this.Remove(node)
-		this.Add(node)
-		return
-	} else {
-		node = &Node{Key: key, Val: value}
-		this.Keys[key] = node
-		this.Add(node)
-	}
-	if len(this.Keys) > this.Cap {
-		delete(this.Keys, this.tail.Key)
-		this.Remove(this.tail)
-	}
+    if node, ok := this.Keys[key]; ok {
+        node.Val = value
+        this.Remove(node)
+        this.Add(node)
+        return
+    } else {
+        node = &Node{Key: key, Val: value}
+        this.Keys[key] = node
+        this.Add(node)
+    }
+    if len(this.Keys) > this.Cap {
+        delete(this.Keys, this.tail.Key)
+        this.Remove(this.tail)
+    }
 }
 
 func (this *LRUCache) Add(node *Node) {
-	node.Prev = nil
-	node.Next = this.head
-	if this.head != nil {
-		this.head.Prev = node
-	}
-	this.head = node
-	if this.tail == nil {
-		this.tail = node
-		this.tail.Next = nil
-	}
+    node.Prev = nil
+    node.Next = this.head
+    if this.head != nil {
+        this.head.Prev = node
+    }
+    this.head = node
+    if this.tail == nil {
+        this.tail = node
+        this.tail.Next = nil
+    }
 }
 
 func (this *LRUCache) Remove(node *Node) {
-	if node == this.head {
-		this.head = node.Next
-		node.Next = nil
-		return
-	}
-	if node == this.tail {
-		this.tail = node.Prev
-		node.Prev.Next = nil
-		node.Prev = nil
-		return
-	}
-	node.Prev.Next = node.Next
-	node.Next.Prev = node.Prev
+    if node == this.head {
+        this.head = node.Next
+        node.Next = nil
+        return
+    }
+    if node == this.tail {
+        this.tail = node.Prev
+        node.Prev.Next = nil
+        node.Prev = nil
+        return
+    }
+    node.Prev.Next = node.Next
+    node.Next.Prev = node.Prev
 }
 
 ```

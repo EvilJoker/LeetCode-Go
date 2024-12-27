@@ -57,7 +57,8 @@ func Test_Problem524(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans524, q.para524
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findLongestWord(p.s, p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findLongestWord(p.s, p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

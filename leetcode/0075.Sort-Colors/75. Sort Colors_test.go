@@ -51,9 +51,9 @@ func Test_Problem75(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans75, q.para75
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		sortColors(p.one)
-		fmt.Printf("【output】:%v      \n", p)
+		fmt.Printf("[output]:%v      \n", p)
 	}
 	fmt.Printf("\n\n\n")
 }

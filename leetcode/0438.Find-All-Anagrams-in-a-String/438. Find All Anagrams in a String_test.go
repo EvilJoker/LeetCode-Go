@@ -52,7 +52,8 @@ func Test_Problem438(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans438, q.para438
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findAnagrams(p.s, p.p))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findAnagrams(p.s, p.p))
 	}
 	fmt.Printf("\n\n\n")
 }

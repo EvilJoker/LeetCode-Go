@@ -56,7 +56,8 @@ func Test_Problem914(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans914, q.para914
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, hasGroupsSizeX(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", hasGroupsSizeX(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

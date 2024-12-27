@@ -40,7 +40,7 @@ func Test_Problem846(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans846, q.para846
-		fmt.Printf("【input】:%v    【output】:%v\n", p, isNStraightHand(p.hand, p.groupSize))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, isNStraightHand(p.hand, p.groupSize))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -47,7 +47,8 @@ func Test_Problem1438(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1438, q.para1438
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestSubarray(p.nums, p.limit))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", longestSubarray(p.nums, p.limit))
 	}
 	fmt.Printf("\n\n\n")
 }

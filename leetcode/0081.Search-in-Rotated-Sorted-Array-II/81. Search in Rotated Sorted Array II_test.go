@@ -42,7 +42,7 @@ func Test_Problem81(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans81, q.para81
-		fmt.Printf("【input】:%v    【output】:%v\n", p, search(p.nums, p.target))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, search(p.nums, p.target))
 	}
 	fmt.Printf("\n\n\n")
 }

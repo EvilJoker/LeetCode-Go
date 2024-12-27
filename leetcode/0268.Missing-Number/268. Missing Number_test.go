@@ -41,7 +41,8 @@ func Test_Problem268(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans268, q.para268
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, missingNumber(p.s))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", missingNumber(p.s))
 	}
 	fmt.Printf("\n\n\n")
 }

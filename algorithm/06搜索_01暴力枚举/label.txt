@@ -1,0 +1,1 @@
+catagory=06搜索;status=01done;recommend=01basic;difficulty=01easy;lastupdate=2024-12-18;alias=经典问题;

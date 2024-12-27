@@ -40,7 +40,8 @@ func Test_Problem1110(t *testing.T) {
 	for _, q := range qs {
 		ans, p := q.ans1110, q.para1110
 		tree := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, delNodes(tree, p.two))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", delNodes(tree, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

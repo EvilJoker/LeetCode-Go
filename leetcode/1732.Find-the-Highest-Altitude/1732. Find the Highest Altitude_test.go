@@ -41,7 +41,8 @@ func Test_Problem1732(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1732, q.para1732
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, largestAltitude(p.gain))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", largestAltitude(p.gain))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -36,7 +36,7 @@ func Test_Problem966(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans966, q.para966
-		fmt.Printf("【input】:%v       【output】:%#v\n", p, spellchecker(p.wordlist, p.queries))
+		fmt.Printf("[input]:%v       [output]:%#v\n", p, spellchecker(p.wordlist, p.queries))
 	}
 	fmt.Printf("\n\n\n")
 }

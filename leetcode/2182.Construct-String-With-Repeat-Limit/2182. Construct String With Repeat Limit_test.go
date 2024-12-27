@@ -42,7 +42,8 @@ func Test_Problem2182(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans2182, q.para2182
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, repeatLimitedString(p.one, p.limit))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", repeatLimitedString(p.one, p.limit))
 	}
 	fmt.Printf("\n\n\n")
 }

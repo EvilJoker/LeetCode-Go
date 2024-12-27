@@ -50,11 +50,11 @@ func Test_Problem235(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans235, q.para235
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
 		rootTwo := structures.Ints2TreeNode(p.two)
 		rootThr := structures.Ints2TreeNode(p.thr)
-		fmt.Printf("【output】:%v      \n", lowestCommonAncestor(rootOne, rootTwo, rootThr))
+		fmt.Printf("[output]:%v      \n", lowestCommonAncestor(rootOne, rootTwo, rootThr))
 	}
 	fmt.Printf("\n\n\n")
 }

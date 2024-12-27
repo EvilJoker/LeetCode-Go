@@ -43,7 +43,8 @@ func Test_Problem561(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans561, q.para561
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, arrayPairSum(p.nums))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", arrayPairSum(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

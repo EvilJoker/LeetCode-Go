@@ -50,7 +50,8 @@ func Test_Problem417(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans417, q.para417
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, pacificAtlantic(p.matrix))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", pacificAtlantic(p.matrix))
 	}
 	fmt.Printf("\n\n\n")
 }

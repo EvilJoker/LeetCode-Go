@@ -66,7 +66,8 @@ func Test_Problem1005(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1005, q.para1005
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, largestSumAfterKNegations(p.one, p.two))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", largestSumAfterKNegations(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

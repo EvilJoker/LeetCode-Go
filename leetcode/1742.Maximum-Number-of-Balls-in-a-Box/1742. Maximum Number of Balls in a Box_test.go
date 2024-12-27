@@ -47,7 +47,8 @@ func Test_Problem1742(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1742, q.para1742
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, countBalls(p.lowLimit, p.highLimit))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", countBalls(p.lowLimit, p.highLimit))
 	}
 	fmt.Printf("\n\n\n")
 }

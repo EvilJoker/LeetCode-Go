@@ -42,7 +42,8 @@ func Test_Problem748(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans748, q.para748
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, shortestCompletingWord(p.c, p.w))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", shortestCompletingWord(p.c, p.w))
 	}
 	fmt.Printf("\n\n\n")
 }

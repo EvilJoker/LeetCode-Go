@@ -50,7 +50,8 @@ func Test_Problem1439(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1439, q.para1439
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, kthSmallest(p.mat, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", kthSmallest(p.mat, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

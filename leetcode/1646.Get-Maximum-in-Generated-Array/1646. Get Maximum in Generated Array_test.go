@@ -56,7 +56,7 @@ func Test_Problem1646(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1646, q.para1646
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, getMaximumGenerated(p.n))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, getMaximumGenerated(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

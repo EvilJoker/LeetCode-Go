@@ -52,7 +52,8 @@ func Test_Problem875(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans875, q.para875
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minEatingSpeed(p.piles, p.H))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minEatingSpeed(p.piles, p.H))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -40,8 +40,8 @@ func Test_Problem1984(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1984, q.para1984
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", minimumDifference(p.nums, p.k))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", minimumDifference(p.nums, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

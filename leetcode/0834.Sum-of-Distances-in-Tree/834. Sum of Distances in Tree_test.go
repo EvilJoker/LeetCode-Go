@@ -42,7 +42,8 @@ func Test_Problem834(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans834, q.para834
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, sumOfDistancesInTree(p.N, p.edges))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", sumOfDistancesInTree(p.N, p.edges))
 	}
 	fmt.Printf("\n\n\n")
 }

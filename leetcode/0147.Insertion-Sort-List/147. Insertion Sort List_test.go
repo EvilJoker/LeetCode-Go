@@ -52,7 +52,8 @@ func Test_Problem147(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans147, q.para147
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, structures.List2Ints(insertionSortList(structures.Ints2List(p.one))))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", structures.List2Ints(insertionSortList(structures.Ints2List(p.one))))
 	}
 	fmt.Printf("\n\n\n")
 }

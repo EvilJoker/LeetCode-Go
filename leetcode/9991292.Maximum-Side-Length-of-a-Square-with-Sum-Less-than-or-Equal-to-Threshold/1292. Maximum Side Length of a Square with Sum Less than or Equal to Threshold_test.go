@@ -42,7 +42,8 @@ func Test_Problem1292(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1292, q.para1292
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, maxSideLength(p.mat, p.threshold))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", maxSideLength(p.mat, p.threshold))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -42,7 +42,8 @@ func Test_Problem537(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans537, q.para537
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, complexNumberMultiply(p.a, p.b))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", complexNumberMultiply(p.a, p.b))
 	}
 	fmt.Printf("\n\n\n")
 }

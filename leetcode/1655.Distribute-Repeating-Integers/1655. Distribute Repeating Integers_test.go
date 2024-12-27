@@ -57,7 +57,7 @@ func Test_Problem1655(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1655, q.para1655
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, canDistribute(p.nums, p.quantity))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, canDistribute(p.nums, p.quantity))
 	}
 	fmt.Printf("\n\n\n")
 }

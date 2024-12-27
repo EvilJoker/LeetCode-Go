@@ -47,7 +47,8 @@ func Test_Problem1004(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1004, q.para1004
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestOnes(p.s, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", longestOnes(p.s, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

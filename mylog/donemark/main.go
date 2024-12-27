@@ -125,6 +125,7 @@ func padRight(input string, totalWidth int) string {
 		return input
 	}
 	return input + strings.Repeat(" ", totalWidth-currentWidth)
+
 }
 
 func main() {

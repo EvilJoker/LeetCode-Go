@@ -46,7 +46,8 @@ func Test_Problem1691(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1691, q.para1691
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, maxHeight(p.cuboids))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", maxHeight(p.cuboids))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -52,7 +52,8 @@ func Test_Problem786(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans786, q.para786
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, kthSmallestPrimeFraction(p.A, p.K))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", kthSmallestPrimeFraction(p.A, p.K))
 	}
 	fmt.Printf("\n\n\n")
 }

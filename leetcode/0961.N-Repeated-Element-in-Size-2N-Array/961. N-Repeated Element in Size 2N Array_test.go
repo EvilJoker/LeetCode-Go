@@ -45,7 +45,8 @@ func Test_Problem961(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans961, q.para961
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, repeatedNTimes(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", repeatedNTimes(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

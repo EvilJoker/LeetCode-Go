@@ -36,7 +36,8 @@ func Test_Problem816(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans816, q.para816
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, ambiguousCoordinates(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", ambiguousCoordinates(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -54,7 +54,8 @@ func Test_Problem1201(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1201, q.para1201
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, nthUglyNumber(p.n, p.a, p.b, p.c))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", nthUglyNumber(p.n, p.a, p.b, p.c))
 	}
 	fmt.Printf("\n\n\n")
 }

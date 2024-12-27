@@ -28,8 +28,8 @@ func Test_Problem1209(t *testing.T) {
 	qs := []question1209{
 
 		// {
-		// 	para1209{"abcd", 2},
-		// 	ans1209{"abcd"},
+		//     para1209{"abcd", 2},
+		//     ans1209{"abcd"},
 		// },
 
 		{
@@ -47,7 +47,8 @@ func Test_Problem1209(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1209, q.para1209
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, removeDuplicates(p.s, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", removeDuplicates(p.s, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

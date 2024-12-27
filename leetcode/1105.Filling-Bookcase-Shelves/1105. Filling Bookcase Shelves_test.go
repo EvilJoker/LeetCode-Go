@@ -37,7 +37,8 @@ func Test_Problem1105(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1105, q.para1105
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minHeightShelves(p.one, p.w))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minHeightShelves(p.one, p.w))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -39,7 +39,7 @@ func Test_Problem1104(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1104, q.para1104
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, pathInZigZagTree(p.label))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, pathInZigZagTree(p.label))
 	}
 	fmt.Printf("\n\n\n")
 }

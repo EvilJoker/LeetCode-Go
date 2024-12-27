@@ -47,7 +47,8 @@ func Test_Problem1202(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1202, q.para1202
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, smallestStringWithSwaps(p.s, p.pairs))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", smallestStringWithSwaps(p.s, p.pairs))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -64,8 +64,8 @@ func Test_Problem1463(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1463, q.para1463
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", cherryPickup(p.grid))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", cherryPickup(p.grid))
 	}
 	fmt.Printf("\n\n\n")
 }

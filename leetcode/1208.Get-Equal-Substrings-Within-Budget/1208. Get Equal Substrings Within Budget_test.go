@@ -58,7 +58,8 @@ func Test_Problem1208(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1208, q.para1208
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, equalSubstring(p.s, p.t, p.maxCost))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", equalSubstring(p.s, p.t, p.maxCost))
 	}
 	fmt.Printf("\n\n\n")
 }

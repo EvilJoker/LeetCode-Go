@@ -51,7 +51,8 @@ func Test_Problem1154(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1154, q.para1154
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, dayOfYear(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", dayOfYear(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

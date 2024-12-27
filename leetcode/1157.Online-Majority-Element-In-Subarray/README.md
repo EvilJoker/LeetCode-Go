@@ -64,14 +64,14 @@ Each `query(...)` returns the element in `arr[left], arr[left+1], ..., arr[ri
     现在每个线段树的节点不是只存一个 int 数字了，而是存 candidate 和 count。每个节点的 candidate 和 count 分别代表的是该区间内摩尔投票的结果。初始化的时候，先把每个叶子都填满，candidate 是自己，count = 1 。即右图绿色节点。然后在 pushUp 的时候，进行摩尔投票：
 
         mc.merge = func(i, j segmentItem) segmentItem {
-        		if i.candidate == j.candidate {
-        			return segmentItem{candidate: i.candidate, count: i.count + j.count}
-        		}
-        		if i.count > j.count {
-        			return segmentItem{candidate: i.candidate, count: i.count - j.count}
-        		}
-        		return segmentItem{candidate: j.candidate, count: j.count - i.count}
-        	}
+                if i.candidate == j.candidate {
+                    return segmentItem{candidate: i.candidate, count: i.count + j.count}
+                }
+                if i.count > j.count {
+                    return segmentItem{candidate: i.candidate, count: i.count - j.count}
+                }
+                return segmentItem{candidate: j.candidate, count: j.count - i.count}
+            }
 
     直到根节点的 candidate 和 count 都填满。**注意，这里的 count 并不是元素出现的总次数，而是摩尔投票中坚持没有被投出去的轮数**。当线段树构建完成以后，就可以开始查询任意区间内的众数了，candidate 即为众数。接下来还要确定众数是否满足 `threshold` 的条件。
 

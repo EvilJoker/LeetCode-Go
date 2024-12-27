@@ -42,7 +42,8 @@ func Test_Problem475(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans475, q.para475
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findRadius(p.houses, p.heaters))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findRadius(p.houses, p.heaters))
 	}
 	fmt.Printf("\n\n\n")
 }

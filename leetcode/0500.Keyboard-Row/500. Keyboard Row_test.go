@@ -36,7 +36,8 @@ func Test_Problem500(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans500, q.para500
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findWords500(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findWords500(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

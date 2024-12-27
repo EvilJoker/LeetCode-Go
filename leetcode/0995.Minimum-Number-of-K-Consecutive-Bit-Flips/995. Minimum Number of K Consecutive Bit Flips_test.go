@@ -47,7 +47,8 @@ func Test_Problem995(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans995, q.para995
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minKBitFlips(p.one, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minKBitFlips(p.one, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

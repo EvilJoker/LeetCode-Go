@@ -39,7 +39,8 @@ func Test_Problem520(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans520, q.para520
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, detectCapitalUse(p.word))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", detectCapitalUse(p.word))
 	}
 	fmt.Printf("\n\n\n")
 }

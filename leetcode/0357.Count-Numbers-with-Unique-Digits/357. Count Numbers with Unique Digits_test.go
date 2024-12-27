@@ -62,7 +62,8 @@ func Test_Problem357(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans357, q.para357
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, countNumbersWithUniqueDigits(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", countNumbersWithUniqueDigits(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -49,9 +49,9 @@ func Test_Problem971(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans971, q.para971
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", flipMatchVoyage(rootOne, p.voyage))
+		fmt.Printf("[output]:%v      \n", flipMatchVoyage(rootOne, p.voyage))
 	}
 	fmt.Printf("\n\n\n")
 }

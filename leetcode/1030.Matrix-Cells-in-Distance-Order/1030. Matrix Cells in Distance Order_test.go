@@ -49,7 +49,8 @@ func Test_Problem1030(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1030, q.para1030
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, allCellsDistOrder(p.R, p.C, p.r0, p.c0))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", allCellsDistOrder(p.R, p.C, p.r0, p.c0))
 	}
 	fmt.Printf("\n\n\n")
 }

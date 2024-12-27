@@ -46,7 +46,8 @@ func Test_Problem416(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans416, q.para416
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, canPartition(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", canPartition(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

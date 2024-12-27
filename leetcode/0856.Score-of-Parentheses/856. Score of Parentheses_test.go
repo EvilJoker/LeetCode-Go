@@ -60,7 +60,8 @@ func Test_Problem856(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans856, q.para856
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, scoreOfParentheses(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", scoreOfParentheses(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

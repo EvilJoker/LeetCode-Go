@@ -42,7 +42,8 @@ func Test_Problem2169(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans2169, q.para2169
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, countOperations(p.num1, p.num2))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", countOperations(p.num1, p.num2))
 	}
 	fmt.Printf("\n\n\n")
 }

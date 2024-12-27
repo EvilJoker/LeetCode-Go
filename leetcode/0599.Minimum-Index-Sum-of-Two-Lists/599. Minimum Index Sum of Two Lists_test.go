@@ -42,7 +42,8 @@ func Test_Problem599(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans599, q.para599
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findRestaurant(p.one, p.two))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findRestaurant(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

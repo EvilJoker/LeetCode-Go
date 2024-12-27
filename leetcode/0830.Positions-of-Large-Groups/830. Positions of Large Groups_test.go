@@ -51,7 +51,8 @@ func Test_Problem830(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans830, q.para830
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, largeGroupPositions(p.S))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", largeGroupPositions(p.S))
 	}
 	fmt.Printf("\n\n\n")
 }

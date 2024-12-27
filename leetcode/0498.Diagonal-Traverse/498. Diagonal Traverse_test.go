@@ -61,7 +61,8 @@ func Test_Problem498(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans498, q.para498
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findDiagonalOrder(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findDiagonalOrder(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

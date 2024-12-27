@@ -62,7 +62,8 @@ func Test_Problem744(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans744, q.para744
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, nextGreatestLetter(p.letters, p.target))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", nextGreatestLetter(p.letters, p.target))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -50,9 +50,9 @@ func Test_Problem993(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans993, q.para993
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", isCousins(root, p.x, p.y))
+		fmt.Printf("[output]:%v      \n", isCousins(root, p.x, p.y))
 	}
 	fmt.Printf("\n\n\n")
 }

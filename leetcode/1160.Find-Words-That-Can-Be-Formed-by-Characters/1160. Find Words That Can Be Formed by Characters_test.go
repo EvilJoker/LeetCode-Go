@@ -42,7 +42,8 @@ func Test_Problem1160(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1160, q.para1160
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, countCharacters(p.words, p.chars))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", countCharacters(p.words, p.chars))
 	}
 	fmt.Printf("\n\n\n")
 }

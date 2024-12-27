@@ -41,7 +41,8 @@ func Test_Problem1010(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1010, q.para1010
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numPairsDivisibleBy60(p.time))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numPairsDivisibleBy60(p.time))
 	}
 	fmt.Printf("\n\n\n")
 }

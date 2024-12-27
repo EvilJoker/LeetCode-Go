@@ -47,7 +47,8 @@ func Test_Problem1681(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1681, q.para1681
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minimumIncompatibility(p.nums, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minimumIncompatibility(p.nums, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

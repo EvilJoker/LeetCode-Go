@@ -67,7 +67,7 @@ func Test_Problem1609(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1609, q.para1609
-		fmt.Printf("【input】:%v    【output】:%v\n", p.root, isEvenOddTree(p.root))
+		fmt.Printf("[input]:%v    [output]:%v\n", p.root, isEvenOddTree(p.root))
 	}
 	fmt.Printf("\n\n\n")
 }

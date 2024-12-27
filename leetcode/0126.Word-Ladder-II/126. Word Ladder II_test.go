@@ -42,7 +42,8 @@ func Test_Problem126(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans126, q.para126
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findLadders(p.b, p.e, p.w))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findLadders(p.b, p.e, p.w))
 	}
 	fmt.Printf("\n\n\n")
 }

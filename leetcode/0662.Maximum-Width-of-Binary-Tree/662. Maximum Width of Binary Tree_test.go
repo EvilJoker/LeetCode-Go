@@ -58,9 +58,9 @@ func Test_Problem662(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans662, q.para662
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", widthOfBinaryTree(root))
+		fmt.Printf("[output]:%v      \n", widthOfBinaryTree(root))
 	}
 	fmt.Printf("\n\n\n")
 }

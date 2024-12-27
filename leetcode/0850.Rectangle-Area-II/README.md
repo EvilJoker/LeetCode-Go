@@ -71,15 +71,15 @@ Find the total area covered by all `rectangles` in the plane. Since the answer
     ![](https://img.halfrost.com/Leetcode/leetcode_850_2.png)
 
         func (sat *SegmentAreaTree) pushUp(treeIndex, leftTreeIndex, rightTreeIndex int) {
-        	newCount, newValue := sat.merge(sat.tree[leftTreeIndex].count, sat.tree[rightTreeIndex].count), 0
-        	if sat.tree[leftTreeIndex].count > 0 && sat.tree[rightTreeIndex].count > 0 {
-        		newValue = sat.merge(sat.tree[leftTreeIndex].val, sat.tree[rightTreeIndex].val)
-        	} else if sat.tree[leftTreeIndex].count > 0 && sat.tree[rightTreeIndex].count == 0 {
-        		newValue = sat.tree[leftTreeIndex].val
-        	} else if sat.tree[leftTreeIndex].count == 0 && sat.tree[rightTreeIndex].count > 0 {
-        		newValue = sat.tree[rightTreeIndex].val
-        	}
-        	sat.tree[treeIndex] = SegmentItem{count: newCount, val: newValue}
+            newCount, newValue := sat.merge(sat.tree[leftTreeIndex].count, sat.tree[rightTreeIndex].count), 0
+            if sat.tree[leftTreeIndex].count > 0 && sat.tree[rightTreeIndex].count > 0 {
+                newValue = sat.merge(sat.tree[leftTreeIndex].val, sat.tree[rightTreeIndex].val)
+            } else if sat.tree[leftTreeIndex].count > 0 && sat.tree[rightTreeIndex].count == 0 {
+                newValue = sat.tree[leftTreeIndex].val
+            } else if sat.tree[leftTreeIndex].count == 0 && sat.tree[rightTreeIndex].count > 0 {
+                newValue = sat.tree[rightTreeIndex].val
+            }
+            sat.tree[treeIndex] = SegmentItem{count: newCount, val: newValue}
         }
 
 - 扫描每一个扫描线，先 pushDown 到叶子节点，再 pushUp 到根节点。

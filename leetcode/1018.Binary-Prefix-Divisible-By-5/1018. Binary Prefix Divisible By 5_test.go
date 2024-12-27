@@ -51,7 +51,8 @@ func Test_Problem1018(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1018, q.para1018
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, prefixesDivBy5(p.a))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", prefixesDivBy5(p.a))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -56,7 +56,8 @@ func Test_Problem1877(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1877, q.para1877
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minPairSum(p.nums))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minPairSum(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

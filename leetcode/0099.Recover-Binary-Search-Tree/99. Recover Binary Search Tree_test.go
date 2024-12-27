@@ -43,10 +43,10 @@ func Test_Problem99(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans99, q.para99
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
 		recoverTree(rootOne)
-		fmt.Printf("【output】:%v      \n", p)
+		fmt.Printf("[output]:%v      \n", p)
 	}
 	fmt.Printf("\n\n\n")
 }

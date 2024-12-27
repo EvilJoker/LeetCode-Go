@@ -33,15 +33,15 @@ Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2.
 package leetcode
 
 func addDigits(num int) int {
-	for num > 9 {
-		cur := 0
-		for num != 0 {
-			cur += num % 10
-			num /= 10
-		}
-		num = cur
-	}
-	return num
+    for num > 9 {
+        cur := 0
+        for num != 0 {
+            cur += num % 10
+            num /= 10
+        }
+        num = cur
+    }
+    return num
 }
 
 ```

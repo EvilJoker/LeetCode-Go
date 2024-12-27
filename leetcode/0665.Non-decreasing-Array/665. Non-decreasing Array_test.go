@@ -41,7 +41,8 @@ func Test_Problem665(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans665, q.para665
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, checkPossibility(p.nums))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", checkPossibility(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

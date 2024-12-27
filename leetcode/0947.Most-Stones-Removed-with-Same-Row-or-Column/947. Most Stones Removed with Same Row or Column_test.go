@@ -45,7 +45,8 @@ func Test_Problem947(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans947, q.para947
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, removeStones(p.stones))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", removeStones(p.stones))
 	}
 	fmt.Printf("\n\n\n")
 }

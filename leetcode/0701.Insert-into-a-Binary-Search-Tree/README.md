@@ -71,18 +71,18 @@ type TreeNode = structures.TreeNode
  * }
  */
 func insert(n *TreeNode, val int) *TreeNode {
-	if n == nil {
-		return &TreeNode{Val: val}
-	}
-	if n.Val < val {
-		n.Right = insert(n.Right, val)
-	} else {
-		n.Left = insert(n.Left, val)
-	}
-	return n
+    if n == nil {
+        return &TreeNode{Val: val}
+    }
+    if n.Val < val {
+        n.Right = insert(n.Right, val)
+    } else {
+        n.Left = insert(n.Left, val)
+    }
+    return n
 }
 
 func insertIntoBST(root *TreeNode, val int) *TreeNode {
-	return insert(root, val)
+    return insert(root, val)
 }
 ```

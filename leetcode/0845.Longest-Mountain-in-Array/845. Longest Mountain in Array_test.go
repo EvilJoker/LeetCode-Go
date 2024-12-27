@@ -55,7 +55,8 @@ func Test_Problem845(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans845, q.para845
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestMountain(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", longestMountain(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

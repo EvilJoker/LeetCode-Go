@@ -37,7 +37,8 @@ func Test_Problem1122(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1122, q.para1122
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, relativeSortArray(p.arr1, p.arr2))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", relativeSortArray(p.arr1, p.arr2))
 	}
 	fmt.Printf("\n\n\n")
 }

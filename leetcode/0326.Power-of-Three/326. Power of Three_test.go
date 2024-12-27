@@ -51,7 +51,8 @@ func Test_Problem326(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans326, q.para326
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isPowerOfThree(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", isPowerOfThree(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

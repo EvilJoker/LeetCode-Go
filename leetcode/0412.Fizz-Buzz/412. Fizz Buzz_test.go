@@ -35,7 +35,7 @@ var tcs = []struct {
 func Test_fizzBuzz(t *testing.T) {
 	fmt.Printf("------------------------Leetcode Problem 412------------------------\n")
 	for _, tc := range tcs {
-		fmt.Printf("【output】:%v\n", tc)
+		fmt.Printf("[output]:%v\n", tc)
 	}
 	fmt.Printf("\n\n\n")
 }

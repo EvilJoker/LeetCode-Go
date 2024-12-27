@@ -49,7 +49,8 @@ func Test_Problem1383(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1383, q.para1383
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, maxPerformance(p.n, p.speed, p.efficiency, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", maxPerformance(p.n, p.speed, p.efficiency, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

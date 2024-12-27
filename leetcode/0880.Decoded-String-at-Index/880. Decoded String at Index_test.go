@@ -62,7 +62,8 @@ func Test_Problem880(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans880, q.para880
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, decodeAtIndex(p.s, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", decodeAtIndex(p.s, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

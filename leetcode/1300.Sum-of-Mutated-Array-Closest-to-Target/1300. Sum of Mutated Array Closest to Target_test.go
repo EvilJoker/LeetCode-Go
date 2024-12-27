@@ -53,7 +53,8 @@ func Test_Problem1300(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1300, q.para1300
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findBestValue(p.arr, p.target))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findBestValue(p.arr, p.target))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -48,10 +48,10 @@ func Test_Problem95(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans95, q.para95
-		fmt.Printf("【input】:%v  \n", p)
+		fmt.Printf("[input]:%v  \n", p)
 		trees := generateTrees(p.one)
 		for _, t := range trees {
-			fmt.Printf("【output】:%v\n", structures.Tree2Preorder(t))
+			fmt.Printf("[output]:%v\n", structures.Tree2Preorder(t))
 		}
 	}
 	fmt.Printf("\n\n\n")

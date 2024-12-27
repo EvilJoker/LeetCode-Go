@@ -37,7 +37,8 @@ func Test_Problem690(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans690, q.para690
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, getImportance(p.employees, p.id))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", getImportance(p.employees, p.id))
 	}
 	fmt.Printf("\n\n\n")
 }

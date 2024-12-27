@@ -13,9 +13,9 @@ Given the height `m` and the length `n` of a `m * n` Multiplication Table,
     Output: 
     Explanation: 
     The Multiplication Table:
-    1	2	3
-    2	4	6
-    3	6	9
+    1    2    3
+    2    4    6
+    3    6    9
     
     The 5-th smallest number is 3 (1, 2, 2, 3, 3).
 
@@ -25,8 +25,8 @@ Given the height `m` and the length `n` of a `m * n` Multiplication Table,
     Output: 
     Explanation: 
     The Multiplication Table:
-    1	2	3
-    2	4	6
+    1    2    3
+    2    4    6
     
     The 6-th smallest number is 6 (1, 2, 2, 3, 4, 6).
 

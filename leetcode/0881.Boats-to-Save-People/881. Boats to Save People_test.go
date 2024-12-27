@@ -57,7 +57,8 @@ func Test_Problem881(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans881, q.para881
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numRescueBoats(p.s, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numRescueBoats(p.s, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

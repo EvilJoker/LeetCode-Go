@@ -36,27 +36,27 @@ Return `true` if and only if the two given trees with head nodes `root1` and
 
 ```go
 func leafSimilar(root1 *TreeNode, root2 *TreeNode) bool {
-	leaf1, leaf2 := []int{}, []int{}
-	dfsLeaf(root1, &leaf1)
-	dfsLeaf(root2, &leaf2)
-	if len(leaf1) != len(leaf2) {
-		return false
-	}
-	for i := range leaf1 {
-		if leaf1[i] != leaf2[i] {
-			return false
-		}
-	}
-	return true
+    leaf1, leaf2 := []int{}, []int{}
+    dfsLeaf(root1, &leaf1)
+    dfsLeaf(root2, &leaf2)
+    if len(leaf1) != len(leaf2) {
+        return false
+    }
+    for i := range leaf1 {
+        if leaf1[i] != leaf2[i] {
+            return false
+        }
+    }
+    return true
 }
 
 func dfsLeaf(root *TreeNode, leaf *[]int) {
-	if root != nil {
-		if root.Left == nil && root.Right == nil {
-			*leaf = append(*leaf, root.Val)
-		}
-		dfsLeaf(root.Left, leaf)
-		dfsLeaf(root.Right, leaf)
-	}
+    if root != nil {
+        if root.Left == nil && root.Right == nil {
+            *leaf = append(*leaf, root.Val)
+        }
+        dfsLeaf(root.Left, leaf)
+        dfsLeaf(root.Right, leaf)
+    }
 }
 ```

@@ -46,7 +46,8 @@ func Test_Problem547(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans547, q.para547
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findCircleNum(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findCircleNum(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

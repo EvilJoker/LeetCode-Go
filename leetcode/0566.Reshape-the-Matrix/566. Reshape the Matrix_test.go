@@ -43,7 +43,8 @@ func Test_Problem566(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans566, q.para566
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, matrixReshape(p.nums, p.r, p.c))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", matrixReshape(p.nums, p.r, p.c))
 	}
 	fmt.Printf("\n\n\n")
 }

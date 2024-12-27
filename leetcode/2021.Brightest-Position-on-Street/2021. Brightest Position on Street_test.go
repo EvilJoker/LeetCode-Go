@@ -49,8 +49,8 @@ func Test_Problem2021(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans2021, q.para2021
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", brightestPosition(p.lights))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", brightestPosition(p.lights))
 	}
 	fmt.Printf("\n\n\n")
 }

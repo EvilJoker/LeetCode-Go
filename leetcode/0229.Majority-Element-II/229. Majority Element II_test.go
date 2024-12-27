@@ -41,7 +41,8 @@ func Test_Problem229(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans229, q.para229
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, majorityElement229(p.s))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", majorityElement229(p.s))
 	}
 	fmt.Printf("\n\n\n")
 }

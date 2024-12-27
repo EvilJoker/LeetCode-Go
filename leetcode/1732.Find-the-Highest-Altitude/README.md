@@ -43,13 +43,13 @@ Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
 package leetcode
 
 func largestAltitude(gain []int) int {
-	max, height := 0, 0
-	for _, g := range gain {
-		height += g
-		if height > max {
-			max = height
-		}
-	}
-	return max
+    max, height := 0, 0
+    for _, g := range gain {
+        height += g
+        if height > max {
+            max = height
+        }
+    }
+    return max
 }
 ```

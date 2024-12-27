@@ -36,7 +36,8 @@ func Test_Problem810(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans810, q.para810
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, xorGame(p.nums))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", xorGame(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

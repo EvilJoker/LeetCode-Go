@@ -61,7 +61,8 @@ func Test_Problem724(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans724, q.para724
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, pivotIndex(p.nums))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", pivotIndex(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

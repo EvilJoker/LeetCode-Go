@@ -53,9 +53,9 @@ func Test_Problem513(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans513, q.para513
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", findBottomLeftValue(root))
+		fmt.Printf("[output]:%v      \n", findBottomLeftValue(root))
 	}
 	fmt.Printf("\n\n\n")
 }

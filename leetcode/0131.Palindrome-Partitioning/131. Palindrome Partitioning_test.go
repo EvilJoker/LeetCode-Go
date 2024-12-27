@@ -51,7 +51,8 @@ func Test_Problem131(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans131, q.para131
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, partition131(p.s))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", partition131(p.s))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -54,7 +54,8 @@ func Test_Problem1026(t *testing.T) {
 	for _, q := range qs {
 		ans, p := q.ans1026, q.para1026
 		tree := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, maxAncestorDiff(tree))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", maxAncestorDiff(tree))
 	}
 	fmt.Printf("\n\n\n")
 }

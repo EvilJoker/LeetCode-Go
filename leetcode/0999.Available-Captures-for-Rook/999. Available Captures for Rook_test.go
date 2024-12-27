@@ -73,7 +73,8 @@ func Test_Problem999(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans999, q.para999
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numRookCaptures(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numRookCaptures(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

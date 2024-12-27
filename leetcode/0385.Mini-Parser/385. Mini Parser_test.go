@@ -56,7 +56,7 @@ func Test_Problem385(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans385, q.para385
-		fmt.Printf("【input】:%v       【output】: \n", p)
+		fmt.Printf("[input]:%v       [output]: \n", p)
 		fmt.Printf("NestedInteger = ")
 		deserialize(p.n).Print()
 	}

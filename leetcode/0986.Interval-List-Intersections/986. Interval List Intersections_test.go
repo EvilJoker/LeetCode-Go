@@ -39,7 +39,8 @@ func Test_Problem986(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans986, q.para986
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, intervalIntersection(p.one, p.two))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", intervalIntersection(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

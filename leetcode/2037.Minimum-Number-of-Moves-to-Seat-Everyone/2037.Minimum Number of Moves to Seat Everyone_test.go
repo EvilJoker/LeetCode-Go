@@ -45,8 +45,8 @@ func Test_Problem2037(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans2037, q.para2037
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", minMovesToSeat(p.seats, p.students))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", minMovesToSeat(p.seats, p.students))
 	}
 	fmt.Printf("\n\n\n")
 }

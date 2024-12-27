@@ -54,10 +54,10 @@ func Test_Problem572(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans572, q.para572
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		roots := structures.Ints2TreeNode(p.s)
 		roott := structures.Ints2TreeNode(p.t)
-		fmt.Printf("【output】:%v      \n", isSubtree(roots, roott))
+		fmt.Printf("[output]:%v      \n", isSubtree(roots, roott))
 	}
 	fmt.Printf("\n\n\n")
 }

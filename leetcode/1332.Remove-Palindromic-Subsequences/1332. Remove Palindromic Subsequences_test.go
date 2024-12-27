@@ -56,7 +56,8 @@ func Test_Problem1332(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1332, q.para1332
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, removePalindromeSub(p.s))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", removePalindromeSub(p.s))
 	}
 	fmt.Printf("\n\n\n")
 }

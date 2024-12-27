@@ -1,0 +1,1 @@
+catagory=01数组字符串;status=01done;recommend=01basic;difficulty=02mid;lastupdate=2024-12-19;alias=贪心;

@@ -63,7 +63,8 @@ func Test_Problem1073(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1073, q.para1073
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, addNegabinary1(p.arr1, p.arr2))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", addNegabinary1(p.arr1, p.arr2))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -45,6 +45,6 @@ This demonstrated that taking the first 5 was a winning move for Alex, so we ret
 package leetcode
 
 func stoneGame(piles []int) bool {
-	return true
+    return true
 }
 ```

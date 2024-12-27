@@ -42,7 +42,8 @@ func Test_Problem821(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans821, q.para821
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, shortestToChar(p.s, p.c))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", shortestToChar(p.s, p.c))
 	}
 	fmt.Printf("\n\n\n")
 }

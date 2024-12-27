@@ -47,7 +47,8 @@ func Test_Problem461(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans461, q.para461
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, hammingDistance(p.x, p.y))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", hammingDistance(p.x, p.y))
 	}
 	fmt.Printf("\n\n\n")
 }

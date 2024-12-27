@@ -48,7 +48,8 @@ func Test_Problem474(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans474, q.para474
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findMaxForm(p.strs, p.m, p.n))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findMaxForm(p.strs, p.m, p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

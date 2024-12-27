@@ -46,7 +46,7 @@ func Test_Problem458(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans458, q.para458
-		fmt.Printf("【input】:%v    【output】:%v\n", p, poorPigs(p.buckets, p.minutesToDie, p.minutesToTest))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, poorPigs(p.buckets, p.minutesToDie, p.minutesToTest))
 	}
 	fmt.Printf("\n\n\n")
 }

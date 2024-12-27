@@ -42,7 +42,8 @@ func Test_Problem1074(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1074, q.para1074
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numSubmatrixSumTarget1(p.one, p.t))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numSubmatrixSumTarget1(p.one, p.t))
 	}
 	fmt.Printf("\n\n\n")
 }

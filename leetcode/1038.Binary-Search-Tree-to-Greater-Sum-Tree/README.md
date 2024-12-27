@@ -71,7 +71,7 @@ Output: [7,9,4,10]
 package leetcode
 
 import (
-	"github.com/halfrost/LeetCode-Go/structures"
+    "github.com/halfrost/LeetCode-Go/structures"
 )
 
 // TreeNode define
@@ -87,21 +87,21 @@ type TreeNode = structures.TreeNode
  */
 
 func bstToGst(root *TreeNode) *TreeNode {
-	if root == nil {
-		return root
-	}
-	sum := 0
-	dfs1038(root, &sum)
-	return root
+    if root == nil {
+        return root
+    }
+    sum := 0
+    dfs1038(root, &sum)
+    return root
 }
 
 func dfs1038(root *TreeNode, sum *int) {
-	if root == nil {
-		return
-	}
-	dfs1038(root.Right, sum)
-	root.Val += *sum
-	*sum = root.Val
-	dfs1038(root.Left, sum)
+    if root == nil {
+        return
+    }
+    dfs1038(root.Right, sum)
+    root.Val += *sum
+    *sum = root.Val
+    dfs1038(root.Left, sum)
 }
 ```

@@ -62,7 +62,7 @@ func Test_Problem529(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans529, q.para529
-		fmt.Printf("【input】:%v       【output】:%v\n\n\n", p, updateBoard(p.b, p.click))
+		fmt.Printf("[input]:%v       [output]:%v\n\n\n", p, updateBoard(p.b, p.click))
 	}
 	fmt.Printf("\n\n\n")
 }

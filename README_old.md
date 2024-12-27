@@ -1092,7 +1092,7 @@
 ## Snapchat
 | Title | Solution | Difficulty | Frequency |
 | ----- | -------- | ---------- | --------- |
-[Game of Life](https://leetcode.com/problems/game-of-life/)	|	[Go](./Array/GameLife.Go)| Medium| ★★★★★★|
+[Game of Life](https://leetcode.com/problems/game-of-life/)    |    [Go](./Array/GameLife.Go)| Medium| ★★★★★★|
 [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)| [Go](./Sort/MeetingRoomsII.Go)| Medium| ★★★★★★|
 [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)| [Go](./Array/ValidSudoku.Go)| Easy| ★★★★★|
 [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)| [Go](./Tree/BinaryTreeVerticalOrderTraversal.Go)| Medium| ★★★★|

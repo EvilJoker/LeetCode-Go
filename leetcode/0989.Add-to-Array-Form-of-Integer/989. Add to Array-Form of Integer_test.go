@@ -52,7 +52,8 @@ func Test_Problem989(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans989, q.para989
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, addToArrayForm(p.A, p.K))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", addToArrayForm(p.A, p.K))
 	}
 	fmt.Printf("\n\n\n")
 }

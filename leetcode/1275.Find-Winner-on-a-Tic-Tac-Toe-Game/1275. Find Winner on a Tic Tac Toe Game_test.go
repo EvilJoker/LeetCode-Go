@@ -51,7 +51,8 @@ func Test_Problem1275(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1275, q.para1275
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, tictactoe(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", tictactoe(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

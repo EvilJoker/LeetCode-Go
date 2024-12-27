@@ -42,7 +42,8 @@ func Test_Problem984(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans984, q.para984
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, strWithout3a3b(p.a, p.b))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", strWithout3a3b(p.a, p.b))
 	}
 	fmt.Printf("\n\n\n")
 }

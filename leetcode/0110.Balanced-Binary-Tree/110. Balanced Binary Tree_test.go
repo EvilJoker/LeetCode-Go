@@ -68,9 +68,9 @@ func Test_Problem110(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans110, q.para110
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", isBalanced(rootOne))
+		fmt.Printf("[output]:%v      \n", isBalanced(rootOne))
 	}
 	fmt.Printf("\n\n\n")
 }

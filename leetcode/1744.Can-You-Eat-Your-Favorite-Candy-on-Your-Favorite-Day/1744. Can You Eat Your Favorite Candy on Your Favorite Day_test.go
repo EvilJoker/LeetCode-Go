@@ -42,7 +42,8 @@ func Test_Problem1744(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1744, q.para1744
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, canEat(p.candiesCount, p.queries))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", canEat(p.candiesCount, p.queries))
 	}
 	fmt.Printf("\n\n\n")
 }

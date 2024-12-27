@@ -43,7 +43,8 @@ func Test_Problem1022(t *testing.T) {
 	for _, q := range qs {
 		ans, p := q.ans1022, q.para1022
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, sumRootToLeaf(root))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", sumRootToLeaf(root))
 	}
 	fmt.Printf("\n\n\n")
 }

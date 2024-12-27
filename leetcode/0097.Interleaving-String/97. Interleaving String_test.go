@@ -48,7 +48,8 @@ func Test_Problem97(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans97, q.para97
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isInterleave(p.s1, p.s2, p.s3))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", isInterleave(p.s1, p.s2, p.s3))
 	}
 	fmt.Printf("\n\n\n")
 }

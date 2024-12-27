@@ -65,7 +65,8 @@ func Test_Problem976(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans976, q.para976
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, largestPerimeter(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", largestPerimeter(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

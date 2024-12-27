@@ -55,7 +55,8 @@ func Test_Problem109(t *testing.T) {
 		ans, p := q.ans109, q.para109
 		arr := []int{}
 		structures.T2s(sortedListToBST(structures.Ints2List(p.one)), &arr)
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, arr)
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", arr)
 	}
 	fmt.Printf("\n\n\n")
 }

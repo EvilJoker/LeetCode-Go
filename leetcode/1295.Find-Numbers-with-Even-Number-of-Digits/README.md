@@ -54,10 +54,10 @@ Only 1771 contains an even number of digits.
 
 ```go
 func findNumbers(nums []int) int {
-	res := 0
-	for _, n := range nums {
-		res += 1 - len(strconv.Itoa(n))%2
-	}
-	return res
+    res := 0
+    for _, n := range nums {
+        res += 1 - len(strconv.Itoa(n))%2
+    }
+    return res
 }
 ```

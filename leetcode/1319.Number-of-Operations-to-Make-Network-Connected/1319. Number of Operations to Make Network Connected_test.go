@@ -57,7 +57,8 @@ func Test_Problem1319(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1319, q.para1319
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, makeConnected(p.n, p.connections))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", makeConnected(p.n, p.connections))
 	}
 	fmt.Printf("\n\n\n")
 }

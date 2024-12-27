@@ -47,8 +47,8 @@ func Test_Problem1389(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1389, q.para1389
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", createTargetArray(p.nums, p.index))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", createTargetArray(p.nums, p.index))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -49,7 +49,8 @@ func Test_Problem391(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans391, q.para391
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isRectangleCover(p.rectangles))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", isRectangleCover(p.rectangles))
 	}
 	fmt.Printf("\n\n\n")
 }

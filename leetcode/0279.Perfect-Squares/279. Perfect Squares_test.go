@@ -40,7 +40,8 @@ func Test_Problem279(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans279, q.para279
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numSquares(p.n))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numSquares(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

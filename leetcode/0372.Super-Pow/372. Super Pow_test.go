@@ -43,7 +43,8 @@ func Test_Problem372(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans372, q.para372
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, superPow(p.a, p.b))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", superPow(p.a, p.b))
 	}
 	fmt.Printf("\n\n\n")
 }

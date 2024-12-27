@@ -39,7 +39,8 @@ func Test_Problem454(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans454, q.para454
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, fourSumCount(p.a, p.b, p.c, p.d))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", fourSumCount(p.a, p.b, p.c, p.d))
 	}
 	fmt.Printf("\n\n\n")
 }

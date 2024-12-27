@@ -48,9 +48,9 @@ func Test_Problem145(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans145, q.para145
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", postorderTraversal(root))
+		fmt.Printf("[output]:%v      \n", postorderTraversal(root))
 	}
 	fmt.Printf("\n\n\n")
 }

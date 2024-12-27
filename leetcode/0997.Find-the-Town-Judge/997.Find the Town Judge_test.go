@@ -45,7 +45,7 @@ func Test_Problem997(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans997, q.para997
-		fmt.Printf("【input】:%v    【output】:%v\n", p, findJudge(p.n, p.trust))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, findJudge(p.n, p.trust))
 	}
 	fmt.Printf("\n\n\n")
 }

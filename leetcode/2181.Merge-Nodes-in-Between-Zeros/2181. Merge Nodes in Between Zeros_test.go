@@ -43,7 +43,8 @@ func Test_Problem2181(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans2181, q.para2181
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, structures.List2Ints(mergeNodes(structures.Ints2List(p.one))))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", structures.List2Ints(mergeNodes(structures.Ints2List(p.one))))
 	}
 	fmt.Printf("\n\n\n")
 }

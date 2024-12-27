@@ -56,7 +56,8 @@ func Test_Problem892(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans892, q.para892
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, surfaceArea(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", surfaceArea(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

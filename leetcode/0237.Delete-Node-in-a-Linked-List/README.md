@@ -74,7 +74,7 @@ Output: [5,-99]
 package leetcode
 
 import (
-	"github.com/halfrost/LeetCode-Go/structures"
+    "github.com/halfrost/LeetCode-Go/structures"
 )
 
 // ListNode define
@@ -88,7 +88,7 @@ type ListNode = structures.ListNode
  * }
  */
 func deleteNode(node *ListNode) {
-	node.Val = node.Next.Val
-	node.Next = node.Next.Next
+    node.Val = node.Next.Val
+    node.Next = node.Next.Next
 }
 ```

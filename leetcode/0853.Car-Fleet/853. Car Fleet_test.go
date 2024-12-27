@@ -38,7 +38,8 @@ func Test_Problem853(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans853, q.para853
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, carFleet(p.target, p.position, p.speed))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", carFleet(p.target, p.position, p.speed))
 	}
 	fmt.Printf("\n\n\n")
 }

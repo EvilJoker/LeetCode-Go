@@ -48,9 +48,9 @@ func Test_Problem543(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans543, q.para543
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", diameterOfBinaryTree(root))
+		fmt.Printf("[output]:%v      \n", diameterOfBinaryTree(root))
 	}
 	fmt.Printf("\n\n\n")
 }

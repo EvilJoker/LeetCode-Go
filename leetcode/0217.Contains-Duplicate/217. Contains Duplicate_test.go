@@ -46,7 +46,8 @@ func Test_Problem217(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans217, q.para217
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, containsDuplicate(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", containsDuplicate(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -61,7 +61,7 @@ func Test_Problem168(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans168, q.para168
-		fmt.Printf("【input】:%v    【output】:%v\n", p, convertToTitle(p.n))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, convertToTitle(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

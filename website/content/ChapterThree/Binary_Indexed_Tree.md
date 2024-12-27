@@ -49,19 +49,19 @@ B_{i} = \sum_{j = i - 2^{k} + 1}^{i} A_{j}
 ```go
 // BinaryIndexedTree define
 type BinaryIndexedTree struct {
-	tree     []int
-	capacity int
+    tree     []int
+    capacity int
 }
 
 // Init define
 func (bit *BinaryIndexedTree) Init(nums []int) {
-	bit.tree, bit.capacity = make([]int, len(nums)+1), len(nums)+1
-	for i := 1; i <= len(nums); i++ {
-		bit.tree[i] += nums[i-1]
-		for j := i - 2; j >= i-lowbit(i); j-- {
-			bit.tree[i] += nums[j]
-		}
-	}
+    bit.tree, bit.capacity = make([]int, len(nums)+1), len(nums)+1
+    for i := 1; i <= len(nums); i++ {
+        bit.tree[i] += nums[i-1]
+        for j := i - 2; j >= i-lowbit(i); j-- {
+            bit.tree[i] += nums[j]
+        }
+    }
 }
 ```
 
@@ -69,7 +69,7 @@ lowbit(i) 函数返回 i 转换成二进制以后，末尾最后一个 1 代表�
 
 ```go
 func lowbit(x int) int {
-	return x & -x
+    return x & -x
 }
 ```
 
@@ -88,10 +88,10 @@ lowbit(34) 结果是 {{< katex >}}2^{k} = 2^{1} = 2 {{< /katex >}}
 ```go
 // Add define
 func (bit *BinaryIndexedTree) Add(index int, val int) {
-	for index <= bit.capacity {
-		bit.tree[index] += val
-		index += lowbit(index)
-	}
+    for index <= bit.capacity {
+        bit.tree[index] += val
+        index += lowbit(index)
+    }
 }
 ```
 
@@ -100,7 +100,7 @@ func (bit *BinaryIndexedTree) Add(index int, val int) {
 
 ### 3. 查询操作
 
-	
+    
 树状数组中查询 [1, i] 区间内的和。按照节点的含义，可以得出下面的关系：
 
 {{< katex display >}}
@@ -118,12 +118,12 @@ Query(i) &= A_{1} + A_{2} + ...... + A_{i} \\
 ```go
 // Query define
 func (bit *BinaryIndexedTree) Query(index int) int {
-	sum := 0
-	for index >= 1 {
-		sum += bit.tree[index]
-		index -= lowbit(index)
-	}
-	return sum
+    sum := 0
+    for index >= 1 {
+        sum += bit.tree[index]
+        index -= lowbit(index)
+    }
+    return sum
 }
 ```
 
@@ -220,13 +220,13 @@ A_{1} + A_{2} + A_{3} + ...... + A_{n}\\
 
 ```go
 func (bit *BinaryIndexedTree) Add(index int, val int) {
-	for index <= bit.capacity {
-		bit.tree[index] = val
-		for i := 1; i < lowbit(index); i = i << 1 {
-			bit.tree[index] = max(bit.tree[index], bit.tree[index-i])
-		}
-		index += lowbit(index)
-	}
+    for index <= bit.capacity {
+        bit.tree[index] = val
+        for i := 1; i < lowbit(index); i = i << 1 {
+            bit.tree[index] = max(bit.tree[index], bit.tree[index-i])
+        }
+        index += lowbit(index)
+    }
 }
 ```
 
@@ -238,15 +238,15 @@ func (bit *BinaryIndexedTree) Add(index int, val int) {
 
 ```go
 func (bit *BinaryIndexedTree) Query(m, n int) int {
-	res := 0
-	for n >= m {
-		res = max(nums[n], res)
-		n--
-		for ; n-lowbit(n) >= m; n -= lowbit(n) {
-			res = max(bit.tree[n], res)
-		}
-	}
-	return res
+    res := 0
+    for n >= m {
+        res = max(nums[n], res)
+        n--
+        for ; n-lowbit(n) >= m; n -= lowbit(n) {
+            res = max(bit.tree[n], res)
+        }
+    }
+    return res
 }
 ```
 
@@ -267,22 +267,22 @@ Output
 对于每一次询问操作，在一行里面输出最高成绩。
 
 
-	Sample Input
-	5 6
-	1 2 3 4 5
-	Q 1 5
-	U 3 6
-	Q 3 4
-	Q 4 5
-	U 2 9
-	Q 1 5
+    Sample Input
+    5 6
+    1 2 3 4 5
+    Q 1 5
+    U 3 6
+    Q 3 4
+    Q 4 5
+    U 2 9
+    Q 1 5
  
 
-	Sample Output
-	5
-	6
-	5
-	9
+    Sample Output
+    5
+    6
+    5
+    9
 
 读完题可以很快反应是单点增减 + 区间最大值的题。利用上面讲解的思想写出代码：
 
@@ -300,64 +300,64 @@ int n, m;
  
 int lowbit(int x)
 {
-	return x & (-x);
+    return x & (-x);
 }
 void updata(int x)
 {
-	int lx, i;
-	while (x <= n)
-	{
-		h[x] = a[x];
-		lx = lowbit(x);
-		for (i=1; i<lx; i<<=1)
-			h[x] = max(h[x], h[x-i]);
-		x += lowbit(x);
-	}		
+    int lx, i;
+    while (x <= n)
+    {
+        h[x] = a[x];
+        lx = lowbit(x);
+        for (i=1; i<lx; i<<=1)
+            h[x] = max(h[x], h[x-i]);
+        x += lowbit(x);
+    }        
 }
 int query(int x, int y)
 {
-	int ans = 0;
-	while (y >= x)
-	{
-		ans = max(a[y], ans);
-		y --;
-		for (; y-lowbit(y) >= x; y -= lowbit(y))
-			ans = max(h[y], ans);
-	}
-	return ans;
+    int ans = 0;
+    while (y >= x)
+    {
+        ans = max(a[y], ans);
+        y --;
+        for (; y-lowbit(y) >= x; y -= lowbit(y))
+            ans = max(h[y], ans);
+    }
+    return ans;
 }
 int main()
 {
-	int i, j, x, y, ans;
-	char c;
-	while (scanf("%d%d",&n,&m)!=EOF)
-	{
-		for (i=1; i<=n; i++)
-			h[i] = 0;
-		for (i=1; i<=n; i++)
-		{
-			scanf("%d",&a[i]);
-			updata(i);
-		}
-		for (i=1; i<=m; i++)
-		{
-			scanf("%c",&c);
-			scanf("%c",&c);
-			if (c == 'Q')
-			{
-				scanf("%d%d",&x,&y);
-				ans = query(x, y);
-				printf("%d\n",ans);
-			}
-			else if (c == 'U')
-			{
-				scanf("%d%d",&x,&y);
-				a[x] = y;
-				updata(x);
-			}
-		}
-	}
-	return 0;
+    int i, j, x, y, ans;
+    char c;
+    while (scanf("%d%d",&n,&m)!=EOF)
+    {
+        for (i=1; i<=n; i++)
+            h[i] = 0;
+        for (i=1; i<=n; i++)
+        {
+            scanf("%d",&a[i]);
+            updata(i);
+        }
+        for (i=1; i<=m; i++)
+        {
+            scanf("%c",&c);
+            scanf("%c",&c);
+            if (c == 'Q')
+            {
+                scanf("%d%d",&x,&y);
+                ans = query(x, y);
+                printf("%d\n",ans);
+            }
+            else if (c == 'U')
+            {
+                scanf("%d%d",&x,&y);
+                a[x] = y;
+                updata(x);
+            }
+        }
+    }
+    return 0;
 }
 ```
 
@@ -391,74 +391,74 @@ const LEFTSIDE = 1
 const RIGHTSIDE = 2
 
 type Point struct {
-	xAxis int
-	side  int
-	index int
+    xAxis int
+    side  int
+    index int
 }
 
 func getSkyline3(buildings [][]int) [][]int {
-	res := [][]int{}
-	if len(buildings) == 0 {
-		return res
-	}
-	allPoints, bit := make([]Point, 0), BinaryIndexedTree{}
-	// [x-axis (value), [1 (left) | 2 (right)], index (building number)]
-	for i, b := range buildings {
-		allPoints = append(allPoints, Point{xAxis: b[0], side: LEFTSIDE, index: i})
-		allPoints = append(allPoints, Point{xAxis: b[1], side: RIGHTSIDE, index: i})
-	}
-	sort.Slice(allPoints, func(i, j int) bool {
-		if allPoints[i].xAxis == allPoints[j].xAxis {
-			return allPoints[i].side < allPoints[j].side
-		}
-		return allPoints[i].xAxis < allPoints[j].xAxis
-	})
-	bit.Init(len(allPoints))
-	kth := make(map[Point]int)
-	for i := 0; i < len(allPoints); i++ {
-		kth[allPoints[i]] = i
-	}
-	for i := 0; i < len(allPoints); i++ {
-		pt := allPoints[i]
-		if pt.side == LEFTSIDE {
-			bit.Add(kth[Point{xAxis: buildings[pt.index][1], side: RIGHTSIDE, index: pt.index}], buildings[pt.index][2])
-		}
-		currHeight := bit.Query(kth[pt] + 1)
-		if len(res) == 0 || res[len(res)-1][1] != currHeight {
-			if len(res) > 0 && res[len(res)-1][0] == pt.xAxis {
-				res[len(res)-1][1] = currHeight
-			} else {
-				res = append(res, []int{pt.xAxis, currHeight})
-			}
-		}
-	}
-	return res
+    res := [][]int{}
+    if len(buildings) == 0 {
+        return res
+    }
+    allPoints, bit := make([]Point, 0), BinaryIndexedTree{}
+    // [x-axis (value), [1 (left) | 2 (right)], index (building number)]
+    for i, b := range buildings {
+        allPoints = append(allPoints, Point{xAxis: b[0], side: LEFTSIDE, index: i})
+        allPoints = append(allPoints, Point{xAxis: b[1], side: RIGHTSIDE, index: i})
+    }
+    sort.Slice(allPoints, func(i, j int) bool {
+        if allPoints[i].xAxis == allPoints[j].xAxis {
+            return allPoints[i].side < allPoints[j].side
+        }
+        return allPoints[i].xAxis < allPoints[j].xAxis
+    })
+    bit.Init(len(allPoints))
+    kth := make(map[Point]int)
+    for i := 0; i < len(allPoints); i++ {
+        kth[allPoints[i]] = i
+    }
+    for i := 0; i < len(allPoints); i++ {
+        pt := allPoints[i]
+        if pt.side == LEFTSIDE {
+            bit.Add(kth[Point{xAxis: buildings[pt.index][1], side: RIGHTSIDE, index: pt.index}], buildings[pt.index][2])
+        }
+        currHeight := bit.Query(kth[pt] + 1)
+        if len(res) == 0 || res[len(res)-1][1] != currHeight {
+            if len(res) > 0 && res[len(res)-1][0] == pt.xAxis {
+                res[len(res)-1][1] = currHeight
+            } else {
+                res = append(res, []int{pt.xAxis, currHeight})
+            }
+        }
+    }
+    return res
 }
 
 type BinaryIndexedTree struct {
-	tree     []int
-	capacity int
+    tree     []int
+    capacity int
 }
 
 // Init define
 func (bit *BinaryIndexedTree) Init(capacity int) {
-	bit.tree, bit.capacity = make([]int, capacity+1), capacity
+    bit.tree, bit.capacity = make([]int, capacity+1), capacity
 }
 
 // Add define
 func (bit *BinaryIndexedTree) Add(index int, val int) {
-	for ; index > 0; index -= index & -index {
-		bit.tree[index] = max(bit.tree[index], val)
-	}
+    for ; index > 0; index -= index & -index {
+        bit.tree[index] = max(bit.tree[index], val)
+    }
 }
 
 // Query define
 func (bit *BinaryIndexedTree) Query(index int) int {
-	sum := 0
-	for ; index <= bit.capacity; index += index & -index {
-		sum = max(sum, bit.tree[index])
-	}
-	return sum
+    sum := 0
+    for ; index <= bit.capacity; index += index & -index {
+        sum = max(sum, bit.tree[index])
+    }
+    return sum
 }
 
 ```
@@ -485,40 +485,40 @@ func (bit *BinaryIndexedTree) Query(index int) int {
 
 ```go
 func reversePairs(nums []int) int {
-	if len(nums) <= 1 {
-		return 0
-	}
-	arr, newPermutation, bit, res := make([]Element, len(nums)), make([]int, len(nums)), template.BinaryIndexedTree{}, 0
-	for i := 0; i < len(nums); i++ {
-		arr[i].data = nums[i]
-		arr[i].pos = i
-	}
-	sort.Slice(arr, func(i, j int) bool {
-		if arr[i].data == arr[j].data {
-			if arr[i].pos < arr[j].pos {
-				return true
-			} else {
-				return false
-			}
-		}
-		return arr[i].data < arr[j].data
-	})
-	id := 1
-	newPermutation[arr[0].pos] = 1
-	for i := 1; i < len(arr); i++ {
-		if arr[i].data == arr[i-1].data {
-			newPermutation[arr[i].pos] = id
-		} else {
-			id++
-			newPermutation[arr[i].pos] = id
-		}
-	}
-	bit.Init(id)
-	for i := 0; i < len(newPermutation); i++ {
-		bit.Add(newPermutation[i], 1)
-		res += (i + 1) - bit.Query(newPermutation[i])
-	}
-	return res
+    if len(nums) <= 1 {
+        return 0
+    }
+    arr, newPermutation, bit, res := make([]Element, len(nums)), make([]int, len(nums)), template.BinaryIndexedTree{}, 0
+    for i := 0; i < len(nums); i++ {
+        arr[i].data = nums[i]
+        arr[i].pos = i
+    }
+    sort.Slice(arr, func(i, j int) bool {
+        if arr[i].data == arr[j].data {
+            if arr[i].pos < arr[j].pos {
+                return true
+            } else {
+                return false
+            }
+        }
+        return arr[i].data < arr[j].data
+    })
+    id := 1
+    newPermutation[arr[0].pos] = 1
+    for i := 1; i < len(arr); i++ {
+        if arr[i].data == arr[i-1].data {
+            newPermutation[arr[i].pos] = id
+        } else {
+            id++
+            newPermutation[arr[i].pos] = id
+        }
+    }
+    bit.Init(id)
+    for i := 0; i < len(newPermutation); i++ {
+        bit.Add(newPermutation[i], 1)
+        res += (i + 1) - bit.Query(newPermutation[i])
+    }
+    return res
 }
 ```
 
@@ -528,10 +528,10 @@ func reversePairs(nums []int) int {
 还有一种方法是倒序构造树状数组。例如下面代码：
 
 ```go
-	for i := len(s) - 1; i > 0; i-- {
-		bit.Add(newPermutation[i], 1)
-		res += bit.Query(newPermutation[i] - 1)
-	}
+    for i := len(s) - 1; i > 0; i-- {
+        bit.Add(newPermutation[i], 1)
+        res += bit.Query(newPermutation[i] - 1)
+    }
 ```
 
 由于是倒序插入，每次 Query 之前的元素下标一定比当前 i 要大。下标比 i 大，元素值比 A[i] 小，这样的元素和 i 可以构成逆序对。Query 查找 [1, B[j]] 区间内元素总个数，即为逆序对的总数。
@@ -595,35 +595,35 @@ Query(A[i] - 1) - C[i] &=  Query(A[7] - 1) - C[7]  \\
 ```go
 // BinaryIndexedTree2D define
 type BinaryIndexedTree2D struct {
-	tree [][]int
-	row  int
-	col  int
+    tree [][]int
+    row  int
+    col  int
 }
 
 // Add define
 func (bit2 *BinaryIndexedTree2D) Add(i, j int, val int) {
-	for i <= bit2.row {
-		k := j
-		for k <= bit2.col {
-			bit2.tree[i][k] += val
-			k += lowbit(k)
-		}
-		i += lowbit(i)
-	}
+    for i <= bit2.row {
+        k := j
+        for k <= bit2.col {
+            bit2.tree[i][k] += val
+            k += lowbit(k)
+        }
+        i += lowbit(i)
+    }
 }
 
 // Query define
 func (bit2 *BinaryIndexedTree2D) Query(i, j int) int {
-	sum := 0
-	for i >= 1 {
-		k := j
-		for k >= 1 {
-			sum += bit2.tree[i][k]
-			k -= lowbit(k)
-		}
-		i -= lowbit(i)
-	}
-	return sum
+    sum := 0
+    for i >= 1 {
+        k := j
+        for k >= 1 {
+            sum += bit2.tree[i][k]
+            k -= lowbit(k)
+        }
+        i -= lowbit(i)
+    }
+    return sum
 }
 ```
 

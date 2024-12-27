@@ -44,7 +44,8 @@ func Test_Problem1203(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1203, q.para1203
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, sortItems1(p.n, p.m, p.group, p.beforeItems))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", sortItems1(p.n, p.m, p.group, p.beforeItems))
 	}
 	fmt.Printf("\n\n\n")
 }

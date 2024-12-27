@@ -61,7 +61,8 @@ func Test_Problem329(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans329, q.para329
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestIncreasingPath(p.matrix))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", longestIncreasingPath(p.matrix))
 	}
 	fmt.Printf("\n\n\n")
 }

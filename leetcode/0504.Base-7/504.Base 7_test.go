@@ -39,8 +39,8 @@ func Test_Problem504(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans504, q.para504
-		fmt.Printf("【input】:%v      ", p.num)
-		fmt.Printf("【output】:%v      \n", convertToBase7(p.num))
+		fmt.Printf("[input]:%v      ", p.num)
+		fmt.Printf("[output]:%v      \n", convertToBase7(p.num))
 	}
 	fmt.Printf("\n\n\n")
 }

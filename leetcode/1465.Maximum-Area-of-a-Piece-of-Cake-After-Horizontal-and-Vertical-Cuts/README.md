@@ -65,25 +65,25 @@ package leetcode
 import "sort"
 
 func maxArea(h int, w int, hcuts []int, vcuts []int) int {
-	sort.Ints(hcuts)
-	sort.Ints(vcuts)
-	maxw, maxl := hcuts[0], vcuts[0]
-	for i, c := range hcuts[1:] {
-		if c-hcuts[i] > maxw {
-			maxw = c - hcuts[i]
-		}
-	}
-	if h-hcuts[len(hcuts)-1] > maxw {
-		maxw = h - hcuts[len(hcuts)-1]
-	}
-	for i, c := range vcuts[1:] {
-		if c-vcuts[i] > maxl {
-			maxl = c - vcuts[i]
-		}
-	}
-	if w-vcuts[len(vcuts)-1] > maxl {
-		maxl = w - vcuts[len(vcuts)-1]
-	}
-	return (maxw * maxl) % (1000000007)
+    sort.Ints(hcuts)
+    sort.Ints(vcuts)
+    maxw, maxl := hcuts[0], vcuts[0]
+    for i, c := range hcuts[1:] {
+        if c-hcuts[i] > maxw {
+            maxw = c - hcuts[i]
+        }
+    }
+    if h-hcuts[len(hcuts)-1] > maxw {
+        maxw = h - hcuts[len(hcuts)-1]
+    }
+    for i, c := range vcuts[1:] {
+        if c-vcuts[i] > maxl {
+            maxl = c - vcuts[i]
+        }
+    }
+    if w-vcuts[len(vcuts)-1] > maxl {
+        maxl = w - vcuts[len(vcuts)-1]
+    }
+    return (maxw * maxl) % (1000000007)
 }
 ```

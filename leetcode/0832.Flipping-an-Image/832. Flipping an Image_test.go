@@ -46,7 +46,8 @@ func Test_Problem832(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans832, q.para832
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, flipAndInvertImage(p.A))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", flipAndInvertImage(p.A))
 	}
 	fmt.Printf("\n\n\n")
 }

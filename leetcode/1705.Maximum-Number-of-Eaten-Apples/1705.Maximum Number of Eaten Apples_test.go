@@ -40,7 +40,7 @@ func Test_Problem1705(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1705, q.para1705
-		fmt.Printf("【input】:%v    【output】:%v\n", p, eatenApples(p.apples, p.days))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, eatenApples(p.apples, p.days))
 	}
 	fmt.Printf("\n\n\n")
 }

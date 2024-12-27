@@ -56,7 +56,7 @@ func Test_Problem1619(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1619, q.para1619
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, trimMean(p.p))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, trimMean(p.p))
 	}
 	fmt.Printf("\n\n\n")
 }

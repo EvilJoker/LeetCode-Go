@@ -47,7 +47,7 @@ func Test_Problem1470(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1470, q.para1470
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, shuffle(p.nums, p.n))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, shuffle(p.nums, p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

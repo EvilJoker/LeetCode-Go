@@ -50,7 +50,7 @@ func Test_Problem859(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans859, q.para859
-		fmt.Printf("【input】:%v    【output】:%v\n", p, buddyStrings(p.s, p.goal))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, buddyStrings(p.s, p.goal))
 	}
 	fmt.Printf("\n\n\n")
 }

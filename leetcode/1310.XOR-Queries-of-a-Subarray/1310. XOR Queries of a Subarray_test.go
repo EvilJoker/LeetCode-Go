@@ -42,7 +42,8 @@ func Test_Problem1310(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1310, q.para1310
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, xorQueries(p.arr, p.queries))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", xorQueries(p.arr, p.queries))
 	}
 	fmt.Printf("\n\n\n")
 }

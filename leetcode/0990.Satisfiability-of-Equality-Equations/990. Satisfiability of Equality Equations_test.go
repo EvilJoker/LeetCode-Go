@@ -56,7 +56,8 @@ func Test_Problem990(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans990, q.para990
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, equationsPossible(p.a))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", equationsPossible(p.a))
 	}
 	fmt.Printf("\n\n\n")
 }

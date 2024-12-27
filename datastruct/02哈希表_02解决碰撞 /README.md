@@ -13,7 +13,7 @@
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 const TableSize = 7
@@ -24,29 +24,29 @@ type HashTable struct {
 
 // 哈希函数
 func hash(key int) int {
-	return key % TableSize
+    return key % TableSize
 }
 
 // 插入元素，使用线性探测
 func (h *HashTable) Insert(key int) {
-	index := hash(key)
-	for h.table[index] != 0 { // 线性探测
-		index = (index + 1) % TableSize
-	}
-	h.table[index] = key
+    index := hash(key)
+    for h.table[index] != 0 { // 线性探测
+        index = (index + 1) % TableSize
+    }
+    h.table[index] = key
 }
 
 // 打印哈希表
 func (h *HashTable) Print() {
-	fmt.Println(h.table)
+    fmt.Println(h.table)
 }
 
 func main() {
-	h := &HashTable{}
-	h.Insert(10)
-	h.Insert(17) // 发生碰撞
-	h.Insert(24) // 再次碰撞
-	h.Print()
+    h := &HashTable{}
+    h.Insert(10)
+    h.Insert(17) // 发生碰撞
+    h.Insert(24) // 再次碰撞
+    h.Print()
 }
 
 ```
@@ -61,54 +61,54 @@ import "fmt"
 
 // 链表节点
 type Node struct {
-	key  int
-	next *Node
+    key  int
+    next *Node
 }
 
 type HashTable struct {
-	table []*Node
+    table []*Node
 }
 
 const TableSize = 7
 
 // 哈希函数
 func hash(key int) int {
-	return key % TableSize
+    return key % TableSize
 }
 
 // 插入元素，使用链地址法
 func (h *HashTable) Insert(key int) {
-	index := hash(key)
-	newNode := &Node{key: key}
-	if h.table[index] == nil {
-		h.table[index] = newNode
-	} else {
-		current := h.table[index]
-		for current.next != nil {
-			current = current.next
-		}
-		current.next = newNode
-	}
+    index := hash(key)
+    newNode := &Node{key: key}
+    if h.table[index] == nil {
+        h.table[index] = newNode
+    } else {
+        current := h.table[index]
+        for current.next != nil {
+            current = current.next
+        }
+        current.next = newNode
+    }
 }
 
 // 打印哈希表
 func (h *HashTable) Print() {
-	for i, node := range h.table {
-		fmt.Printf("%d: ", i)
-		for node != nil {
-			fmt.Printf("%d -> ", node.key)
-			node = node.next
-		}
-		fmt.Println("nil")
-	}
+    for i, node := range h.table {
+        fmt.Printf("%d: ", i)
+        for node != nil {
+            fmt.Printf("%d -> ", node.key)
+            node = node.next
+        }
+        fmt.Println("nil")
+    }
 }
 
 func main() {
-	h := &HashTable{table: make([]*Node, TableSize)}
-	h.Insert(10)
-	h.Insert(17) // 发生碰撞
-	h.Insert(24) // 再次碰撞
-	h.Print()
+    h := &HashTable{table: make([]*Node, TableSize)}
+    h.Insert(10)
+    h.Insert(17) // 发生碰撞
+    h.Insert(24) // 再次碰撞
+    h.Print()
 }
 
 

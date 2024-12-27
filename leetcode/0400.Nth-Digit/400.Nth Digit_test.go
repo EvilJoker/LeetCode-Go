@@ -39,7 +39,7 @@ func Test_Problem400(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans400, q.para400
-		fmt.Printf("【input】:%v    【output】:%v\n", p.n, findNthDigit(p.n))
+		fmt.Printf("[input]:%v    [output]:%v\n", p.n, findNthDigit(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

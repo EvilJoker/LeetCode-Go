@@ -77,7 +77,8 @@ func Test_Problem532(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans532, q.para532
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findPairs(p.one, p.n))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findPairs(p.one, p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

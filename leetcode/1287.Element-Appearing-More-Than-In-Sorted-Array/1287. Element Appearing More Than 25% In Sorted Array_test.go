@@ -36,7 +36,8 @@ func Test_Problem1287(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1287, q.para1287
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findSpecialInteger(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findSpecialInteger(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

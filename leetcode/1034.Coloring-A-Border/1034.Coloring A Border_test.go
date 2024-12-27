@@ -47,7 +47,7 @@ func Test_Problem1034(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1034, q.para1034
-		fmt.Printf("【input】:%v    【output】:%v\n", p, colorBorder(p.grid, p.row, p.col, p.color))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, colorBorder(p.grid, p.row, p.col, p.color))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -63,7 +63,8 @@ func Test_Problem349(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans349, q.para349
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, intersection(p.one, p.another))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", intersection(p.one, p.another))
 	}
 	fmt.Printf("\n\n\n")
 }

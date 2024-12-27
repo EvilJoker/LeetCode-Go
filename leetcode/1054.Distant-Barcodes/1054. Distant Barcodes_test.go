@@ -41,7 +41,8 @@ func Test_Problem1054(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1054, q.para1054
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, rearrangeBarcodes(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", rearrangeBarcodes(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

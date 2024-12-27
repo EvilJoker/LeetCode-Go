@@ -39,8 +39,8 @@ func Test_Problem1791(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1791, q.para1791
-		fmt.Printf("【input】:%v      ", p.edges)
-		fmt.Printf("【output】:%v      \n", findCenter(p.edges))
+		fmt.Printf("[input]:%v      ", p.edges)
+		fmt.Printf("[output]:%v      \n", findCenter(p.edges))
 	}
 	fmt.Printf("\n\n\n")
 }

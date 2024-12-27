@@ -41,7 +41,8 @@ func Test_Problem59(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans59, q.para59
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, generateMatrix(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", generateMatrix(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

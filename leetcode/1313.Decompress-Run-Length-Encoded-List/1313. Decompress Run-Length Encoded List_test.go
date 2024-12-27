@@ -46,8 +46,8 @@ func Test_Problem1313(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1313, q.para1313
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", decompressRLElist(p.nums))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", decompressRLElist(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

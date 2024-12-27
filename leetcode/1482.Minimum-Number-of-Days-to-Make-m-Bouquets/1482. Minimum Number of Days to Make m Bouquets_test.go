@@ -58,7 +58,7 @@ func Test_Problem1482(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1482, q.para1482
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, minDays(p.bloomDay, p.m, p.k))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, minDays(p.bloomDay, p.m, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

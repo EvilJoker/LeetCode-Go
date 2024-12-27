@@ -41,7 +41,8 @@ func Test_Problem216(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans216, q.para216
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, combinationSum3(p.n, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", combinationSum3(p.n, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

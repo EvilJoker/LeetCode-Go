@@ -50,18 +50,18 @@ Explanation: The unique elements are [1,2,3,4,5], and the sum is 15.
 package leetcode
 
 func sumOfUnique(nums []int) int {
-	freq, res := make(map[int]int), 0
-	for _, v := range nums {
-		if _, ok := freq[v]; !ok {
-			freq[v] = 0
-		}
-		freq[v]++
-	}
-	for k, v := range freq {
-		if v == 1 {
-			res += k
-		}
-	}
-	return res
+    freq, res := make(map[int]int), 0
+    for _, v := range nums {
+        if _, ok := freq[v]; !ok {
+            freq[v] = 0
+        }
+        freq[v]++
+    }
+    for k, v := range freq {
+        if v == 1 {
+            res += k
+        }
+    }
+    return res
 }
 ```

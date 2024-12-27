@@ -46,7 +46,7 @@ func Test_Problem1631(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1631, q.para1631
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, minimumEffortPath(p.heights))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, minimumEffortPath(p.heights))
 	}
 	fmt.Printf("\n\n\n")
 }

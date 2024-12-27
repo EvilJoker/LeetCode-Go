@@ -41,7 +41,8 @@ func Test_Problem368(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans368, q.para368
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, largestDivisibleSubset(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", largestDivisibleSubset(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

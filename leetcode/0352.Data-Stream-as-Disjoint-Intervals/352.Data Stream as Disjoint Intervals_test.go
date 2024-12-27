@@ -57,7 +57,8 @@ func Test_Problem352(t *testing.T) {
 	for _, q := range qs {
 		ans, p := q.ans352, q.para352
 		obj.AddNum(p.num)
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, obj.GetIntervals())
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", obj.GetIntervals())
 	}
 	fmt.Printf("\n\n\n")
 }

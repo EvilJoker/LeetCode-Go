@@ -38,21 +38,21 @@ Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).
 package leetcode
 
 func arrayPairSum(nums []int) int {
-	array := [20001]int{}
-	for i := 0; i < len(nums); i++ {
-		array[nums[i]+10000]++
-	}
-	flag, sum := true, 0
-	for i := 0; i < len(array); i++ {
-		for array[i] > 0 {
-			if flag {
-				sum = sum + i - 10000
-			}
-			flag = !flag
-			array[i]--
-		}
-	}
-	return sum
+    array := [20001]int{}
+    for i := 0; i < len(nums); i++ {
+        array[nums[i]+10000]++
+    }
+    flag, sum := true, 0
+    for i := 0; i < len(array); i++ {
+        for array[i] > 0 {
+            if flag {
+                sum = sum + i - 10000
+            }
+            flag = !flag
+            array[i]--
+        }
+    }
+    return sum
 }
 
 ```

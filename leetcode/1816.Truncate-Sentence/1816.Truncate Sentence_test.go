@@ -45,7 +45,7 @@ func Test_Problem1816(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1816, q.para1816
-		fmt.Printf("【input】:%v    【output】:%v\n", p, truncateSentence(p.s, p.k))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, truncateSentence(p.s, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

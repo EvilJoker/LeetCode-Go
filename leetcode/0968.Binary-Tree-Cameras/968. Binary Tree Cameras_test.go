@@ -43,9 +43,9 @@ func Test_Problem968(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans968, q.para968
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", minCameraCover(root))
+		fmt.Printf("[output]:%v      \n", minCameraCover(root))
 	}
 	fmt.Printf("\n\n\n")
 }

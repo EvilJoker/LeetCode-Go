@@ -47,7 +47,8 @@ func Test_Problem1143(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1143, q.para1143
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestCommonSubsequence(p.text1, p.text2))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", longestCommonSubsequence(p.text1, p.text2))
 	}
 	fmt.Printf("\n\n\n")
 }

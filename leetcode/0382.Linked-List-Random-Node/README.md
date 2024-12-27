@@ -59,9 +59,9 @@ solution.getRandom(); // return 3
 package leetcode
 
 import (
-	"math/rand"
+    "math/rand"
 
-	"github.com/halfrost/LeetCode-Go/structures"
+    "github.com/halfrost/LeetCode-Go/structures"
 )
 
 // ListNode define
@@ -75,26 +75,26 @@ type ListNode = structures.ListNode
  * }
  */
 type Solution struct {
-	head *ListNode
+    head *ListNode
 }
 
 /** @param head The linked list's head.
   Note that the head is guaranteed to be not null, so it contains at least one node. */
 func Constructor(head *ListNode) Solution {
-	return Solution{head: head}
+    return Solution{head: head}
 }
 
 /** Returns a random node's value. */
 func (this *Solution) GetRandom() int {
-	scope, selectPoint, curr := 1, 0, this.head
-	for curr != nil {
-		if rand.Float64() < 1.0/float64(scope) {
-			selectPoint = curr.Val
-		}
-		scope += 1
-		curr = curr.Next
-	}
-	return selectPoint
+    scope, selectPoint, curr := 1, 0, this.head
+    for curr != nil {
+        if rand.Float64() < 1.0/float64(scope) {
+            selectPoint = curr.Val
+        }
+        scope += 1
+        curr = curr.Next
+    }
+    return selectPoint
 }
 
 /**

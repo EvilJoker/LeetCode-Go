@@ -47,7 +47,8 @@ func Test_Problem733(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans733, q.para733
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, floodFill(p.one, p.sr, p.sc, p.c))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", floodFill(p.one, p.sr, p.sc, p.c))
 	}
 	fmt.Printf("\n\n\n")
 }

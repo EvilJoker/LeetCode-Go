@@ -60,7 +60,8 @@ func Test_Problem2(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans2, q.para2
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, structures.List2Ints(swapNodes(structures.Ints2List(p.head), p.k)))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", structures.List2Ints(swapNodes(structures.Ints2List(p.head), p.k)))
 	}
 	fmt.Printf("\n\n\n")
 }

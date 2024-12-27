@@ -45,7 +45,8 @@ func Test_Problem470(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans470, q.para470
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, rand10())
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", rand10())
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -68,9 +68,9 @@ func Test_Problem1038(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1038, q.para1038
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", structures.Tree2ints(bstToGst(root)))
+		fmt.Printf("[output]:%v      \n", structures.Tree2ints(bstToGst(root)))
 	}
 	fmt.Printf("\n\n\n")
 }

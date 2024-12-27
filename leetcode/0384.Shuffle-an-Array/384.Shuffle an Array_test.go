@@ -40,9 +40,9 @@ func Test_Problem384(t *testing.T) {
 			if op == "Solution" {
 				sol = Constructor(q.value[0])
 			} else if op == "reset" {
-				fmt.Printf("【input】:%v    【output】:%v\n", op, sol.Reset())
+				fmt.Printf("[input]:%v    [output]:%v\n", op, sol.Reset())
 			} else {
-				fmt.Printf("【input】:%v    【output】:%v\n", op, sol.Shuffle())
+				fmt.Printf("[input]:%v    [output]:%v\n", op, sol.Shuffle())
 			}
 		}
 	}

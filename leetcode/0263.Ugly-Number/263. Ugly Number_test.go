@@ -46,7 +46,8 @@ func Test_Problem263(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans263, q.para263
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isUgly(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", isUgly(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

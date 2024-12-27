@@ -48,7 +48,8 @@ func Test_Problem1235(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1235, q.para1235
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, jobScheduling(p.startTime, p.endTime, p.profit))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", jobScheduling(p.startTime, p.endTime, p.profit))
 	}
 	fmt.Printf("\n\n\n")
 }

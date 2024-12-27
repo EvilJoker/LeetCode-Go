@@ -70,7 +70,8 @@ func Test_Problem904(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans904, q.para904
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, totalFruit(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", totalFruit(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

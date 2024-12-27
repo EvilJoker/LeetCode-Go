@@ -47,7 +47,8 @@ func Test_Problem1818(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1818, q.para1818
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minAbsoluteSumDiff(p.nums1, p.nums2))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minAbsoluteSumDiff(p.nums1, p.nums2))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -49,9 +49,9 @@ func Test_Problem701(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans701, q.para701
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.root)
-		fmt.Printf("【output】:%v      \n", structures.Tree2ints(insertIntoBST(rootOne, p.val)))
+		fmt.Printf("[output]:%v      \n", structures.Tree2ints(insertIntoBST(rootOne, p.val)))
 	}
 	fmt.Printf("\n\n\n")
 }

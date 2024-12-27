@@ -41,9 +41,9 @@ func Test_Problem344(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans344, q.para344
-		fmt.Printf("【input】:%v      ", p.one)
+		fmt.Printf("[input]:%v      ", p.one)
 		reverseString(p.one)
-		fmt.Printf("【output】:%v\n", p.one)
+		fmt.Printf("[output]:%v\n", p.one)
 	}
 	fmt.Printf("\n\n\n")
 }

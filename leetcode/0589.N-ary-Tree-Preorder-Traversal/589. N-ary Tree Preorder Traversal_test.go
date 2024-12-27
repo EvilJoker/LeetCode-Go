@@ -43,9 +43,9 @@ func Test_Problem589(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans589, q.para589
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		rootOne := int2NaryNode(p.one)
-		fmt.Printf("【output】:%v      \n", preorder(rootOne))
+		fmt.Printf("[output]:%v      \n", preorder(rootOne))
 	}
 	fmt.Printf("\n\n\n")
 }

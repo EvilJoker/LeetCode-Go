@@ -51,7 +51,8 @@ func Test_Problem765(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans765, q.para765
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minSwapsCouples(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minSwapsCouples(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -39,7 +39,7 @@ func Test_Problem506(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans506, q.para506
-		fmt.Printf("【input】:%v    【output】:%v\n", p.score, findRelativeRanks(p.score))
+		fmt.Printf("[input]:%v    [output]:%v\n", p.score, findRelativeRanks(p.score))
 	}
 	fmt.Printf("\n\n\n")
 }

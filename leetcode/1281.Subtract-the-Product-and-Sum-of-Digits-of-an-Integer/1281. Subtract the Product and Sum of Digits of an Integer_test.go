@@ -41,7 +41,8 @@ func Test_Problem1281(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1281, q.para1281
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, subtractProductAndSum(p.n))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", subtractProductAndSum(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

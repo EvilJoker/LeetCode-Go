@@ -46,7 +46,8 @@ func Test_Problem838(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans838, q.para838
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, pushDominoes(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", pushDominoes(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

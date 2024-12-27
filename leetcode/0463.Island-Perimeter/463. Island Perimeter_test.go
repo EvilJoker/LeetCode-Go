@@ -36,7 +36,8 @@ func Test_Problem463(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans463, q.para463
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, islandPerimeter(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", islandPerimeter(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

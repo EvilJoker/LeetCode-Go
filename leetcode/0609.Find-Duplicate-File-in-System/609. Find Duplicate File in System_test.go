@@ -41,7 +41,8 @@ func Test_Problem609(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans609, q.para609
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findDuplicate(p.paths))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findDuplicate(p.paths))
 	}
 	fmt.Printf("\n\n\n")
 }

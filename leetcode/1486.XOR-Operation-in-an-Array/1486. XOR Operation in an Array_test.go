@@ -52,7 +52,7 @@ func Test_Problem1486(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1486, q.para1486
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, xorOperation(p.n, p.start))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, xorOperation(p.n, p.start))
 	}
 	fmt.Printf("\n\n\n")
 }

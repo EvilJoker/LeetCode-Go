@@ -42,7 +42,8 @@ func Test_Problem713(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans713, q.para713
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numSubarrayProductLessThanK(p.s, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numSubarrayProductLessThanK(p.s, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

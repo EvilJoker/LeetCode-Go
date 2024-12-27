@@ -75,7 +75,8 @@ func Test_Problem179(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans179, q.para179
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, largestNumber(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", largestNumber(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

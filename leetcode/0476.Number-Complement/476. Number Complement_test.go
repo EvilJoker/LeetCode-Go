@@ -41,7 +41,8 @@ func Test_Problem476(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans476, q.para476
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findComplement(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findComplement(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

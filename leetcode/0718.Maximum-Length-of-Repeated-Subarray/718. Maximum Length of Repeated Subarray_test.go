@@ -52,7 +52,8 @@ func Test_Problem718(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans718, q.para718
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findLength(p.A, p.B))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findLength(p.A, p.B))
 	}
 	fmt.Printf("\n\n\n")
 }

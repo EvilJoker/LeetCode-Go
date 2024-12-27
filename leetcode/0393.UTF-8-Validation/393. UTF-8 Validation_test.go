@@ -41,7 +41,8 @@ func Test_Problem393(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans393, q.para393
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, validUtf8(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", validUtf8(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

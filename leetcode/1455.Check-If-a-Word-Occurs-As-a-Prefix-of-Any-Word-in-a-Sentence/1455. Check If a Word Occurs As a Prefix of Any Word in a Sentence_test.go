@@ -57,8 +57,8 @@ func Test_Problem1455(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1455, q.para1455
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", isPrefixOfWord(p.sentence, p.searchWord))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", isPrefixOfWord(p.sentence, p.searchWord))
 	}
 	fmt.Printf("\n\n\n")
 }

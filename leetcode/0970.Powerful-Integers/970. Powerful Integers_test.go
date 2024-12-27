@@ -43,7 +43,8 @@ func Test_Problem970(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans970, q.para970
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, powerfulIntegers(p.one, p.two, p.b))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", powerfulIntegers(p.one, p.two, p.b))
 	}
 	fmt.Printf("\n\n\n")
 }

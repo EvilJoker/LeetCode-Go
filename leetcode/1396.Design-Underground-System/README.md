@@ -100,49 +100,49 @@ undergroundSystem.getAverageTime("Leyton", "Paradise"); // return 6.66667
 package leetcode
 
 type checkin struct {
-	station string
-	time    int
+    station string
+    time    int
 }
 
 type stationTime struct {
-	sum, count float64
+    sum, count float64
 }
 
 type UndergroundSystem struct {
-	checkins     map[int]*checkin
-	stationTimes map[string]map[string]*stationTime
+    checkins     map[int]*checkin
+    stationTimes map[string]map[string]*stationTime
 }
 
 func Constructor() UndergroundSystem {
-	return UndergroundSystem{
-		make(map[int]*checkin),
-		make(map[string]map[string]*stationTime),
-	}
+    return UndergroundSystem{
+        make(map[int]*checkin),
+        make(map[string]map[string]*stationTime),
+    }
 }
 
 func (s *UndergroundSystem) CheckIn(id int, stationName string, t int) {
-	s.checkins[id] = &checkin{stationName, t}
+    s.checkins[id] = &checkin{stationName, t}
 }
 
 func (s *UndergroundSystem) CheckOut(id int, stationName string, t int) {
-	checkin := s.checkins[id]
-	destination := s.stationTimes[checkin.station]
-	if destination == nil {
-		s.stationTimes[checkin.station] = make(map[string]*stationTime)
-	}
-	st := s.stationTimes[checkin.station][stationName]
-	if st == nil {
-		st = new(stationTime)
-		s.stationTimes[checkin.station][stationName] = st
-	}
-	st.sum += float64(t - checkin.time)
-	st.count++
-	delete(s.checkins, id)
+    checkin := s.checkins[id]
+    destination := s.stationTimes[checkin.station]
+    if destination == nil {
+        s.stationTimes[checkin.station] = make(map[string]*stationTime)
+    }
+    st := s.stationTimes[checkin.station][stationName]
+    if st == nil {
+        st = new(stationTime)
+        s.stationTimes[checkin.station][stationName] = st
+    }
+    st.sum += float64(t - checkin.time)
+    st.count++
+    delete(s.checkins, id)
 }
 
 func (s *UndergroundSystem) GetAverageTime(startStation string, endStation string) float64 {
-	st := s.stationTimes[startStation][endStation]
-	return st.sum / st.count
+    st := s.stationTimes[startStation][endStation]
+    return st.sum / st.count
 }
 
 /**

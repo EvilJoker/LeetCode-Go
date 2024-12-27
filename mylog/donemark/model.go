@@ -20,8 +20,8 @@ type Problem struct {
 
 func newProblem(name string, path string, desc string) *Problem {
 
-	if len(name) > 50 {
-		name = name[:50]
+	if len(name) > 200 {
+		name = name[:200]
 	}
 	result := Problem{name: name, path: path}
 

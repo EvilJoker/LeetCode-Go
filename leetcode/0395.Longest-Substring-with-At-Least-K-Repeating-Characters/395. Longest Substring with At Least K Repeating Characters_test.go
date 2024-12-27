@@ -42,7 +42,8 @@ func Test_Problem395(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans395, q.para395
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestSubstring(p.s, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", longestSubstring(p.s, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

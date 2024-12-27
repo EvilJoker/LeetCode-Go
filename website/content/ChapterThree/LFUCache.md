@@ -37,24 +37,24 @@ LFU 的更新操作和 LRU 类似，也需要用一个 map 保存 key 和双向�
 import "container/list"
 
 type LFUCache struct {
-	nodes    map[int]*list.Element
-	lists    map[int]*list.List
-	capacity int
-	min      int
+    nodes    map[int]*list.Element
+    lists    map[int]*list.List
+    capacity int
+    min      int
 }
 
 type node struct {
-	key       int
-	value     int
-	frequency int
+    key       int
+    value     int
+    frequency int
 }
 
 func Constructor(capacity int) LFUCache {
-	return LFUCache{nodes: make(map[int]*list.Element),
-		lists:    make(map[int]*list.List),
-		capacity: capacity,
-		min:      0,
-	}
+    return LFUCache{nodes: make(map[int]*list.Element),
+        lists:    make(map[int]*list.List),
+        capacity: capacity,
+        min:      0,
+    }
 }
 
 ```
@@ -63,23 +63,23 @@ LFUCache 的 Get 操作涉及更新 frequency 值和 2 个 map。在 nodes map �
 
 ```go
 func (this *LFUCache) Get(key int) int {
-	value, ok := this.nodes[key]
-	if !ok {
-		return -1
-	}
-	currentNode := value.Value.(*node)
-	this.lists[currentNode.frequency].Remove(value)
-	currentNode.frequency++
-	if _, ok := this.lists[currentNode.frequency]; !ok {
-		this.lists[currentNode.frequency] = list.New()
-	}
-	newList := this.lists[currentNode.frequency]
-	newNode := newList.PushFront(currentNode)
-	this.nodes[key] = newNode
-	if currentNode.frequency-1 == this.min && this.lists[currentNode.frequency-1].Len() == 0 {
-		this.min++
-	}
-	return currentNode.value
+    value, ok := this.nodes[key]
+    if !ok {
+        return -1
+    }
+    currentNode := value.Value.(*node)
+    this.lists[currentNode.frequency].Remove(value)
+    currentNode.frequency++
+    if _, ok := this.lists[currentNode.frequency]; !ok {
+        this.lists[currentNode.frequency] = list.New()
+    }
+    newList := this.lists[currentNode.frequency]
+    newNode := newList.PushFront(currentNode)
+    this.nodes[key] = newNode
+    if currentNode.frequency-1 == this.min && this.lists[currentNode.frequency-1].Len() == 0 {
+        this.min++
+    }
+    return currentNode.value
 }
 
 ```
@@ -91,36 +91,36 @@ LFU 的 Put 操作逻辑稍微多一点。先在 nodes map 中查询 key 是否�
 ```go
 
 func (this *LFUCache) Put(key int, value int) {
-	if this.capacity == 0 {
-		return
-	}
-	// 如果存在，更新访问次数
-	if currentValue, ok := this.nodes[key]; ok {
-		currentNode := currentValue.Value.(*node)
-		currentNode.value = value
-		this.Get(key)
-		return
-	}
-	// 如果不存在且缓存满了，需要删除
-	if this.capacity == len(this.nodes) {
-		currentList := this.lists[this.min]
-		backNode := currentList.Back()
-		delete(this.nodes, backNode.Value.(*node).key)
-		currentList.Remove(backNode)
-	}
-	// 新建结点，插入到 2 个 map 中
-	this.min = 1
-	currentNode := &node{
-		key:       key,
-		value:     value,
-		frequency: 1,
-	}
-	if _, ok := this.lists[1]; !ok {
-		this.lists[1] = list.New()
-	}
-	newList := this.lists[1]
-	newNode := newList.PushFront(currentNode)
-	this.nodes[key] = newNode
+    if this.capacity == 0 {
+        return
+    }
+    // 如果存在，更新访问次数
+    if currentValue, ok := this.nodes[key]; ok {
+        currentNode := currentValue.Value.(*node)
+        currentNode.value = value
+        this.Get(key)
+        return
+    }
+    // 如果不存在且缓存满了，需要删除
+    if this.capacity == len(this.nodes) {
+        currentList := this.lists[this.min]
+        backNode := currentList.Back()
+        delete(this.nodes, backNode.Value.(*node).key)
+        currentList.Remove(backNode)
+    }
+    // 新建结点，插入到 2 个 map 中
+    this.min = 1
+    currentNode := &node{
+        key:       key,
+        value:     value,
+        frequency: 1,
+    }
+    if _, ok := this.lists[1]; !ok {
+        this.lists[1] = list.New()
+    }
+    newList := this.lists[1]
+    newNode := newList.PushFront(currentNode)
+    this.nodes[key] = newNode
 }
 
 ```
@@ -145,19 +145,19 @@ LFU 的另外一个思路是利用 [Index Priority Queue](https://algs4.cs.princ
 import "container/heap"
 
 type LFUCache struct {
-	capacity int
-	pq       PriorityQueue
-	hash     map[int]*Item
-	counter  int
+    capacity int
+    pq       PriorityQueue
+    hash     map[int]*Item
+    counter  int
 }
 
 func Constructor(capacity int) LFUCache {
-	lfu := LFUCache{
-		pq:       PriorityQueue{},
-		hash:     make(map[int]*Item, capacity),
-		capacity: capacity,
-	}
-	return lfu
+    lfu := LFUCache{
+        pq:       PriorityQueue{},
+        hash:     make(map[int]*Item, capacity),
+        capacity: capacity,
+    }
+    return lfu
 }
 
 ```
@@ -167,12 +167,12 @@ Get 和 Put 操作要尽量的快，有 2 个问题需要解决。当访问次�
 ```go
 // An Item is something we manage in a priority queue.
 type Item struct {
-	value     int // The value of the item; arbitrary.
-	key       int
-	frequency int // The priority of the item in the queue.
-	count     int // use for evicting the oldest element
-	// The index is needed by update and is maintained by the heap.Interface methods.
-	index int // The index of the item in the heap.
+    value     int // The value of the item; arbitrary.
+    key       int
+    frequency int // The priority of the item in the queue.
+    count     int // use for evicting the oldest element
+    // The index is needed by update and is maintained by the heap.Interface methods.
+    index int // The index of the item in the heap.
 }
 
 ```
@@ -186,42 +186,42 @@ type PriorityQueue []*Item
 func (pq PriorityQueue) Len() int { return len(pq) }
 
 func (pq PriorityQueue) Less(i, j int) bool {
-	// We want Pop to give us the highest, not lowest, priority so we use greater than here.
-	if pq[i].frequency == pq[j].frequency {
-		return pq[i].count < pq[j].count
-	}
-	return pq[i].frequency < pq[j].frequency
+    // We want Pop to give us the highest, not lowest, priority so we use greater than here.
+    if pq[i].frequency == pq[j].frequency {
+        return pq[i].count < pq[j].count
+    }
+    return pq[i].frequency < pq[j].frequency
 }
 
 func (pq PriorityQueue) Swap(i, j int) {
-	pq[i], pq[j] = pq[j], pq[i]
-	pq[i].index = i
-	pq[j].index = j
+    pq[i], pq[j] = pq[j], pq[i]
+    pq[i].index = i
+    pq[j].index = j
 }
 
 func (pq *PriorityQueue) Push(x interface{}) {
-	n := len(*pq)
-	item := x.(*Item)
-	item.index = n
-	*pq = append(*pq, item)
+    n := len(*pq)
+    item := x.(*Item)
+    item.index = n
+    *pq = append(*pq, item)
 }
 
 func (pq *PriorityQueue) Pop() interface{} {
-	old := *pq
-	n := len(old)
-	item := old[n-1]
-	old[n-1] = nil  // avoid memory leak
-	item.index = -1 // for safety
-	*pq = old[0 : n-1]
-	return item
+    old := *pq
+    n := len(old)
+    item := old[n-1]
+    old[n-1] = nil  // avoid memory leak
+    item.index = -1 // for safety
+    *pq = old[0 : n-1]
+    return item
 }
 
 // update modifies the priority and value of an Item in the queue.
 func (pq *PriorityQueue) update(item *Item, value int, frequency int, count int) {
-	item.value = value
-	item.count = count
-	item.frequency = frequency
-	heap.Fix(pq, item.index)
+    item.value = value
+    item.count = count
+    item.frequency = frequency
+    heap.Fix(pq, item.index)
 }
 ```
 
@@ -233,15 +233,15 @@ func (pq *PriorityQueue) update(item *Item, value int, frequency int, count int)
 
 ```go
 func (this *LFUCache) Get(key int) int {
-	if this.capacity == 0 {
-		return -1
-	}
-	if item, ok := this.hash[key]; ok {
-		this.counter++
-		this.pq.update(item, item.value, item.frequency+1, this.counter)
-		return item.value
-	}
-	return -1
+    if this.capacity == 0 {
+        return -1
+    }
+    if item, ok := this.hash[key]; ok {
+        this.counter++
+        this.pq.update(item, item.value, item.frequency+1, this.counter)
+        return item.value
+    }
+    return -1
 }
 
 ```
@@ -250,28 +250,28 @@ func (this *LFUCache) Get(key int) int {
 
 ```go
 func (this *LFUCache) Put(key int, value int) {
-	if this.capacity == 0 {
-		return
-	}
-	this.counter++
-	// 如果存在，增加 frequency，再调整堆
-	if item, ok := this.hash[key]; ok {
-		this.pq.update(item, value, item.frequency+1, this.counter)
-		return
-	}
-	// 如果不存在且缓存满了，需要删除。在 hashmap 和 pq 中删除。
-	if len(this.pq) == this.capacity {
-		item := heap.Pop(&this.pq).(*Item)
-		delete(this.hash, item.key)
-	}
-	// 新建结点，在 hashmap 和 pq 中添加。
-	item := &Item{
-		value: value,
-		key:   key,
-		count: this.counter,
-	}
-	heap.Push(&this.pq, item)
-	this.hash[key] = item
+    if this.capacity == 0 {
+        return
+    }
+    this.counter++
+    // 如果存在，增加 frequency，再调整堆
+    if item, ok := this.hash[key]; ok {
+        this.pq.update(item, value, item.frequency+1, this.counter)
+        return
+    }
+    // 如果不存在且缓存满了，需要删除。在 hashmap 和 pq 中删除。
+    if len(this.pq) == this.capacity {
+        item := heap.Pop(&this.pq).(*Item)
+        delete(this.hash, item.key)
+    }
+    // 新建结点，在 hashmap 和 pq 中添加。
+    item := &Item{
+        value: value,
+        key:   key,
+        count: this.counter,
+    }
+    heap.Push(&this.pq, item)
+    this.hash[key] = item
 }
 ```
 
@@ -288,74 +288,74 @@ func (this *LFUCache) Put(key int, value int) {
 import "container/list"
 
 type LFUCache struct {
-	nodes    map[int]*list.Element
-	lists    map[int]*list.List
-	capacity int
-	min      int
+    nodes    map[int]*list.Element
+    lists    map[int]*list.List
+    capacity int
+    min      int
 }
 
 type node struct {
-	key       int
-	value     int
-	frequency int
+    key       int
+    value     int
+    frequency int
 }
 
 func Constructor(capacity int) LFUCache {
-	return LFUCache{nodes: make(map[int]*list.Element),
-		lists:    make(map[int]*list.List),
-		capacity: capacity,
-		min:      0,
-	}
+    return LFUCache{nodes: make(map[int]*list.Element),
+        lists:    make(map[int]*list.List),
+        capacity: capacity,
+        min:      0,
+    }
 }
 
 func (this *LFUCache) Get(key int) int {
-	value, ok := this.nodes[key]
-	if !ok {
-		return -1
-	}
-	currentNode := value.Value.(*node)
-	this.lists[currentNode.frequency].Remove(value)
-	currentNode.frequency++
-	if _, ok := this.lists[currentNode.frequency]; !ok {
-		this.lists[currentNode.frequency] = list.New()
-	}
-	newList := this.lists[currentNode.frequency]
-	newNode := newList.PushBack(currentNode)
-	this.nodes[key] = newNode
-	if currentNode.frequency-1 == this.min && this.lists[currentNode.frequency-1].Len() == 0 {
-		this.min++
-	}
-	return currentNode.value
+    value, ok := this.nodes[key]
+    if !ok {
+        return -1
+    }
+    currentNode := value.Value.(*node)
+    this.lists[currentNode.frequency].Remove(value)
+    currentNode.frequency++
+    if _, ok := this.lists[currentNode.frequency]; !ok {
+        this.lists[currentNode.frequency] = list.New()
+    }
+    newList := this.lists[currentNode.frequency]
+    newNode := newList.PushBack(currentNode)
+    this.nodes[key] = newNode
+    if currentNode.frequency-1 == this.min && this.lists[currentNode.frequency-1].Len() == 0 {
+        this.min++
+    }
+    return currentNode.value
 }
 
 func (this *LFUCache) Put(key int, value int) {
-	if this.capacity == 0 {
-		return
-	}
-	if currentValue, ok := this.nodes[key]; ok {
-		currentNode := currentValue.Value.(*node)
-		currentNode.value = value
-		this.Get(key)
-		return
-	}
-	if this.capacity == len(this.nodes) {
-		currentList := this.lists[this.min]
-		frontNode := currentList.Front()
-		delete(this.nodes, frontNode.Value.(*node).key)
-		currentList.Remove(frontNode)
-	}
-	this.min = 1
-	currentNode := &node{
-		key:       key,
-		value:     value,
-		frequency: 1,
-	}
-	if _, ok := this.lists[1]; !ok {
-		this.lists[1] = list.New()
-	}
-	newList := this.lists[1]
-	newNode := newList.PushBack(currentNode)
-	this.nodes[key] = newNode
+    if this.capacity == 0 {
+        return
+    }
+    if currentValue, ok := this.nodes[key]; ok {
+        currentNode := currentValue.Value.(*node)
+        currentNode.value = value
+        this.Get(key)
+        return
+    }
+    if this.capacity == len(this.nodes) {
+        currentList := this.lists[this.min]
+        frontNode := currentList.Front()
+        delete(this.nodes, frontNode.Value.(*node).key)
+        currentList.Remove(frontNode)
+    }
+    this.min = 1
+    currentNode := &node{
+        key:       key,
+        value:     value,
+        frequency: 1,
+    }
+    if _, ok := this.lists[1]; !ok {
+        this.lists[1] = list.New()
+    }
+    newList := this.lists[1]
+    newNode := newList.PushBack(currentNode)
+    this.nodes[key] = newNode
 }
 
 ```

@@ -45,9 +45,9 @@ func Test_Problem1089(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1089, q.para1089
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		duplicateZeros(p.arr)
-		fmt.Printf("【output】:%v      \n", p.arr)
+		fmt.Printf("[output]:%v      \n", p.arr)
 
 	}
 	fmt.Printf("\n\n\n")

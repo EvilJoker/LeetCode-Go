@@ -59,7 +59,8 @@ func Test_Problem888(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans888, q.para888
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, fairCandySwap(p.one, p.two))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", fairCandySwap(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

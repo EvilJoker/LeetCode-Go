@@ -45,7 +45,8 @@ func Test_Problem451(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans451, q.para451
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, frequencySort(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", frequencySort(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

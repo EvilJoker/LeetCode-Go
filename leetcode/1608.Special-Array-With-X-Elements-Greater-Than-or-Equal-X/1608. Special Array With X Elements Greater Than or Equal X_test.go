@@ -51,7 +51,7 @@ func Test_Problem1608(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1608, q.para1608
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, specialArray(p.nums))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, specialArray(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

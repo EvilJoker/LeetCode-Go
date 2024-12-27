@@ -41,7 +41,8 @@ func Test_Problem863(t *testing.T) {
 	for _, q := range qs {
 		ans, p := q.ans863, q.para863
 		tree, target := structures.Ints2TreeNode(p.root), structures.Ints2TreeNode(p.target)
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, distanceK(tree, target, p.K))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", distanceK(tree, target, p.K))
 	}
 	fmt.Printf("\n\n\n")
 }

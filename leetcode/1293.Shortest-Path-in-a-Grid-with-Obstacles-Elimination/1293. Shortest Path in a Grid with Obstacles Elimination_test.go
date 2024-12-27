@@ -67,7 +67,8 @@ func Test_Problem1293(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1293, q.para1293
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, shortestPath(p.grid, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", shortestPath(p.grid, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

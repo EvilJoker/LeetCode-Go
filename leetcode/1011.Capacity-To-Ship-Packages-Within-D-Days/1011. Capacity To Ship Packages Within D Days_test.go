@@ -52,7 +52,8 @@ func Test_Problem1011(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1011, q.para1011
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, shipWithinDays(p.weights, p.D))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", shipWithinDays(p.weights, p.D))
 	}
 	fmt.Printf("\n\n\n")
 }

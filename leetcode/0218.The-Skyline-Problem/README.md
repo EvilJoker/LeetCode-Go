@@ -54,17 +54,17 @@ For instance, the skyline in Figure B should be represented as:`[ [2 10], [3 15]
 
         // 扫描线伪代码
         events = {{x: L , height: H , type: entering},
-        		  {x: R , height: H , type: leaving}}
+                  {x: R , height: H , type: leaving}}
         event.SortByX()
         ds = new DS()
         
         for e in events:
-        	if entering(e):
-        		if e.height > ds.max(): ans += [e.height]
-        		ds.add(e.height)
-        	if leaving(e):
-        		ds.remove(e.height)
-        		if e.height > ds.max(): ans += [ds.max()]
+            if entering(e):
+                if e.height > ds.max(): ans += [e.height]
+                ds.add(e.height)
+            if leaving(e):
+                ds.remove(e.height)
+                if e.height > ds.max(): ans += [ds.max()]
 
 - 动态插入，查找最大值可以选用的数据结构有，最大堆和二叉搜索树。最大堆找最大值 O(1)，插入 O(log n)，但是 remove_by_key 需要 O(n) 的时间复杂度，并且需要自己实现。二叉搜索树，查找 max，添加和删除元素都是 O(log n) 的时间复杂度。
 - 排序的时候也需要注意几个问题：如果大楼的边界相等，并且是进入状态，那么再按照高度从大到小进行排序；如果大楼的边界相等，并且是离开状态，那么高度按照从小到大进行排序。

@@ -42,7 +42,8 @@ func Test_Problem1720(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1720, q.para1720
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, decode(p.encoded, p.first))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", decode(p.encoded, p.first))
 	}
 	fmt.Printf("\n\n\n")
 }

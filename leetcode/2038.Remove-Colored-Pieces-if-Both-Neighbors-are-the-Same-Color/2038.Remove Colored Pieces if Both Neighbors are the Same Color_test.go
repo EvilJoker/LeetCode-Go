@@ -44,8 +44,8 @@ func Test_Problem2038(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans2038, q.para2038
-		fmt.Printf("【input】:%v      ", p.colors)
-		fmt.Printf("【output】:%v      \n", winnerOfGame(p.colors))
+		fmt.Printf("[input]:%v      ", p.colors)
+		fmt.Printf("[output]:%v      \n", winnerOfGame(p.colors))
 	}
 	fmt.Printf("\n\n\n")
 }

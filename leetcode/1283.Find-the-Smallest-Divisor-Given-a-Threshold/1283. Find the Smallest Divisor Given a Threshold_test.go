@@ -47,7 +47,8 @@ func Test_Problem1283(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1283, q.para1283
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, smallestDivisor(p.nums, p.threshold))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", smallestDivisor(p.nums, p.threshold))
 	}
 	fmt.Printf("\n\n\n")
 }

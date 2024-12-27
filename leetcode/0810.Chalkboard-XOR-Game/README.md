@@ -46,13 +46,13 @@ If Alice erases 2 first, now nums becomes [1, 1]. The bitwise XOR of all the ele
 package leetcode
 
 func xorGame(nums []int) bool {
-	if len(nums)%2 == 0 {
-		return true
-	}
-	xor := 0
-	for _, num := range nums {
-		xor ^= num
-	}
-	return xor == 0
+    if len(nums)%2 == 0 {
+        return true
+    }
+    xor := 0
+    for _, num := range nums {
+        xor ^= num
+    }
+    return xor == 0
 }
 ```

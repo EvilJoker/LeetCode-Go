@@ -65,13 +65,13 @@ original 中下标从 0 到 n - 1 （都 包含 ）的元素构成二维数�
 package leetcode
 
 func construct2DArray(original []int, m int, n int) [][]int {
-	if m*n != len(original) {
-		return [][]int{}
-	}
-	res := make([][]int, m)
-	for i := 0; i < m; i++ {
-		res[i] = original[n*i : n*(i+1)]
-	}
-	return res
+    if m*n != len(original) {
+        return [][]int{}
+    }
+    res := make([][]int, m)
+    for i := 0; i < m; i++ {
+        res[i] = original[n*i : n*(i+1)]
+    }
+    return res
 }
 ```

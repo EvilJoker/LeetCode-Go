@@ -39,12 +39,12 @@ func Test_Problem519(t *testing.T) {
 		for _, v := range p.para {
 			if v == "Solution" {
 				sol = Constructor(q.val[0][0], q.val[0][1])
-				fmt.Printf("【input】:%v    【output】:%v\n", v, nil)
+				fmt.Printf("[input]:%v    [output]:%v\n", v, nil)
 			} else if v == "flip" {
-				fmt.Printf("【input】:%v    【output】:%v\n", v, sol.Flip())
+				fmt.Printf("[input]:%v    [output]:%v\n", v, sol.Flip())
 			} else {
 				sol.Reset()
-				fmt.Printf("【input】:%v    【output】:%v\n", v, nil)
+				fmt.Printf("[input]:%v    [output]:%v\n", v, nil)
 			}
 		}
 	}

@@ -43,7 +43,8 @@ func Test_Problem826(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans826, q.para826
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, maxProfitAssignment(p.one, p.two, p.three))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", maxProfitAssignment(p.one, p.two, p.three))
 	}
 	fmt.Printf("\n\n\n")
 }

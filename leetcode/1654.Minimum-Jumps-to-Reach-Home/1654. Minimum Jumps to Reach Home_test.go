@@ -54,7 +54,7 @@ func Test_Problem1654(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1654, q.para1654
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, minimumJumps(p.forbidden, p.a, p.b, p.x))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, minimumJumps(p.forbidden, p.a, p.b, p.x))
 	}
 	fmt.Printf("\n\n\n")
 }

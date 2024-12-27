@@ -64,19 +64,19 @@ So the maximum integer in M is 2, and there are four of it in M. So return 4.
 package leetcode
 
 func maxCount(m int, n int, ops [][]int) int {
-	minM, minN := m, n
-	for _, op := range ops {
-		minM = min(minM, op[0])
-		minN = min(minN, op[1])
-	}
-	return minM * minN
+    minM, minN := m, n
+    for _, op := range ops {
+        minM = min(minM, op[0])
+        minN = min(minN, op[1])
+    }
+    return minM * minN
 }
 
 func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
+    if a < b {
+        return a
+    }
+    return b
 }
 
 ```

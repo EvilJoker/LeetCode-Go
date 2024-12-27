@@ -40,9 +40,9 @@ sumRegion(1, 2, 2, 4) -> 12
 
 - 这一题是一维数组前缀和的进阶版本。定义 f(x,y) 代表矩形左上角 (0,0)，右下角 (x,y) 内的元素和。{{< katex display >}} f(i,j) = \sum_{x=0}^{i}\sum_{y=0}^{j} Matrix[x][y]{{< /katex >}}
 
-	{{< katex display >}}
+    {{< katex display >}}
     \begin{aligned}f(i,j) &= \sum_{x=0}^{i-1}\sum_{y=0}^{j-1} Matrix[x][y] + \sum_{x=0}^{i-1} Matrix[x][j] + \sum_{y=0}^{j-1} Matrix[i][y] + Matrix[i][j]\\&= (\sum_{x=0}^{i-1}\sum_{y=0}^{j-1} Matrix[x][y] + \sum_{x=0}^{i-1} Matrix[x][j]) + (\sum_{x=0}^{i-1}\sum_{y=0}^{j-1} Matrix[x][y] + \sum_{y=0}^{j-1} Matrix[i][y]) - \sum_{x=0}^{i-1}\sum_{y=0}^{j-1} Matrix[x][y] + Matrix[i][j]\\&= \sum_{x=0}^{i-1}\sum_{y=0}^{j} Matrix[x][y] + \sum_{x=0}^{i}\sum_{y=0}^{j-1} Matrix[x][y] - \sum_{x=0}^{i-1}\sum_{y=0}^{j-1} Matrix[x][y] + Matrix[i][j]\\&= f(i-1,j) + f(i,j-1) - f(i-1,j-1) + Matrix[i][j]\end{aligned}
-	{{< /katex >}}
+    {{< /katex >}}
 
 - 于是得到递推的关系式：`f(i, j) = f(i-1, j) + f(i, j-1) - f(i-1, j-1) + matrix[i][j]`，写代码为了方便，新建一个 `m+1 * n+1` 的矩阵，这样就不需要对 `row = 0` 和 `col = 0` 做单独处理了。上述推导公式如果画成图也很好理解：
 
@@ -58,27 +58,27 @@ sumRegion(1, 2, 2, 4) -> 12
 package leetcode
 
 type NumMatrix struct {
-	cumsum [][]int
+    cumsum [][]int
 }
 
 func Constructor(matrix [][]int) NumMatrix {
-	if len(matrix) == 0 {
-		return NumMatrix{nil}
-	}
-	cumsum := make([][]int, len(matrix)+1)
-	cumsum[0] = make([]int, len(matrix[0])+1)
-	for i := range matrix {
-		cumsum[i+1] = make([]int, len(matrix[i])+1)
-		for j := range matrix[i] {
-			cumsum[i+1][j+1] = matrix[i][j] + cumsum[i][j+1] + cumsum[i+1][j] - cumsum[i][j]
-		}
-	}
-	return NumMatrix{cumsum}
+    if len(matrix) == 0 {
+        return NumMatrix{nil}
+    }
+    cumsum := make([][]int, len(matrix)+1)
+    cumsum[0] = make([]int, len(matrix[0])+1)
+    for i := range matrix {
+        cumsum[i+1] = make([]int, len(matrix[i])+1)
+        for j := range matrix[i] {
+            cumsum[i+1][j+1] = matrix[i][j] + cumsum[i][j+1] + cumsum[i+1][j] - cumsum[i][j]
+        }
+    }
+    return NumMatrix{cumsum}
 }
 
 func (this *NumMatrix) SumRegion(row1 int, col1 int, row2 int, col2 int) int {
-	cumsum := this.cumsum
-	return cumsum[row2+1][col2+1] - cumsum[row1][col2+1] - cumsum[row2+1][col1] + cumsum[row1][col1]
+    cumsum := this.cumsum
+    return cumsum[row2+1][col2+1] - cumsum[row1][col2+1] - cumsum[row2+1][col1] + cumsum[row1][col1]
 }
 
 /**

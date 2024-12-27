@@ -48,7 +48,8 @@ func Test_Problem1052(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1052, q.para1052
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, maxSatisfied(p.customers, p.grumpy, p.x))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", maxSatisfied(p.customers, p.grumpy, p.x))
 	}
 	fmt.Printf("\n\n\n")
 }

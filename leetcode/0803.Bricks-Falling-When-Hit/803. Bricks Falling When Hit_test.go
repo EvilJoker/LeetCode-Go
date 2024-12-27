@@ -52,7 +52,8 @@ func Test_Problem803(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans803, q.para803
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, hitBricks(p.grid, p.hits))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", hitBricks(p.grid, p.hits))
 	}
 	fmt.Printf("\n\n\n")
 }

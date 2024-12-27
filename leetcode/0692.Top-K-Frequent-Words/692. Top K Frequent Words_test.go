@@ -42,7 +42,8 @@ func Test_Problem692(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans692, q.para692
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, topKFrequent(p.words, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", topKFrequent(p.words, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -36,7 +36,8 @@ func Test_Problem877(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans877, q.para877
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, stoneGame(p.piles))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", stoneGame(p.piles))
 	}
 	fmt.Printf("\n\n\n")
 }

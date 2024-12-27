@@ -49,7 +49,7 @@ func Test_Problem1659(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1659, q.para1659
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, getMaxGridHappiness(p.m, p.n, p.introvertsCount, p.extrovertsCount))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, getMaxGridHappiness(p.m, p.n, p.introvertsCount, p.extrovertsCount))
 	}
 	fmt.Printf("\n\n\n")
 }

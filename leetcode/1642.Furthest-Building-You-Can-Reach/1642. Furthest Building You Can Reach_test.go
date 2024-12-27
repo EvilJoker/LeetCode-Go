@@ -53,7 +53,7 @@ func Test_Problem1642(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1642, q.para1642
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, furthestBuilding(p.heights, p.bricks, p.ladders))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, furthestBuilding(p.heights, p.bricks, p.ladders))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -36,7 +36,8 @@ func Test_Problem630(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans630, q.para630
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, scheduleCourse(p.courses))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", scheduleCourse(p.courses))
 	}
 	fmt.Printf("\n\n\n")
 }

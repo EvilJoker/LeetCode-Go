@@ -41,7 +41,8 @@ func Test_Problem1725(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1725, q.para1725
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, countGoodRectangles(p.rectangles))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", countGoodRectangles(p.rectangles))
 	}
 	fmt.Printf("\n\n\n")
 }

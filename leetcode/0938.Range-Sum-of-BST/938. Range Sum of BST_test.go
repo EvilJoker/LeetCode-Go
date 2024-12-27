@@ -45,9 +45,9 @@ func Test_Problem938(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans938, q.para938
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		rootOne := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", rangeSumBST(rootOne, p.low, p.high))
+		fmt.Printf("[output]:%v      \n", rangeSumBST(rootOne, p.low, p.high))
 	}
 	fmt.Printf("\n\n\n")
 }

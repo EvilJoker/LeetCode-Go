@@ -41,7 +41,8 @@ func Test_Problem820(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans820, q.para820
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minimumLengthEncoding(p.words))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minimumLengthEncoding(p.words))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -54,9 +54,9 @@ func Test_Problem37(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans37, q.para37
-		fmt.Printf("【input】:%v \n\n", p)
+		fmt.Printf("[input]:%v \n\n", p)
 		solveSudoku(p.s)
-		fmt.Printf("【output】:%v \n\n", p)
+		fmt.Printf("[output]:%v \n\n", p)
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -55,8 +55,8 @@ func Test_Problem2043(t *testing.T) {
 				fmt.Println("unknown operation")
 			}
 		}
-		fmt.Printf("【input】:%v      \n", p)
-		fmt.Printf("【output】:%v      \n", res)
+		fmt.Printf("[input]:%v      \n", p)
+		fmt.Printf("[output]:%v      \n", res)
 	}
 	fmt.Printf("\n\n\n")
 }

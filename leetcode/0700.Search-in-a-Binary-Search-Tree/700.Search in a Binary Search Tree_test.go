@@ -45,7 +45,7 @@ func Test_Problem700(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans700, q.para700
-		fmt.Printf("【input】:%v    【output】:%v\n", p, searchBST(p.root, p.val))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, searchBST(p.root, p.val))
 	}
 	fmt.Printf("\n\n\n")
 }

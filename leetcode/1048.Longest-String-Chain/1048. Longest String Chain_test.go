@@ -72,7 +72,8 @@ func Test_Problem1048(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1048, q.para1048
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestStrChain(p.words))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", longestStrChain(p.words))
 	}
 	fmt.Printf("\n\n\n")
 }

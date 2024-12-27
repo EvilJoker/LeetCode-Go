@@ -37,7 +37,8 @@ func Test_Problem819(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans819, q.para819
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, mostCommonWord(p.one, p.b))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", mostCommonWord(p.one, p.b))
 	}
 	fmt.Printf("\n\n\n")
 }

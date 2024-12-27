@@ -48,8 +48,8 @@ func Test_Problem1385(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1385, q.para1385
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", findTheDistanceValue(p.arr1, p.arr2, p.d))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", findTheDistanceValue(p.arr1, p.arr2, p.d))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -75,7 +75,8 @@ func Test_Problem96(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans96, q.para96
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numTrees(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numTrees(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

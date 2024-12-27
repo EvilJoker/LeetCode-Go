@@ -68,16 +68,16 @@ LeetCode 设计了一款新式键盘，正在测试其可用性。测试人员�
 package leetcode
 
 func slowestKey(releaseTimes []int, keysPressed string) byte {
-	longestDuration, key := releaseTimes[0], keysPressed[0]
-	for i := 1; i < len(releaseTimes); i++ {
-		duration := releaseTimes[i] - releaseTimes[i-1]
-		if duration > longestDuration {
-			longestDuration = duration
-			key = keysPressed[i]
-		} else if duration == longestDuration && keysPressed[i] > key {
-			key = keysPressed[i]
-		}
-	}
-	return key
+    longestDuration, key := releaseTimes[0], keysPressed[0]
+    for i := 1; i < len(releaseTimes); i++ {
+        duration := releaseTimes[i] - releaseTimes[i-1]
+        if duration > longestDuration {
+            longestDuration = duration
+            key = keysPressed[i]
+        } else if duration == longestDuration && keysPressed[i] > key {
+            key = keysPressed[i]
+        }
+    }
+    return key
 }
 ```

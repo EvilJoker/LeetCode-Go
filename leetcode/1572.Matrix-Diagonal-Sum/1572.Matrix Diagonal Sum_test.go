@@ -45,7 +45,7 @@ func Test_Problem1572(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1572, q.para1572
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, diagonalSum(p.mat))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, diagonalSum(p.mat))
 	}
 	fmt.Printf("\n\n\n")
 }

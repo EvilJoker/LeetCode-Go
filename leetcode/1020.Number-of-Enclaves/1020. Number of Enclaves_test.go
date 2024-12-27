@@ -84,7 +84,8 @@ func Test_Problem1020(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1020, q.para1020
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numEnclaves(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numEnclaves(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

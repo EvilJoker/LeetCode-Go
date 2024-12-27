@@ -43,7 +43,8 @@ func Test_Problem1078(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1078, q.para1078
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findOcurrences(p.t, p.f, p.s))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findOcurrences(p.t, p.f, p.s))
 	}
 	fmt.Printf("\n\n\n")
 }

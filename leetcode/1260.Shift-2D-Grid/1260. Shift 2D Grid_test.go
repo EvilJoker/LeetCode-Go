@@ -53,7 +53,8 @@ func Test_Problem1260(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1260, q.para1260
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, shiftGrid(p.grid, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", shiftGrid(p.grid, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

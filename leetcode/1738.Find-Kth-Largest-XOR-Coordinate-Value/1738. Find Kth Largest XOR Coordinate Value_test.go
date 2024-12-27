@@ -52,7 +52,8 @@ func Test_Problem1738(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1738, q.para1738
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, kthLargestValue(p.matrix, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", kthLargestValue(p.matrix, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

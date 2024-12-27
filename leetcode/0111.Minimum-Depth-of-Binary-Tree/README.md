@@ -13,7 +13,7 @@ The minimum depth is the number of nodes along the shortest path from the root n
 
 Given binary tree `[3,9,20,null,null,15,7]`,
 
-    		3
+            3
        / \
       9  20
         /  \

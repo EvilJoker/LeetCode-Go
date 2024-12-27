@@ -58,7 +58,8 @@ func Test_Problem2022(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans2022, q.para2022
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, construct2DArray(p.original, p.m, p.n))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", construct2DArray(p.original, p.m, p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -57,7 +57,7 @@ func Test_Problem980(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans980, q.para980
-		fmt.Printf("【input】:%v       【output】:%v\n\n\n", p, uniquePathsIII(p.grid))
+		fmt.Printf("[input]:%v       [output]:%v\n\n\n", p, uniquePathsIII(p.grid))
 	}
 	fmt.Printf("\n\n\n")
 }

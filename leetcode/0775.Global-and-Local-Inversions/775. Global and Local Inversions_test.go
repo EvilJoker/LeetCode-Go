@@ -40,7 +40,8 @@ func Test_Problem775(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans775, q.para775
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isIdealPermutation(p.A))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", isIdealPermutation(p.A))
 	}
 	fmt.Printf("\n\n\n")
 }

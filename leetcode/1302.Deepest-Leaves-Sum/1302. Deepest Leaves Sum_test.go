@@ -43,7 +43,8 @@ func Test_Problem1302(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1302, q.para1302
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, deepestLeavesSum(structures.Ints2TreeNode(p.one)))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", deepestLeavesSum(structures.Ints2TreeNode(p.one)))
 	}
 	fmt.Printf("\n\n\n")
 }

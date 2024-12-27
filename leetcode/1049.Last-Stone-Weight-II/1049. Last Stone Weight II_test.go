@@ -46,7 +46,8 @@ func Test_Problem1049(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1049, q.para1049
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, lastStoneWeightII(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", lastStoneWeightII(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

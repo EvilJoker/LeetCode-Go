@@ -79,10 +79,10 @@ Note that the solution remains the same since 5 and 6 are in the same location a
 package leetcode
 
 import (
-	"math"
-	"sort"
+    "math"
+    "sort"
 
-	"github.com/halfrost/LeetCode-Go/structures"
+    "github.com/halfrost/LeetCode-Go/structures"
 )
 
 // TreeNode define
@@ -98,38 +98,38 @@ type TreeNode = structures.TreeNode
  */
 
 type node struct {
-	x, y, val int
+    x, y, val int
 }
 
 func verticalTraversal(root *TreeNode) [][]int {
-	var dfs func(root *TreeNode, x, y int)
-	var nodes []node
-	dfs = func(root *TreeNode, x, y int) {
-		if root == nil {
-			return
-		}
-		nodes = append(nodes, node{x, y, root.Val})
-		dfs(root.Left, x+1, y-1)
-		dfs(root.Right, x+1, y+1)
-	}
-	dfs(root, 0, 0)
+    var dfs func(root *TreeNode, x, y int)
+    var nodes []node
+    dfs = func(root *TreeNode, x, y int) {
+        if root == nil {
+            return
+        }
+        nodes = append(nodes, node{x, y, root.Val})
+        dfs(root.Left, x+1, y-1)
+        dfs(root.Right, x+1, y+1)
+    }
+    dfs(root, 0, 0)
 
-	sort.Slice(nodes, func(i, j int) bool {
-		a, b := nodes[i], nodes[j]
-		return a.y < b.y || a.y == b.y &&
-			(a.x < b.x || a.x == b.x && a.val < b.val)
-	})
+    sort.Slice(nodes, func(i, j int) bool {
+        a, b := nodes[i], nodes[j]
+        return a.y < b.y || a.y == b.y &&
+            (a.x < b.x || a.x == b.x && a.val < b.val)
+    })
 
-	var res [][]int
-	lastY := math.MinInt32
-	for _, node := range nodes {
-		if lastY != node.y {
-			res = append(res, []int{node.val})
-			lastY = node.y
-		} else {
-			res[len(res)-1] = append(res[len(res)-1], node.val)
-		}
-	}
-	return res
+    var res [][]int
+    lastY := math.MinInt32
+    for _, node := range nodes {
+        if lastY != node.y {
+            res = append(res, []int{node.val})
+            lastY = node.y
+        } else {
+            res[len(res)-1] = append(res[len(res)-1], node.val)
+        }
+    }
+    return res
 }
 ```

@@ -36,7 +36,8 @@ func Test_Problem839(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans839, q.para839
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numSimilarGroups(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numSimilarGroups(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

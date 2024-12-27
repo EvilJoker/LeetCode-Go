@@ -41,7 +41,8 @@ func Test_Problem872(t *testing.T) {
 		ans, p := q.ans872, q.para872
 		tree1 := structures.Ints2TreeNode(p.one)
 		tree2 := structures.Ints2TreeNode(p.two)
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, leafSimilar(tree1, tree2))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", leafSimilar(tree1, tree2))
 	}
 	fmt.Printf("\n\n\n")
 }

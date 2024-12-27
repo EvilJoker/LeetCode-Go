@@ -42,7 +42,8 @@ func Test_Problem870(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans870, q.para870
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, advantageCount1(p.A, p.B))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", advantageCount1(p.A, p.B))
 	}
 	fmt.Printf("\n\n\n")
 }

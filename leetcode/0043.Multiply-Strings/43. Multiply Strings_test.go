@@ -42,7 +42,8 @@ func Test_Problem43(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans43, q.para43
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, multiply(p.num1, p.num2))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", multiply(p.num1, p.num2))
 	}
 	fmt.Printf("\n\n\n")
 }

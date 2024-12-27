@@ -37,7 +37,7 @@ func Test_Problem985(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans985, q.para985
-		fmt.Printf("【input】:%v       【output】:%v\n\n\n", p, sumEvenAfterQueries(p.A, p.queries))
+		fmt.Printf("[input]:%v       [output]:%v\n\n\n", p, sumEvenAfterQueries(p.A, p.queries))
 	}
 	fmt.Printf("\n\n\n")
 }

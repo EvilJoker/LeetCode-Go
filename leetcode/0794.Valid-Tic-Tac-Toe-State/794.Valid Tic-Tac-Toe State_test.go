@@ -49,7 +49,7 @@ func Test_Problem794(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans794, q.para794
-		fmt.Printf("【input】:%v    【output】:%v\n", p.board, validTicTacToe(p.board))
+		fmt.Printf("[input]:%v    [output]:%v\n", p.board, validTicTacToe(p.board))
 	}
 	fmt.Printf("\n\n\n")
 }

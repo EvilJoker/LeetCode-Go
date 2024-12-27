@@ -36,7 +36,8 @@ func Test_Problem802(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans802, q.para802
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, eventualSafeNodes(p.graph))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", eventualSafeNodes(p.graph))
 	}
 	fmt.Printf("\n\n\n")
 }

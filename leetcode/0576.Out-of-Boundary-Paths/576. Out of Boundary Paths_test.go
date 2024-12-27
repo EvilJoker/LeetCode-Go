@@ -45,7 +45,8 @@ func Test_Problem576(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans576, q.para576
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findPaths(p.m, p.n, p.maxMove, p.startRow, p.startColumn))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findPaths(p.m, p.n, p.maxMove, p.startRow, p.startColumn))
 	}
 	fmt.Printf("\n\n\n")
 }

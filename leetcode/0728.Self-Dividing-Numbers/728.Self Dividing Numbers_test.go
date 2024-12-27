@@ -40,8 +40,8 @@ func Test_Problem728(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans728, q.para728
-		fmt.Printf("【input】:%v      ", p)
-		fmt.Printf("【output】:%v      \n", selfDividingNumbers(p.left, p.right))
+		fmt.Printf("[input]:%v      ", p)
+		fmt.Printf("[output]:%v      \n", selfDividingNumbers(p.left, p.right))
 	}
 	fmt.Printf("\n\n\n")
 }

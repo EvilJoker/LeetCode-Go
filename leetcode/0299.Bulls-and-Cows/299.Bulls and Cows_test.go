@@ -50,7 +50,8 @@ func Test_Problem299(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans299, q.para299
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, getHint(p.secret, p.guess))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", getHint(p.secret, p.guess))
 	}
 	fmt.Printf("\n\n\n")
 }

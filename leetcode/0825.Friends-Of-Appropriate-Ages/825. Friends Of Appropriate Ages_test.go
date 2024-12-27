@@ -46,7 +46,8 @@ func Test_Problem825(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans825, q.para825
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numFriendRequests(p.ages))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numFriendRequests(p.ages))
 	}
 	fmt.Printf("\n\n\n")
 }

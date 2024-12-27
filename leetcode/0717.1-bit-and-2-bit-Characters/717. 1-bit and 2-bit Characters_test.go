@@ -51,7 +51,8 @@ func Test_Problem717(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans717, q.para717
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isOneBitCharacter(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", isOneBitCharacter(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

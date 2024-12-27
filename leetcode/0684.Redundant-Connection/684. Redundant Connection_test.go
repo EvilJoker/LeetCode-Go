@@ -41,7 +41,8 @@ func Test_Problem684(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans684, q.para684
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findRedundantConnection(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findRedundantConnection(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -123,7 +123,8 @@ func Test_Problem526(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans526, q.para526
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, countArrangement(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", countArrangement(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

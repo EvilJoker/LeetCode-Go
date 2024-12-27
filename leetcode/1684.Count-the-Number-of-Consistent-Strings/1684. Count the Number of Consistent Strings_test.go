@@ -47,7 +47,8 @@ func Test_Problem1684(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1684, q.para1684
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, countConsistentStrings(p.allowed, p.words))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", countConsistentStrings(p.allowed, p.words))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -46,7 +46,8 @@ func Test_Problem953(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans953, q.para953
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isAlienSorted(p.one, p.two))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", isAlienSorted(p.one, p.two))
 	}
 	fmt.Printf("\n\n\n")
 }

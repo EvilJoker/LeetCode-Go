@@ -47,18 +47,18 @@ return: 3, for 3 arithmetic slices in A: [1, 2, 3], [2, 3, 4] and [1, 2, 3, 4] i
 package leetcode
 
 func numberOfArithmeticSlices(A []int) int {
-	if len(A) < 3 {
-		return 0
-	}
-	res, dp := 0, 0
-	for i := 1; i < len(A)-1; i++ {
-		if A[i+1]-A[i] == A[i]-A[i-1] {
-			dp++
-			res += dp
-		} else {
-			dp = 0
-		}
-	}
-	return res
+    if len(A) < 3 {
+        return 0
+    }
+    res, dp := 0, 0
+    for i := 1; i < len(A)-1; i++ {
+        if A[i+1]-A[i] == A[i]-A[i-1] {
+            dp++
+            res += dp
+        } else {
+            dp = 0
+        }
+    }
+    return res
 }
 ```

@@ -70,11 +70,11 @@ Explanation: There is no way to reach at index 1 with value 0.
 
 ```go
 func canReach(arr []int, start int) bool {
-	if start >= 0 && start < len(arr) && arr[start] < len(arr) {
-		jump := arr[start]
-		arr[start] += len(arr)
-		return jump == 0 || canReach(arr, start+jump) || canReach(arr, start-jump)
-	}
-	return false
+    if start >= 0 && start < len(arr) && arr[start] < len(arr) {
+        jump := arr[start]
+        arr[start] += len(arr)
+        return jump == 0 || canReach(arr, start+jump) || canReach(arr, start-jump)
+    }
+    return false
 }
 ```

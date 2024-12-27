@@ -46,7 +46,8 @@ func Test_Problem975(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans975, q.para975
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, oddEvenJumps(p.A))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", oddEvenJumps(p.A))
 	}
 	fmt.Printf("\n\n\n")
 }

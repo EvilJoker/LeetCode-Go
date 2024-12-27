@@ -41,7 +41,8 @@ func Test_Problem867(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans867, q.para867
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, transpose(p.A))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", transpose(p.A))
 	}
 	fmt.Printf("\n\n\n")
 }

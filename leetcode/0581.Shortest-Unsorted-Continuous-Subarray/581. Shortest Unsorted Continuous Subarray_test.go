@@ -46,7 +46,8 @@ func Test_Problem581(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans581, q.para581
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findUnsortedSubarray(p.nums))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findUnsortedSubarray(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

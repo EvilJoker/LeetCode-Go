@@ -97,8 +97,8 @@ int sum( int n ){
 
 ```c
 int binarySearch(int arr[], int l, int r, int target){
-	if( l > r )
-	    return -1;
+    if( l > r )
+        return -1;
     int mid = l + ( r - l ) / 2; // 防溢出
     if(arr[mid] == target)
         return mid;

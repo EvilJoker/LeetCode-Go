@@ -47,7 +47,7 @@ func Test_Problem1652(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1652, q.para1652
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, decrypt(p.code, p.k))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, decrypt(p.code, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

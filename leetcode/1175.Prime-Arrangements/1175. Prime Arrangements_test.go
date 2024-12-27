@@ -46,7 +46,8 @@ func Test_Problem1175(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1175, q.para1175
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numPrimeArrangements(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numPrimeArrangements(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

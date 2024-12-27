@@ -45,7 +45,7 @@ func Test_Problem1296(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1296, q.para1296
-		fmt.Printf("【input】:%v    【output】:%v\n", p, isPossibleDivide(p.nums, p.k))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, isPossibleDivide(p.nums, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

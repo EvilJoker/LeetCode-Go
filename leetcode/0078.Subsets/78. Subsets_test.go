@@ -41,7 +41,8 @@ func Test_Problem78(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans78, q.para78
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, subsets(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", subsets(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

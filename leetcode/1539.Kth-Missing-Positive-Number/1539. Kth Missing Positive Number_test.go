@@ -42,7 +42,7 @@ func Test_Problem1539(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1539, q.para1539
-		fmt.Printf("【input】:%v      【output】:%v      \n", p, findKthPositive(p.arr, p.k))
+		fmt.Printf("[input]:%v      [output]:%v      \n", p, findKthPositive(p.arr, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

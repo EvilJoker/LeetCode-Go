@@ -41,7 +41,8 @@ func Test_Problem841(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans841, q.para841
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, canVisitAllRooms(p.rooms))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", canVisitAllRooms(p.rooms))
 	}
 	fmt.Printf("\n\n\n")
 }

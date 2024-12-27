@@ -46,7 +46,8 @@ func Test_Problem942(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans942, q.para942
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, diStringMatch(p.S))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", diStringMatch(p.S))
 	}
 	fmt.Printf("\n\n\n")
 }

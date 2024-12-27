@@ -42,7 +42,7 @@ func Test_Problem419(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans419, q.para419
-		fmt.Printf("【input】:%v       【output】:%v\n", bytesArrayToStringArray(p.one), countBattleships(p.one))
+		fmt.Printf("[input]:%v       [output]:%v\n", bytesArrayToStringArray(p.one), countBattleships(p.one))
 	}
 	fmt.Printf("\n\n\n")
 

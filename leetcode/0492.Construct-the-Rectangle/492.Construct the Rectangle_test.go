@@ -44,7 +44,8 @@ func Test_Problem492(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans492, q.para492
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, constructRectangle(p.area))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", constructRectangle(p.area))
 	}
 	fmt.Printf("\n\n\n")
 }

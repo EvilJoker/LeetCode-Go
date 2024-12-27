@@ -40,7 +40,8 @@ func Test_Problem64(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans64, q.para64
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minPathSum(p.og))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minPathSum(p.og))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -57,7 +57,8 @@ func Test_Problem1673(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1673, q.para1673
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, mostCompetitive(p.nums, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", mostCompetitive(p.nums, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

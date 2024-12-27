@@ -7,7 +7,7 @@ Given two non-empty binary trees **s** and **t**, check whether tree **t** 
 
 **Example 1:** Given tree s:
 
-		 3
+         3
         / \
        4   5
       / \

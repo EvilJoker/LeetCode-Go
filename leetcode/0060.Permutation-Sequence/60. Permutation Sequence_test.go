@@ -42,7 +42,8 @@ func Test_Problem60(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans60, q.para60
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, getPermutation(p.n, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", getPermutation(p.n, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

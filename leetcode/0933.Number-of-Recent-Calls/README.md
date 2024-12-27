@@ -48,22 +48,22 @@ Output: [null,1,2,3,3]
 
 ```go
 type RecentCounter struct {
-	list []int
+    list []int
 }
 
 func Constructor933() RecentCounter {
-	return RecentCounter{
-		list: []int{},
-	}
+    return RecentCounter{
+        list: []int{},
+    }
 }
 
 func (this *RecentCounter) Ping(t int) int {
-	this.list = append(this.list, t)
-	index := sort.Search(len(this.list), func(i int) bool { return this.list[i] >= t-3000 })
-	if index < 0 {
-		index = -index - 1
-	}
-	return len(this.list) - index
+    this.list = append(this.list, t)
+    index := sort.Search(len(this.list), func(i int) bool { return this.list[i] >= t-3000 })
+    if index < 0 {
+        index = -index - 1
+    }
+    return len(this.list) - index
 }
 
 /**

@@ -72,7 +72,8 @@ func Test_Problem925(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans925, q.para925
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isLongPressedName(p.name, p.typed))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", isLongPressedName(p.name, p.typed))
 	}
 	fmt.Printf("\n\n\n")
 }

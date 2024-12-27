@@ -41,7 +41,8 @@ func Test_Problem720(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans720, q.para720
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, longestWord(p.w))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", longestWord(p.w))
 	}
 	fmt.Printf("\n\n\n")
 }

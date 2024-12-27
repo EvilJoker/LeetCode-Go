@@ -51,7 +51,8 @@ func Test_Problem699(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans699, q.para699
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, fallingSquares(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", fallingSquares(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

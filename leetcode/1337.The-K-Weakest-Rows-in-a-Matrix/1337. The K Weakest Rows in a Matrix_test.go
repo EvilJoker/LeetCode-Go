@@ -42,7 +42,8 @@ func Test_Problem1337(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1337, q.para1337
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, kWeakestRows(p.mat, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", kWeakestRows(p.mat, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

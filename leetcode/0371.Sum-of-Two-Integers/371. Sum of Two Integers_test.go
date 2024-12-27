@@ -43,7 +43,8 @@ func Test_Problem371(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans371, q.para371
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, getSum(p.a, p.b))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", getSum(p.a, p.b))
 	}
 	fmt.Printf("\n\n\n")
 }

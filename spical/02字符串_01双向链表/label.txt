@@ -1,1 +1,0 @@
-catagory=01字符串;status=01done;recommend=01basic;difficulty=01easy;lastupdate=2024-12-09;alias=双向链表的概念;

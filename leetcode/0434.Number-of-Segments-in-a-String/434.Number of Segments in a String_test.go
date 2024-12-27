@@ -49,7 +49,8 @@ func Test_Problem434(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans434, q.para434
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, countSegments(p.s))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", countSegments(p.s))
 	}
 	fmt.Printf("\n\n\n")
 }

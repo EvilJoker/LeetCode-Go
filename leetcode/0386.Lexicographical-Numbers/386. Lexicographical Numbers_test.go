@@ -36,7 +36,8 @@ func Test_Problem386(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans386, q.para386
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, lexicalOrder(p.n))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", lexicalOrder(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

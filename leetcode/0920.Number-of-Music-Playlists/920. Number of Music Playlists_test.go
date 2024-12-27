@@ -48,7 +48,8 @@ func Test_Problem920(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans920, q.para920
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numMusicPlaylists(p.N, p.L, p.K))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numMusicPlaylists(p.N, p.L, p.K))
 	}
 	fmt.Printf("\n\n\n")
 }

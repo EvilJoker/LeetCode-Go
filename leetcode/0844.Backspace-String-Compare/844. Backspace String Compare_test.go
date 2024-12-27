@@ -52,7 +52,8 @@ func Test_Problem844(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans844, q.para844
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, backspaceCompare(p.s, p.t))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", backspaceCompare(p.s, p.t))
 	}
 	fmt.Printf("\n\n\n")
 }

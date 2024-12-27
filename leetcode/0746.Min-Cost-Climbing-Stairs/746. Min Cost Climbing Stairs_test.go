@@ -41,7 +41,8 @@ func Test_Problem746(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans746, q.para746
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minCostClimbingStairs(p.c))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minCostClimbingStairs(p.c))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -86,7 +86,7 @@ func Test_Problem154(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans154, q.para154
-		fmt.Printf("【input】:%v    【output】:%v\n", p, findMin154(p.nums))
+		fmt.Printf("[input]:%v    [output]:%v\n", p, findMin154(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

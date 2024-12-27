@@ -46,7 +46,8 @@ func Test_Problem1006(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1006, q.para1006
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, clumsy(p.N))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", clumsy(p.N))
 	}
 	fmt.Printf("\n\n\n")
 }

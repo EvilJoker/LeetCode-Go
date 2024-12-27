@@ -41,7 +41,8 @@ func Test_Problem1266(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1266, q.para1266
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, minTimeToVisitAllPoints(p.points))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", minTimeToVisitAllPoints(p.points))
 	}
 	fmt.Printf("\n\n\n")
 }

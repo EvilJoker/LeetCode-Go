@@ -43,9 +43,9 @@ func Test_Problem404(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans404, q.para404
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
-		fmt.Printf("【output】:%v      \n", sumOfLeftLeaves(root))
+		fmt.Printf("[output]:%v      \n", sumOfLeftLeaves(root))
 	}
 	fmt.Printf("\n\n\n")
 }

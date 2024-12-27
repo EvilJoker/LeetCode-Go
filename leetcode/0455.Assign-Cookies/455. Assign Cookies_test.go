@@ -42,7 +42,8 @@ func Test_Problem455(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans455, q.para455
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findContentChildren(p.g, p.s))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findContentChildren(p.g, p.s))
 	}
 	fmt.Printf("\n\n\n")
 }

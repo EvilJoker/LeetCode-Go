@@ -58,7 +58,8 @@ func Test_Problem63(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans63, q.para63
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, uniquePathsWithObstacles(p.og))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", uniquePathsWithObstacles(p.og))
 	}
 	fmt.Printf("\n\n\n")
 }

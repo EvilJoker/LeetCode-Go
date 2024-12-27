@@ -40,7 +40,8 @@ func Test_Problem278(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans278, q.para278
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, firstBadVersion(p.n))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", firstBadVersion(p.n))
 	}
 	fmt.Printf("\n\n\n")
 }

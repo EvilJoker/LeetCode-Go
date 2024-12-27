@@ -42,7 +42,8 @@ func Test_Problem1710(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1710, q.para1710
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, maximumUnits(p.boxTypes, p.truckSize))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", maximumUnits(p.boxTypes, p.truckSize))
 	}
 	fmt.Printf("\n\n\n")
 }

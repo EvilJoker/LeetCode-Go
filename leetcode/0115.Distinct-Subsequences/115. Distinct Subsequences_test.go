@@ -42,7 +42,8 @@ func Test_Problem115(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans115, q.para115
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numDistinct(p.s, p.t))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numDistinct(p.s, p.t))
 	}
 	fmt.Printf("\n\n\n")
 }

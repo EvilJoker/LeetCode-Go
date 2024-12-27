@@ -47,7 +47,8 @@ func Test_Problem509(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans509, q.para509
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, fib(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", fib(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

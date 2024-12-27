@@ -41,7 +41,8 @@ func Test_Problem1232(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1232, q.para1232
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, checkStraightLine(p.arr))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", checkStraightLine(p.arr))
 	}
 	fmt.Printf("\n\n\n")
 }

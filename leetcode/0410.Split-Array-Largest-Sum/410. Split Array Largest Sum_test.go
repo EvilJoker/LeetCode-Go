@@ -37,7 +37,8 @@ func Test_Problem410(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans410, q.para410
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, splitArray(p.nums, p.m))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", splitArray(p.nums, p.m))
 	}
 	fmt.Printf("\n\n\n")
 }

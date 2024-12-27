@@ -46,7 +46,8 @@ func Test_Problem611(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans611, q.para611
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, triangleNumber(p.nums))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", triangleNumber(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

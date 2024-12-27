@@ -42,7 +42,8 @@ func Test_Problem704(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans704, q.para704
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, search704(p.nums, p.target))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", search704(p.nums, p.target))
 	}
 	fmt.Printf("\n\n\n")
 }

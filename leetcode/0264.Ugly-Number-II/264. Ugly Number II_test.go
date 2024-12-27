@@ -56,7 +56,8 @@ func Test_Problem264(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans264, q.para264
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, nthUglyNumber(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", nthUglyNumber(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

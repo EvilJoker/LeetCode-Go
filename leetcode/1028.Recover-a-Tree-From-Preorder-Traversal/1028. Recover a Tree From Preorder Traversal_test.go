@@ -47,7 +47,8 @@ func Test_Problem1028(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1028, q.para1028
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, structures.Tree2ints(recoverFromPreorder(p.one)))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", structures.Tree2ints(recoverFromPreorder(p.one)))
 	}
 	fmt.Printf("\n\n\n")
 }

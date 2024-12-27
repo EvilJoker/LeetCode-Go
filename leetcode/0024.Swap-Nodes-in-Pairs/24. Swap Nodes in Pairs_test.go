@@ -55,7 +55,8 @@ func Test_Problem24(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans24, q.para24
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, structures.List2Ints(swapPairs(structures.Ints2List(p.one))))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", structures.List2Ints(swapPairs(structures.Ints2List(p.one))))
 	}
 	fmt.Printf("\n\n\n")
 }

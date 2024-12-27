@@ -10,26 +10,26 @@ Recall that a graph is *bipartite* if we can split it's set of nodes into two 
 The graph is given in the following form: `graph[i]` is a list of indexes `j` for which the edge between nodes `i` and `j` exists. Each node is an integer between `0` and `graph.length - 1`. There are no self edges or parallel edges: `graph[i]` does not contain `i`, and it doesn't contain any element twice.
 
 
-	Example 1:Input: [[1,3], [0,2], [1,3], [0,2]]
-	Output: true
-	Explanation: 
-	The graph looks like this:
-	0----1
-	|    |
-	|    |
-	3----2
-	We can divide the vertices into two groups: {0, 2} and {1, 3}.
+    Example 1:Input: [[1,3], [0,2], [1,3], [0,2]]
+    Output: true
+    Explanation: 
+    The graph looks like this:
+    0----1
+    |    |
+    |    |
+    3----2
+    We can divide the vertices into two groups: {0, 2} and {1, 3}.
 
 
-	Example 2:Input: [[1,2,3], [0,2], [0,1,3], [0,2]]
-	Output: false
-	Explanation: 
-	The graph looks like this:
-	0----1
-	| \  |
-	|  \ |
-	3----2
-	We cannot find a way to divide the set of nodes into two independent subsets.
+    Example 2:Input: [[1,2,3], [0,2], [0,1,3], [0,2]]
+    Output: false
+    Explanation: 
+    The graph looks like this:
+    0----1
+    | \  |
+    |  \ |
+    3----2
+    We cannot find a way to divide the set of nodes into two independent subsets.
 
 
 **Note:**
@@ -64,35 +64,35 @@ package leetcode
 
 // DFS 染色，1 是红色，0 是绿色，-1 是未染色
 func isBipartite(graph [][]int) bool {
-	colors := make([]int, len(graph))
-	for i := range colors {
-		colors[i] = -1
-	}
-	for i := range graph {
-		if !dfs(i, graph, colors, -1) {
-			return false
-		}
-	}
-	return true
+    colors := make([]int, len(graph))
+    for i := range colors {
+        colors[i] = -1
+    }
+    for i := range graph {
+        if !dfs(i, graph, colors, -1) {
+            return false
+        }
+    }
+    return true
 }
 
 func dfs(n int, graph [][]int, colors []int, parentCol int) bool {
-	if colors[n] == -1 {
-		if parentCol == 1 {
-			colors[n] = 0
-		} else {
-			colors[n] = 1
-		}
-	} else if colors[n] == parentCol {
-		return false
-	} else if colors[n] != parentCol {
-		return true
-	}
-	for _, c := range graph[n] {
-		if !dfs(c, graph, colors, colors[n]) {
-			return false
-		}
-	}
-	return true
+    if colors[n] == -1 {
+        if parentCol == 1 {
+            colors[n] = 0
+        } else {
+            colors[n] = 1
+        }
+    } else if colors[n] == parentCol {
+        return false
+    } else if colors[n] != parentCol {
+        return true
+    }
+    for _, c := range graph[n] {
+        if !dfs(c, graph, colors, colors[n]) {
+            return false
+        }
+    }
+    return true
 }
 ```

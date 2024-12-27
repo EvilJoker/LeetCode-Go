@@ -39,7 +39,7 @@ func Test_Problem807(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans807, q.para807
-		fmt.Printf("【input】:%v    【output】:%v\n", p.grid, maxIncreaseKeepingSkyline(p.grid))
+		fmt.Printf("[input]:%v    [output]:%v\n", p.grid, maxIncreaseKeepingSkyline(p.grid))
 	}
 	fmt.Printf("\n\n\n")
 }

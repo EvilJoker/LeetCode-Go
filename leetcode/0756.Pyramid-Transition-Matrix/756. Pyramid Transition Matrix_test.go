@@ -42,7 +42,8 @@ func Test_Problem756(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans756, q.para756
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, pyramidTransition(p.b, p.a))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", pyramidTransition(p.b, p.a))
 	}
 	fmt.Printf("\n\n\n")
 }

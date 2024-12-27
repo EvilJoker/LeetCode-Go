@@ -56,7 +56,8 @@ func Test_Problem784(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans784, q.para784
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, letterCasePermutation1(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", letterCasePermutation1(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

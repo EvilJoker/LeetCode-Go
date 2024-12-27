@@ -40,12 +40,12 @@ Output: [18,6,6,6,1,-1]
 
 ```go
 func replaceElements(arr []int) []int {
-	j, temp := -1, 0
-	for i := len(arr) - 1; i >= 0; i-- {
-		temp = arr[i]
-		arr[i] = j
-		j = max(j, temp)
-	}
-	return arr
+    j, temp := -1, 0
+    for i := len(arr) - 1; i >= 0; i-- {
+        temp = arr[i]
+        arr[i] = j
+        j = max(j, temp)
+    }
+    return arr
 }
 ```

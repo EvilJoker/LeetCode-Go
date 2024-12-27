@@ -42,7 +42,8 @@ func Test_Problem910(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans910, q.para910
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, smallestRangeII(p.A, p.K))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", smallestRangeII(p.A, p.K))
 	}
 	fmt.Printf("\n\n\n")
 }

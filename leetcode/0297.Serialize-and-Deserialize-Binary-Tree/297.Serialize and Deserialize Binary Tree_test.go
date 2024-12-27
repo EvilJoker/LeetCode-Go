@@ -44,12 +44,12 @@ func Test_Problem297(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans297, q.para297
-		fmt.Printf("【input】:%v      ", p)
+		fmt.Printf("[input]:%v      ", p)
 		root := structures.Ints2TreeNode(p.one)
 
 		tree297 := Constructor()
 		serialized := tree297.serialize(root)
-		fmt.Printf("【output】:%v      \n", structures.Tree2Preorder(tree297.deserialize(serialized)))
+		fmt.Printf("[output]:%v      \n", structures.Tree2Preorder(tree297.deserialize(serialized)))
 	}
 	fmt.Printf("\n\n\n")
 }

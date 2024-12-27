@@ -38,7 +38,8 @@ func Test_Problem795(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans795, q.para795
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numSubarrayBoundedMax(p.nums, p.left, p.right))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numSubarrayBoundedMax(p.nums, p.left, p.right))
 	}
 	fmt.Printf("\n\n\n")
 }

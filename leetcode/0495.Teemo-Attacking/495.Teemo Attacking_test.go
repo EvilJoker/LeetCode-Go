@@ -40,7 +40,8 @@ func Test_Problem495(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans495, q.para495
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, findPoisonedDuration(p.timeSeries, p.duration))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", findPoisonedDuration(p.timeSeries, p.duration))
 	}
 	fmt.Printf("\n\n\n")
 }

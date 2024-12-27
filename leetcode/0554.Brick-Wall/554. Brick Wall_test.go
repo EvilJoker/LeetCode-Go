@@ -51,7 +51,8 @@ func Test_Problem554(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans554, q.para554
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, leastBricks(p.wall))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", leastBricks(p.wall))
 	}
 	fmt.Printf("\n\n\n")
 }

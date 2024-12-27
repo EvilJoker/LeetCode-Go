@@ -43,7 +43,8 @@ func Test_Problem1252(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1252, q.para1252
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, oddCells(p.n, p.m, p.indices))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", oddCells(p.n, p.m, p.indices))
 	}
 	fmt.Printf("\n\n\n")
 }

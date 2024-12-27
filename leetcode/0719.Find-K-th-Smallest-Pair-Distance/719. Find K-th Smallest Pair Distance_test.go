@@ -57,7 +57,8 @@ func Test_Problem719(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans719, q.para719
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, smallestDistancePair(p.num, p.k))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", smallestDistancePair(p.num, p.k))
 	}
 	fmt.Printf("\n\n\n")
 }

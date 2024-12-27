@@ -40,7 +40,8 @@ func Test_Problem396(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans396, q.para396
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, maxRotateFunction(p.one))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", maxRotateFunction(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }

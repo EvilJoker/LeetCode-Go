@@ -39,8 +39,8 @@ func Test_Problem540(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans540, q.para540
-		fmt.Printf("【input】:%v      ", p.nums)
-		fmt.Printf("【output】:%v      \n", singleNonDuplicate(p.nums))
+		fmt.Printf("[input]:%v      ", p.nums)
+		fmt.Printf("[output]:%v      \n", singleNonDuplicate(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -42,7 +42,8 @@ func Test_Problem836(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans836, q.para836
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, isRectangleOverlap(p.rec1, p.rec2))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", isRectangleOverlap(p.rec1, p.rec2))
 	}
 	fmt.Printf("\n\n\n")
 }

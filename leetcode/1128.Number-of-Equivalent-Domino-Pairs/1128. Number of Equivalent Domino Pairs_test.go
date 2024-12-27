@@ -36,7 +36,8 @@ func Test_Problem1128(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans1128, q.para1128
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, numEquivDominoPairs(p.dominoes))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", numEquivDominoPairs(p.dominoes))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -43,7 +43,8 @@ func Test_Problem223(t *testing.T) {
 
 	for _, q := range qs {
 		ans, p := q.ans223, q.para223
-		fmt.Printf("【input】:%v\n 【expect】:%v\n 【output】:%v\n", p, ans, computeArea(p.A, p.B, p.C, p.D, p.E, p.F, p.G, p.H))
+		fmt.Printf("[input]:%v\n[expect]:%v\n", p, ans)
+		fmt.Printf("[output]:%v\n", computeArea(p.A, p.B, p.C, p.D, p.E, p.F, p.G, p.H))
 	}
 	fmt.Printf("\n\n\n")
 }
