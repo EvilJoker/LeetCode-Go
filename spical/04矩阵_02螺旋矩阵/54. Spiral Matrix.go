@@ -1,7 +1,77 @@
 package leetcode
 
-// 解法 1
+/*
+题目：顺时针螺旋访问矩阵
+思路：
+1. 标识符控制方向
+2. 遇到边界就收缩边界
+*/
 func spiralOrder(matrix [][]int) []int {
+	row, col := len(matrix), len(matrix[0])
+
+	board := []int{col - 1, row - 1, 0, 0} // 右下左上
+	direct := 0                            // 0123 右下左上
+
+	ret := []int{}
+	i, j := 0, 0 // 起始点
+	// 结束点：
+	count := 0
+
+	for count < row*col {
+		count++
+		// fmt.Printf("{%d, %d} e%d  c %d  dir %d, board %v \n", i, j, 0, count, direct, board)
+		switch direct {
+		case 0:
+			ret = append(ret, matrix[i][j])
+			// 到达右边界
+			if j == board[0] {
+				board[3] += 1
+				direct = 1
+				i++ // 更新起始点
+				continue
+			}
+			j++
+
+		case 1:
+			ret = append(ret, matrix[i][j])
+			// 到达下边界
+			if i == board[1] {
+				board[0] -= 1
+				direct = 2
+				j-- // 更新起始点
+				continue
+			}
+			i++
+
+		case 2:
+			ret = append(ret, matrix[i][j])
+			// 到达左边界
+			if j == board[2] {
+				board[1] -= 1
+				direct = 3
+				i-- // 更新起始点
+				continue
+			}
+			j--
+		case 3:
+			ret = append(ret, matrix[i][j])
+			// 到达上边界
+			if i == board[3] {
+				board[2] += 1
+				direct = 0
+				j++ // 更新起始点
+				continue
+			}
+			i--
+
+		}
+	}
+	return ret
+
+}
+
+// 解法 1
+func spiralOrder3(matrix [][]int) []int {
 	if len(matrix) == 0 {
 		return []int{}
 	}

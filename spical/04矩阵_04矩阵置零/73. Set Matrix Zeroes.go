@@ -1,5 +1,13 @@
 package leetcode
 
+/* 题目：
+
+思路：
+第一行，第一列可以当成标志位。但是比较特殊的是，如果第一行第一列如果有 0 ，就难以区分。
+所以，提前遍历，判断是否需要置为0 。然后 遍历其他。最后根据 第一行的结果决定是否全部置0
+
+*/
+
 func setZeroes(matrix [][]int) {
 	if len(matrix) == 0 || len(matrix[0]) == 0 {
 		return

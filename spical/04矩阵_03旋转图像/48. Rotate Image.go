@@ -1,5 +1,12 @@
 package leetcode
 
+/* nn 矩阵顺时针旋转 90度
+
+思路：
+利用翻转可以达到这个效果，左右翻转一次，对角线翻转一次
+
+*/
+
 // 解法一
 func rotate(matrix [][]int) {
 	length := len(matrix)

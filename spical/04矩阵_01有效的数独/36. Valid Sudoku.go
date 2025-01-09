@@ -2,8 +2,73 @@ package leetcode
 
 import "strconv"
 
-// 解法一 暴力遍历，时间复杂度 O(n^3)
+/*
+	横竖 9宫格(0,3,9) 中重复1-9 不能重复
+
+思路： 暴力判断即可
+*/
 func isValidSudoku(board [][]byte) bool {
+	// 判断横
+	for i := 0; i < 9; i++ {
+		cached := [10]int{} // 全0数组，索引代表 1~9 数字代表次数
+		for j := 0; j < 9; j++ {
+			c := board[i][j]
+			if c == '.' {
+				continue
+			}
+			// 有重复
+			if cached[c-'0'] != 0 {
+				return false
+			}
+		}
+
+	}
+
+	// 判断竖
+	for i := 0; i < 9; i++ {
+		cached := [10]int{} // 全0数组，索引代表 1~9 数字代表次数
+		for j := 0; j < 9; j++ {
+			c := board[j][i]
+			if c == '.' {
+				continue
+			}
+			// 有重复
+			if cached[c-'0'] != 0 {
+				return false
+			}
+		}
+
+	}
+
+	// 判断 9宫格
+
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+			// ij 就是9宫格偏移量
+			cached := [10]int{}
+			// 9宫格数字遍历
+			for m := 0; m < 9; m++ {
+				for n := 0; n < 9; n++ {
+					c := board[m+i*3][n+j*3]
+
+					if c == '.' {
+						continue
+					}
+					// 有重复
+					if cached[c-'0'] != 0 {
+						return false
+					}
+				}
+			}
+
+		}
+
+	}
+	return true
+}
+
+// 解法一 暴力遍历，时间复杂度 O(n^3)
+func isValidSudoku3(board [][]byte) bool {
 	// 判断行 row
 	for i := 0; i < 9; i++ {
 		tmp := [10]int{}
