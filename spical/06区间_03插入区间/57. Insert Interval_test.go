@@ -34,7 +34,7 @@ func Test_Problem57(t *testing.T) {
 
 		{
 			para57{[]Interval{{Start: 1, End: 3}, {Start: 6, End: 9}}, Interval{Start: 4, End: 8}},
-			ans57{[]Interval{{Start: 1, End: 5}, {Start: 6, End: 9}}},
+			ans57{[]Interval{{Start: 1, End: 3}, {Start: 4, End: 9}}},
 		},
 
 		{
