@@ -1,6 +1,8 @@
 package leetcode
 
 import (
+	"sort"
+
 	"github.com/halfrost/LeetCode-Go/structures"
 )
 
@@ -15,7 +17,39 @@ type Interval = structures.Interval
  * }
  */
 
+/*
+题目： 合并无序区间，比如 [1,3] [2,6] -> [1,6]
+
+思路： 按首数字，对区间从小到大进行排序
+遍历： 如果发现当前和上一个区间有重叠就进行合并
+*/
 func merge56(intervals []Interval) []Interval {
+	if len(intervals) == 0 {
+		return []Interval{}
+	}
+
+	ret := []Interval{}
+
+	sort.Slice(intervals, func(i, j int) bool {
+		return intervals[i].Start < intervals[j].Start
+	})
+	ret = append(ret, intervals[0])
+	for i := 1; i < len(intervals); i++ {
+		last := &ret[len(ret)-1] // 取地址，而不是copy
+		// 不合并
+		if last.End < intervals[i].Start {
+			ret = append(ret, intervals[i])
+			continue
+		}
+		// 合并
+
+		last.End = intervals[i].End
+	}
+	return ret
+
+}
+
+func merge56bk(intervals []Interval) []Interval {
 	if len(intervals) == 0 {
 		return intervals
 	}

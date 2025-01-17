@@ -1,11 +1,49 @@
 package leetcode
 
 import (
+	"slices"
+
 	"github.com/halfrost/LeetCode-Go/template"
 )
 
-// 解法一 map，时间复杂度 O(n)
+/* 题目：
+任意数组，需要找出能够拼接出的最长连续子序列
+
+思路1：
+1.排序。
+2. 遍历 数组，维护 count 如果 连续就不断累加，连续就重置为0
+思路2：
+
+
+*/
+
 func longestConsecutive(nums []int) int {
+	// 排序
+	if len(nums) == 0 {
+		return 0
+	}
+
+	slices.Sort(nums)
+
+	count, max := 1, 1
+
+	for i := 1; i < len(nums); i++ {
+		if nums[i] == nums[i-1]+1 {
+			//连续
+			count += 1
+			if count > max {
+				max = count
+			}
+
+		} else {
+			count = 1
+		}
+	}
+	return max
+}
+
+// 解法一 map，时间复杂度 O(n)
+func longestConsecutiveForMap(nums []int) int {
 	res, numMap := 0, map[int]int{}
 	for _, num := range nums {
 		if numMap[num] == 0 {
